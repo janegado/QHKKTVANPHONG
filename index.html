@@ -221,6 +221,59 @@ mark { background: #fef08a; border-radius: 3px; }
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+/* ── MOBILE RESPONSIVE ── */
+html, body { overflow-x: hidden; max-width: 100%; }
+
+/* Table: wrap để scroll ngang thay vì zoom toàn trang */
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; width: 100%; margin-bottom: 20px; border-radius: 10px; border: 1px solid var(--border); }
+.table-scroll table { margin-bottom: 0; border: none; border-radius: 0; min-width: 480px; }
+
+/* Grid: dùng min() để không bao giờ overflow */
+.pk-grid { grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); }
+.law-grid { grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); }
+
+@media (max-width: 640px) {
+  /* Tab bar cuộn ngang thay vì overflow */
+  .tabs { overflow-x: auto; -webkit-overflow-scrolling: touch; flex-wrap: nowrap; padding-bottom: 2px; }
+  .tab { white-space: nowrap; flex-shrink: 0; padding: 6px 12px; font-size: 12px; }
+
+  /* Header gọn hơn */
+  .header { padding: 10px 12px; }
+  .header-top { flex-wrap: wrap; gap: 8px; }
+  .brand { font-size: 12px; }
+  .verified-badge { font-size: 10px; width: 100%; }
+  .search-wrap { width: 100%; order: -1; }
+
+  /* Content padding nhỏ hơn */
+  .content { padding: 14px 10px 60px; }
+
+  /* Section title nhỏ hơn */
+  .section-title { font-size: 15px; }
+
+  /* PK grid 1 cột */
+  .pk-grid { grid-template-columns: 1fr; }
+  .law-grid { grid-template-columns: 1fr; }
+  .hanh-chinh-grid { grid-template-columns: 1fr; }
+
+  /* Table font nhỏ hơn */
+  th, td { padding: 8px 9px; font-size: 12px; }
+
+  /* FAQ text */
+  .faq-q { font-size: 13px; padding: 10px 12px; }
+  .faq-a { font-size: 12px; }
+
+  /* GT cards */
+  .gt-name { font-size: 14px; }
+  .gt-summary { font-size: 12px; }
+  .gt-p { font-size: 13px; }
+  .gt-header { padding: 12px 14px; }
+  .gt-body { padding: 12px 14px 14px; }
+
+  /* Timeline */
+  .tl-text { font-size: 13px; }
+  .tl-note { font-size: 11px; }
+}
 </style>
 </head>
 <body>
@@ -1692,6 +1745,15 @@ function toggleFaq(el) {
   el.querySelector('span').textContent = isOpen ? '▾' : '▴';
 }
 
+
+// ── Wrap tables for mobile horizontal scroll ──
+document.querySelectorAll('table').forEach(tbl => {
+  if (tbl.parentElement.classList.contains('table-scroll')) return;
+  const wrap = document.createElement('div');
+  wrap.className = 'table-scroll';
+  tbl.parentNode.insertBefore(wrap, tbl);
+  wrap.appendChild(tbl);
+});
 
 // ── Toggle Giải Thích cards ──
 function toggleGT(id) {
