@@ -184,6 +184,39 @@ mark { background: #fef08a; border-radius: 3px; }
 .sd-type { font-size: 10px; color: var(--text-muted); white-space: nowrap; flex-shrink: 0; }
 .sd-empty { padding: 16px 14px; font-size: 13px; color: var(--text-muted); text-align: center; }
 
+
+/* ── GIẢI THÍCH CHÍNH SÁCH (TAB 4) ── */
+.gt-grid { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
+.gt-card { background: var(--card); border-radius: 12px; border: 1px solid var(--border); overflow: hidden; }
+.gt-header {
+  padding: 16px 18px; cursor: pointer; display: flex;
+  justify-content: space-between; align-items: flex-start; gap: 12px;
+  transition: background .15s;
+}
+.gt-header:hover { background: var(--sand-light); }
+.gt-card.open .gt-header { background: var(--sand-light); border-bottom: 2px solid var(--sea); }
+.gt-header-left { flex: 1; }
+.gt-num { font-size: 11px; font-weight: 700; color: var(--sea); letter-spacing: .5px; margin-bottom: 4px; }
+.gt-name { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 5px; }
+.gt-summary { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+.gt-chevron { font-size: 18px; color: var(--sea); flex-shrink: 0; transition: transform .2s; margin-top: 2px; }
+.gt-card.open .gt-chevron { transform: rotate(180deg); }
+.gt-body { display: none; padding: 16px 18px 18px; border-top: 1px solid var(--border); }
+.gt-card.open .gt-body { display: block; }
+.gt-p { font-size: 13.5px; color: var(--text); line-height: 1.7; margin-bottom: 10px; }
+.gt-p:last-child { margin-bottom: 0; }
+.gt-h4 { font-size: 13.5px; font-weight: 700; color: var(--navy); margin: 14px 0 6px;
+  padding: 6px 10px; background: var(--sand-light); border-radius: 6px;
+  border-left: 3px solid var(--sea); }
+.gt-bullet { font-size: 13px; color: var(--text); line-height: 1.65; margin: 5px 0 5px 14px;
+  padding-left: 10px; border-left: 2px solid var(--border); }
+.gt-tomlai {
+  font-size: 13px; color: #065f46; line-height: 1.65;
+  background: #d1fae5; border-radius: 8px; padding: 10px 14px;
+  margin: 12px 0; border-left: 3px solid #059669;
+}
+.sd-tab.t4 { background: #f3e8ff; color: #6b21a8; }
+
 /* ── SCROLL & MISC ── */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
@@ -206,6 +239,7 @@ mark { background: #fef08a; border-radius: 3px; }
     <button class="tab active" onclick="switchTab('tab1',this)">⚖️ Khung Pháp Lý</button>
     <button class="tab" onclick="switchTab('tab2',this)">🏖️ Ninh Hòa</button>
     <button class="tab" onclick="switchTab('tab3',this)">⛵ Vạn Ninh</button>
+    <button class="tab" onclick="switchTab('tab4',this)">📋 Giải Thích</button>
   </div>
 </div>
 
@@ -779,6 +813,858 @@ mark { background: #fef08a; border-radius: 3px; }
   </div>
 
 </div>
+
+<!-- ══════════════ TAB 4: GIẢI THÍCH CHÍNH SÁCH ══════════════ -->
+<div class="tab-panel" id="tab4">
+
+<div class="section-title">Giải thích Khung Pháp Lý
+  <div class="section-sub">7 văn bản + cơ chế đặc thù — đọc để hiểu tại sao Khánh Hòa đang thay đổi nhanh như vậy</div>
+</div>
+<div class="gt-grid">
+
+<div class="gt-card" id="gt-nq09">
+  <div class="gt-header" onclick="toggleGT('gt-nq09')">
+    <div class="gt-header-left">
+      <div class="gt-num">🏛️ NQ 09-NQ/TW · 2022 · Bộ Chính trị</div>
+      <div class="gt-name">Chủ trương chiến lược — "Lệnh khởi động"</div>
+      <div class="gt-summary">Đặt mục tiêu Khánh Hòa đến 2030 tầm nhìn 2045. Nhận định KKT Vân Phong chưa tương xứng tiềm năng sau 20 năm quy hoạch. Văn bản mở đường cho toàn bộ chuỗi chính sách 2022–2025.</div>
+    </div>
+    <div class="gt-chevron" id="chev-nq09">▾</div>
+  </div>
+  <div class="gt-body" id="body-nq09">
+<p class="gt-p">Đoạn thông tin này mô tả <strong>mệnh lệnh chính trị cao nhất</strong> và là cội nguồn của mọi sự thay đổi tại Khánh Hòa hiện nay.</p>
+<p class="gt-p">Nếu Quyết định 298 (của Thủ tướng) là "Bản vẽ thiết kế", Nghị quyết 55 (của Quốc hội) là "Hộp công cụ và Dòng tiền", thì Nghị quyết 09 của Bộ Chính trị chính là <strong>"Lệnh xuất quân"</strong> bắt buộc tất cả phải hành động.</p>
+<p class="gt-p">Dưới đây là 3 ý nghĩa cốt lõi của văn bản mang tính lịch sử này đối với tương lai Khánh Hòa:</p>
+<div class="gt-h4"><strong>1. Bảo chứng chính trị tuyệt đối cho dòng vốn</strong></div>
+<p class="gt-p">Ở Việt Nam, khi Bộ Chính trị ban hành một Nghị quyết riêng cho một địa phương, điều đó đồng nghĩa địa phương đó đã trở thành <strong>trọng điểm ưu tiên của quốc gia</strong>.</p>
+<div class="gt-bullet"><strong>Ý nghĩa thực tế:</strong> Các nhà đầu tư chiến lược (những "đại bàng" mang theo hàng tỷ USD) rất sợ rủi ro thay đổi chính sách. Nghị quyết 09 chính là "tấm thẻ bảo hiểm" cao nhất, khẳng định từ cấp cao nhất của Đảng rằng: Việc phát triển Khánh Hòa là chiến lược quốc gia dài hạn, không thể đảo ngược. Các tập đoàn có thể hoàn toàn yên tâm đổ tiền vào đây.</div>
+<div class="gt-h4"><strong>2. Lời tuyên chiến với tình trạng "Quy hoạch treo"</strong></div>
+<div class="gt-bullet">Việc thẳng thắn nhận định "KKT Vân Phong chưa tương xứng tiềm năng sau 20 năm" là một sự nhìn nhận rất mạnh mẽ từ Trung ương. Nó chấm dứt thời kỳ Vân Phong chỉ là những dự án "bánh vẽ" nằm trên giấy suốt 2 thập kỷ qua.</div>
+<div class="gt-bullet"><strong>Ý nghĩa thực tế:</strong> Lời nhận định này đi kèm với áp lực giải ngân và thực thi. Trung ương sẽ giám sát gắt gao, buộc chính quyền địa phương phải quyết liệt dọn dẹp các dự án treo, giải tỏa mặt bằng và đưa đất vào sử dụng thực tế.</div>
+<div class="gt-h4"><strong>3. Khởi nguồn của mọi "Đặc quyền"</strong></div>
+<p class="gt-p">Nghị quyết 09 chính là lý do ra đời của Nghị quyết 55 và hàng loạt chính sách sau này.</p>
+<div class="gt-bullet">Bởi vì Trung ương yêu cầu "đột phá", nên Quốc hội mới cấp cho Khánh Hòa những cơ chế chưa từng có tiền lệ (như tự chuyển đổi đất, tự duyệt quy hoạch).</div>
+<div class="gt-bullet">Cột mốc 2030 (Khánh Hòa lên Thành phố trực thuộc Trung ương) tạo ra một <strong>áp lực tiến độ cực kỳ khẩn trương</strong>. Tỉnh chỉ có chưa đầy 5 năm tới để lột xác toàn diện về hạ tầng giao thông, đô thị và thu nhập bình quân.</div>
+<p class="gt-p"><strong>Tóm lại:</strong> Đoạn thông tin này phác họa bức tranh toàn cảnh về <strong>sự hội tụ của "Thiên thời - Địa lợi - Nhân hòa"</strong>. Một địa phương khi đã được nhận "Lệnh khởi động" từ Bộ Chính trị, kèm theo công cụ pháp lý (NQ 55) và bản đồ quy hoạch rõ ràng (QĐ 298), thì việc hạ tầng và thị trường bất động sản tại khu vực đó bứt tốc chỉ còn là vấn đề thời gian ngắn.</p>
+  </div>
+</div>
+<div class="gt-card" id="gt-nq55">
+  <div class="gt-header" onclick="toggleGT('gt-nq55')">
+    <div class="gt-header-left">
+      <div class="gt-num">🔑 NQ 55/2022/QH15 · Quốc hội</div>
+      <div class="gt-name">Cơ chế đặc thù — "Hộp công cụ"</div>
+      <div class="gt-summary">5 quyền đặc biệt: Vay nợ ≤60% | Tự quyết đất lúa &lt;500ha | Tự phê duyệt QH cục bộ | Tách GPMB thành dự án độc lập | Ưu đãi nhà đầu tư chiến lược KKT. Hiệu lực đến 2031.</div>
+    </div>
+    <div class="gt-chevron" id="chev-nq55">▾</div>
+  </div>
+  <div class="gt-body" id="body-nq55">
+<p class="gt-p">Nội dung bạn đề cập chính là <strong>chìa khóa vàng</strong> về thể chế mà Quốc hội dành riêng cho tỉnh Khánh Hòa.</p>
+<p class="gt-p">Nói một cách dễ hiểu, đây là việc Trung ương <strong>"phân quyền tối đa và bơm trợ lực" </strong>để Khánh Hòa có thể tháo gỡ mọi nút thắt quan liêu, bứt tốc phát triển để đạt mục tiêu trở thành Thành phố trực thuộc Trung ương vào năm 2030.</p>
+<p class="gt-p">Dưới đây là ý nghĩa thực tế đằng sau 5 "công cụ" đặc quyền này:</p>
+<div class="gt-h4"><strong>1. Tự chủ tài chính để làm hạ tầng (Vay nợ ≤ 60%)</strong></div>
+<div class="gt-bullet"><strong>Ý nghĩa thực tế:</strong> Thay vì phải chờ đợi hoặc xin ngân sách Trung ương phân bổ cho từng dự án hạ tầng, Khánh Hòa được phép phát hành trái phiếu hoặc vay vốn với hạn mức lớn hơn rất nhiều. Điều này giúp tỉnh có ngay "tiền tươi thóc thật" để xây dựng các siêu dự án giao thông, y tế, giáo dục mà không bị lỡ nhịp phát triển.</div>
+<div class="gt-h4"><strong>2 <em>&</em> 3. Cấp phép siêu tốc (Tự quyết đất đai <em>&</em> Quy hoạch)</strong></div>
+<div class="gt-bullet"><strong>Ý nghĩa thực tế:</strong> Đây là việc cắt giảm thủ tục hành chính ở mức độ chưa từng có. Bình thường, việc chuyển đổi hàng trăm héc-ta đất nông nghiệp/rừng hay xin điều chỉnh quy hoạch phải trình qua nhiều bộ ngành và chờ Thủ tướng phê duyệt — có thể mất từ vài tháng đến vài năm. Việc trao quyền tự quyết cho UBND tỉnh giúp các dự án của nhà đầu tư có thể được "đóng dấu" và triển khai ngay lập tức.</div>
+<div class="gt-h4"><strong>4. Gỡ điểm nghẽn lớn nhất (Tách giải phóng mặt bằng)</strong></div>
+<div class="gt-bullet"><strong>Ý nghĩa thực tế:</strong> Ở Việt Nam, nguyên nhân khiến 90% các dự án chậm tiến độ là do vướng đền bù, giải tỏa. Bằng cách tách giải phóng mặt bằng thành một dự án độc lập, tỉnh có thể dùng vốn ngân sách đi gom đất, đền bù, dọn sạch mặt bằng rồi mới đấu thầu dự án chính. Nhà đầu tư vào là có "đất sạch" để xây dựng luôn, không lo bị chôn vốn hay kiện cáo tranh chấp.</div>
+<div class="gt-h4"><strong>5. Trải thảm đỏ đón "Đại bàng" (Ưu đãi Khu Kinh tế)</strong></div>
+<div class="gt-bullet"><strong>Ý nghĩa thực tế:</strong> Đây là thỏi nam châm thu hút các tập đoàn tỷ đô, đặc biệt nhắm tới Khu kinh tế Vân Phong. Nhờ những cơ chế thuế, đất đai linh hoạt và vượt trội, Khánh Hòa đủ sức cạnh tranh với các khu vực kinh tế lớn không chỉ trong nước mà cả Đông Nam Á (thu hút làm cảng biển, năng lượng sạch, du lịch nghỉ dưỡng cao cấp).</div>
+<div class="gt-tomlai">📌 Tóm lại: Đoạn nội dung này khẳng định Khánh Hòa đang bước vào <strong>"thập <em>kỷ</em> vàng" (từ nay đến 2031).</strong> Tỉnh đã được gỡ bỏ "vòng kim cô" về quy trình thủ tục, có đủ thẩm quyền hành chính để tự quyết định tốc độ phát triển kinh tế của mình</div>
+<p class="gt-p"><strong>Nghị quyết 55 này tác động mạnh nhất đến khu vực nào của Khánh Hòa, và có những siêu dự án nào đang chuẩn bị đổ bộ vào đây?</strong></p>
+<p class="gt-p">Dưới sự bảo chứng và tạo đà từ <strong>Nghị quyết 55, Khu kinh tế Vân Phong (bao gồm thị xã Ninh Hòa, huyện Vạn Ninh) và huyện Cam Lâm</strong> chính là hai "tọa độ vàng" hưởng lợi trực tiếp và mạnh mẽ nhất.</p>
+<p class="gt-p">Các cơ chế đặc thù về thu hút nhà đầu tư chiến lược và quy trình rút gọn trong giải phóng mặt bằng (thu hồi đất quy mô lớn) được thiết kế gần như đo ni đóng giày để trải thảm đỏ cho các siêu dự án tại hai khu vực này.</p>
+<p class="gt-p">Dưới đây là bức tranh toàn cảnh về làn sóng siêu dự án đang và chuẩn bị đổ bộ:</p>
+<div class="gt-h4"><strong>1. Khu Kinh tế Vân Phong (Vạn Ninh <em>&</em> Ninh Hòa) - Cực tăng trưởng <em>tỷ</em> đô</strong></div>
+<p class="gt-p">Vân Phong là tâm điểm của chính sách "ưu đãi nhà đầu tư chiến lược" với mục tiêu thu hút dòng vốn lên tới 450.000 tỷ đồng. Khu vực này được định hướng phát triển song song: Bắc Vân Phong (Vạn Ninh) thiên về du lịch, cảng biển quốc tế và Nam Vân Phong (Ninh Hòa) tập trung cho công nghiệp, năng lượng, logistics.</p>
+<p class="gt-p">Các dự án đình đám đang rục rịch triển khai và hoàn thiện thủ tục:</p>
+<div class="gt-bullet"><strong>Các đại đô thị biển: Khu đô thị mới Tu Bông và Khu đô thị mới Đầm Môn đã được Thủ tướng phê duyệt chủ trương đầu tư (30/6/2025) và Sun Group được trao quyết định nhà đầu tư (10/9/2025). Cùng với đó là Khu đô thị cao cấp Cổ Mã.</strong></div>
+<div class="gt-bullet"><strong>Tổ hợp du lịch, nghỉ dưỡng cao cấp:</strong> Quần thể du lịch sinh thái biển Hòn Ngang - Bãi Cát Thấm, Khu du lịch nghỉ dưỡng cao cấp Hồ Na, và Khu du lịch Dốc Lết - Phương Mai đang được đẩy nhanh giải phóng mặt bằng.</div>
+<div class="gt-bullet"><strong>Hạ tầng công nghiệp trọng điểm:</strong> Khu công nghiệp Dốc Đá Trắng (quy mô 288ha nằm trên địa bàn xã Ninh Thọ, Ninh Hòa và Vạn Hưng, Vạn Ninh) do Viglacera đầu tư với nguồn vốn hơn 1.800 tỷ đồng, thu hút hàng vạn lao động, tạo cú hích cực lớn cho nhu cầu an cư, dịch vụ quanh khu vực này.</div>
+<div class="gt-h4"><strong>2. Huyện Cam Lâm - Đô thị sân bay, sinh thái đẳng cấp quốc tế</strong></div>
+<p class="gt-p">Nếu Vân Phong thiên về kinh tế đa ngành, thì Cam Lâm đang tận dụng cơ chế tách dự án giải phóng mặt bằng để trở thành một siêu đô thị nghỉ dưỡng và dịch vụ liền kề Sân bay quốc tế Cam Ranh.</p>
+<div class="gt-bullet"><strong>Siêu đô thị mới Cam Lâm (<em>Vinhomes</em> - Vingroup):</strong> Đây là một trong những dự án bất động sản lớn nhất miền Trung hiện nay với quy mô khổng lồ gần <strong>10.400 ha</strong> (trải dài qua nhiều xã của Cam Lâm và một phần Cam Ranh). Tổng mức đầu tư dự kiến lên tới <strong>285.267 <em>tỷ</em> đồng (khoảng 11 - 12 <em>tỷ</em> USD).</strong> Dự án bao gồm hàng chục nghìn căn biệt thự, liền kề, chung cư, nhà ở xã hội cùng hệ sinh thái tiện ích, sân golf 36 hố. Dự án này hiện đang bước vào các giai đoạn thu hồi đất và chuẩn bị nền tảng thi công.</div>
+<div class="gt-bullet"><strong>Khu đô thị phức hợp núi Cù Hin:</strong> Mới đây nhất vào tháng 6/2026, tỉnh Khánh Hòa cũng đang phát thông báo gọi đầu tư cho dự án này tại xã Cam Lâm và Suối Dầu với quy mô hơn 352 ha, vốn đầu tư gần 6.400 tỷ đồng.</div>
+<div class="gt-h4"><strong>Tác động thực tế đến thị trường:</strong></div>
+<p class="gt-p">Lực đẩy từ các siêu dự án công nghiệp ở Nam Vân Phong (Ninh Hòa) kết hợp với các đại đô thị tỷ đô tại Cam Lâm đang làm thay đổi hoàn toàn bộ mặt hạ tầng. Sự cộng hưởng này không chỉ tạo ra hàng chục nghìn việc làm mới mà còn hình thành các chuỗi cung ứng, thương mại. Điều này kéo theo chu kỳ tăng trưởng dài hạn và nhu cầu ở thực đối với các phân khúc bất động sản ven khu công nghiệp, đất nền khu dân cư hiện hữu ở những địa phương này.</p>
+  </div>
+</div>
+<div class="gt-card" id="gt-qd298">
+  <div class="gt-header" onclick="toggleGT('gt-qd298')">
+    <div class="gt-header-left">
+      <div class="gt-num">🗺️ QĐ 298/QĐ-TTg · 27/3/2023 · Thủ tướng</div>
+      <div class="gt-name">QH chung KKT 2040 — "Bản đồ quy hoạch gốc"</div>
+      <div class="gt-summary">Toàn bộ 19 phân khu, ranh giới, chức năng đất đều xuất phát từ đây. 150.000 ha (70.822 ha đất liền). Dân số 2030: 350.000–380.000; 2040: 500.000–550.000. Bắc VP = du lịch + cảng QT; Nam VP = CN + logistics.</div>
+    </div>
+    <div class="gt-chevron" id="chev-qd298">▾</div>
+  </div>
+  <div class="gt-body" id="body-qd298">
+<p class="gt-p">Toàn bộ 19 phân khu, ranh giới, chức năng đất đều xuất phát từ đây.</p>
+<p class="gt-p">Diện tích 150.000 ha (đất liền+đảo 70.822 ha, mặt nước 79.178 ha).</p>
+<p class="gt-p">Dân số 2030: 350.000–380.000; 2040: 500.000–550.000.</p>
+<p class="gt-p">Phân vùng: <strong>Bắc VP</strong> = đô thị du lịch + cảng trung chuyển QT;</p>
+<p class="gt-p"><strong>Nam VP</strong> = CN cảng + logistics.</p>
+<div class="gt-h4"><strong>Mọi quy hoạch phân khu đều phải căn cứ vào văn bản này.</strong></div>
+<p class="gt-p">Đoạn thông tin này mô tả <strong>"bản hiến pháp quy hoạch"</strong> của Khu kinh tế Vân Phong. Nếu Nghị quyết 55 là "công cụ và dòng tiền" để triển khai, thì Quyết định 298 chính là <strong>"bản vẽ thiết kế tổng thể"</strong>.</p>
+<p class="gt-p">Dưới đây là 3 ý nghĩa thực tiễn cốt lõi của văn bản này:</p>
+<div class="gt-h4"><strong>1. Khung pháp lý tối cao ("Bản đồ gốc")</strong></div>
+<div class="gt-bullet"><strong>Tính quyết định:</strong> Bất kỳ dự án cầu đường, khu đô thị, hay nhà máy nào muốn xây dựng tại Vân Phong đều phải đối chiếu và khớp với ranh giới, chức năng đất trong Quyết định này.</div>
+<div class="gt-bullet"><strong>Với nhà đầu tư:</strong> Đây là "kim chỉ nam" cao nhất. Nó xác định khu vực nào được làm khu dân cư, khu vực nào phải nhường đất cho công nghiệp hay cây xanh. Toàn bộ các quy hoạch chi tiết hơn (như phân khu 1/2000, chi tiết 1/500) bắt buộc phải "đẻ" ra từ gốc này, không được làm trái.</div>
+<div class="gt-h4"><strong>2. Phân chia "Hai thái cực" kinh tế rõ rệt</strong></div>
+<p class="gt-p">Quy hoạch đã chốt hạ hướng đi chuyên biệt, không dẫm chân lên nhau cho hai khu vực:</p>
+<div class="gt-bullet"><strong>Bắc Vân Phong (Vạn Ninh):</strong> Được định vị thành thủ phủ du lịch, dịch vụ cao cấp và cảng trung chuyển quốc tế. Nơi đây sẽ là sân chơi của các dự án bất động sản nghỉ dưỡng, thương mại xa xỉ và kinh tế biển đa ngành.</div>
+<div class="gt-bullet"><strong>Nam Vân Phong (Ninh Hòa):</strong> Được ấn định là "đại công trường" công nghiệp nặng, năng lượng, logistics và cảng biển. Đây sẽ là thỏi nam châm hút nguồn vốn FDI mảng sản xuất và các cụm nhà máy quy mô lớn.</div>
+<div class="gt-h4"><strong>3. Bài toán bùng nổ dân số và Bất động sản</strong></div>
+<div class="gt-bullet"><strong>Cú hích nhân lực:</strong> Mục tiêu đẩy quy mô dân số lên 500.000 – 550.000 người vào năm 2040 là một con số khổng lồ. Lượng dân tăng thêm này không phải tăng tự nhiên, mà đến từ dòng thác chuyên gia, kỹ sư, và công nhân đổ về làm việc tại các cảng biển và khu công nghiệp.</div>
+<div class="gt-bullet"><strong>Nhu cầu ở thực:</strong> Điều này phát đi tín hiệu chắc chắn về một lượng cầu khổng lồ đối với <strong>bất động sản an cư</strong> (đất nền khu dân cư, nhà ở xã hội, chung cư) và các dịch vụ tiện ích dân sinh (chợ, siêu thị, trường học, y tế) trong vòng 10-15 năm tới, đặc biệt là quanh các vành đai công nghiệp ở Nam Vân Phong.</div>
+<p class="gt-p"><strong>Tóm lại:</strong> Quyết định 298 là tiếng còi khai cuộc chính thức. Nó chấm dứt thời kỳ phát triển manh mún, cấp cho toàn bộ 150.000ha của Vân Phong một hình hài hợp pháp và bền vững để các "đại bàng" (nhà đầu tư chiến lược) yên tâm rót hàng tỷ USD vào đúng địa chỉ.</p>
+  </div>
+</div>
+<div class="gt-card" id="gt-qd318">
+  <div class="gt-header" onclick="toggleGT('gt-qd318')">
+    <div class="gt-header-left">
+      <div class="gt-num">🌏 QĐ 318/QĐ-TTg · 29/3/2023 · Thủ tướng</div>
+      <div class="gt-name">QH tỉnh Khánh Hòa 2021–2030 — "Bức tranh lớn hơn"</div>
+      <div class="gt-summary">Đặt KKT Vân Phong vào bối cảnh toàn tỉnh: hạt nhân kinh tế biển, động lực Nam Trung Bộ. 35 tuyến đường tỉnh, cao tốc CT.01, 50 bến thủy nội địa. Mục tiêu Ninh Hòa loại III 2030, TP 2040.</div>
+    </div>
+    <div class="gt-chevron" id="chev-qd318">▾</div>
+  </div>
+  <div class="gt-body" id="body-qd318">
+<p class="gt-p">Đặt KKT Vân Phong vào bối cảnh toàn tỉnh: là hạt nhân kinh tế biển, động lực Nam Trung Bộ. Xác định hạ tầng chiến lược: nâng Bến Vân Phong thành cảng TCQT, 35 tuyến đường tỉnh, cao tốc CT.01, hệ thống 50 bến thủy nội địa. Mục tiêu Ninh Hòa đô thị loại III 2030, thành phố 2040.</p>
+<p class="gt-p">Nếu Quyết định 298 là "Bản vẽ chi tiết" dành riêng cho Khu kinh tế Vân Phong, thì Quyết định 318 này chính là <strong>"Hệ thống mạch máu"</strong> kết nối Vân Phong vào hệ sinh thái chung của toàn tỉnh Khánh Hòa và cả nước.</p>
+<p class="gt-p">Văn bản này giải quyết bài toán: Làm sao để Vân Phong không phải là một ốc đảo đơn độc?</p>
+<p class="gt-p">Dưới đây là 3 ý nghĩa thực chiến lớn nhất từ Quyết định này, đặc biệt mang lại giá trị khổng lồ cho khu vực Ninh Hòa:</p>
+<div class="gt-h4"><strong>1. Lộ trình "thăng hạng" rõ ràng cho Ninh Hòa</strong></div>
+<p class="gt-p">Đây là thông tin mang lại giá trị gia tăng trực tiếp mạnh mẽ nhất cho khu vực này:</p>
+<div class="gt-bullet"><strong>Mục tiêu:</strong> Ninh Hòa phải đạt Đô thị loại III vào 2030 và chính thức trở thành Thành phố vào 2040.</div>
+<div class="gt-bullet"><strong>Ý nghĩa thực tế:</strong> Để đạt được các tiêu chuẩn đô thị này, Nhà nước bắt buộc phải rót ngân sách khổng lồ để nâng cấp toàn diện hạ tầng (đường sá, điện, nước, y tế, giáo dục, không gian công cộng). Quá trình này sẽ biến hàng loạt diện tích "đất nông thôn" tại Ninh Hòa thành "đất đô thị". Chu kỳ nâng cấp hành chính (từ thị xã lên thành phố) luôn luôn đi kèm với một chu kỳ tăng trưởng giá trị bất động sản bứt phá và bền vững.</div>
+<div class="gt-h4"><strong>2. Trái tim Logistics và Giao thông liên vùng</strong></div>
+<p class="gt-p">Một khu kinh tế sẽ chết yểu nếu không có đường đi cho dòng hàng hóa. Quyết định này đã chốt hạ một mạng lưới hạ tầng khổng lồ:</p>
+<div class="gt-bullet"><strong>Hệ thống đường bộ <em>&</em> Thủy nội địa:</strong> Việc quy hoạch tới 35 tuyến đường tỉnh, đường cao tốc Bắc Nam (CT.01) chạy qua, và 50 bến thủy nội địa sẽ tạo ra một mạng lưới logistics chân rết. Hàng hóa từ Tây Nguyên, Nam Trung Bộ sẽ đổ dồn về đây.</div>
+<div class="gt-bullet"><strong>Ý nghĩa thực tế:</strong> Các khu vực nằm ven các trục đường tỉnh lộ mới hoặc gần các nút giao cao tốc tại Ninh Hòa và Vạn Ninh sẽ hình thành các cụm dân cư mới, kho bãi, dịch vụ bến bãi, đẩy nhịp độ giao thương và giá trị sử dụng đất lên cao.</div>
+<div class="gt-h4"><strong>3. Định vị vươn tầm quốc tế (Cảng trung chuyển Quốc tế)</strong></div>
+<div class="gt-bullet">Quy hoạch định hướng nâng Bến Vân Phong thành Cảng trung chuyển Quốc tế. Đây không còn là cảng gom hàng nội địa nữa, mà là nơi đón các siêu tàu mẹ từ các đại dương vào bốc dỡ, chuyển tải hàng hóa đi khắp thế giới (cạnh tranh trực tiếp với các cảng lớn trong khu vực như Singapore hay Hong Kong).</div>
+<div class="gt-bullet"><strong>Ý nghĩa thực tế:</strong> Cảng biển quốc tế là cỗ máy tạo việc làm khủng khiếp nhất. Nó sẽ kéo theo hàng loạt các ngành dịch vụ phụ trợ: hải quan, kho ngoại quan, tài chính, logistics, sửa chữa tàu biển... Kéo theo đó là nhu cầu lưu trú của đội ngũ chuyên gia quốc tế và hàng vạn nhân lực ngành hàng hải đổ về.</div>
+<p class="gt-p"><strong>Tóm lại:</strong> Quyết định 318 đóng vai trò như một <strong>bản cam kết về hạ tầng và hành chính</strong>. Nó khẳng định rằng sự phát triển của Vân Phong nói chung và Ninh Hòa nói riêng không chỉ trông chờ vào nguồn vốn của doanh nghiệp tư nhân, mà còn được "chống lưng" bởi mạng lưới hạ tầng quốc gia và lộ trình nâng cấp đô thị bài bản từ phía Nhà nước.</p>
+  </div>
+</div>
+<div class="gt-card" id="gt-ldd2024">
+  <div class="gt-header" onclick="toggleGT('gt-ldd2024')">
+    <div class="gt-header-left">
+      <div class="gt-num">⚖️ Luật Đất đai 2024 · Điều 79 + 203</div>
+      <div class="gt-name">Thu hồi đất trong KKT — "Quy tắc then chốt"</div>
+      <div class="gt-summary">Nhà nước chỉ trực tiếp thu hồi cho "khu phi thuế quan trong KKT". Dự án TMDV, đô thị → chủ đầu tư phải tự thỏa thuận với dân theo giá thị trường. Ưu đãi NQ55: đo đạc kiểm đếm trước khi ra thông báo với dự án ≥300ha.</div>
+    </div>
+    <div class="gt-chevron" id="chev-ldd2024">▾</div>
+  </div>
+  <div class="gt-body" id="body-ldd2024">
+<p class="gt-p">Nhà nước <strong>chỉ trực tiếp thu hồi</strong> cho "khu phi thuế quan trong KKT" (Đ.79 K.22). Dự án TMDV, đô thị khác trong KKT → chủ đầu tư phải <strong>thỏa thuận nhận QSDĐ</strong> với dân. Ưu đãi riêng NQ55: được chuẩn bị thu hồi (đo đạc, kiểm đếm) ngay khi có QH, trước khi ban hành thông báo — áp dụng dự án ≥300ha. Ban QLKKT có trách nhiệm phối hợp GPMB (không trực tiếp thực hiện).</p>
+<p class="gt-p">Đoạn thông tin này là một sự kết hợp cực kỳ quan trọng giữa <strong>Luật Đất đai 2024</strong> (áp dụng chung toàn quốc) và <strong>Nghị quyết 55</strong> (đặc quyền riêng của Khánh Hòa). Nó định hình lại toàn bộ "luật chơi" về giải phóng mặt bằng — khâu sinh tử quyết định sự thành bại của mọi dự án.</p>
+<p class="gt-p">Nội dung này mang 3 thông điệp và ý nghĩa thực tế khổng lồ đối với người dân và giới đầu tư:</p>
+<div class="gt-h4"><strong>1. Kết thúc <em>kỷ</em> nguyên "thu hồi đất giá rẻ" làm đô thị</strong></div>
+<p class="gt-p">Đây là sự bảo vệ tối đa quyền lợi của người dân từ Luật Đất đai 2024:</p>
+<div class="gt-bullet"><strong>Ý nghĩa thực tế:</strong> Trước đây, nhà đầu tư bất động sản thường núp bóng "dự án phát triển kinh tế" để nhờ Nhà nước thu hồi đất của dân với giá đền bù thấp, sau đó phân lô bán nền hoặc làm khu nghỉ dưỡng giá cao. Nhưng hiện nay, đối với các <strong>dự án Thương mại Dịch vụ, Đô thị</strong>, chủ đầu tư bắt buộc phải <strong>tự bỏ tiền túi ra đàm phán, mua lại đất của dân</strong> theo giá thị trường.</div>
+<div class="gt-bullet"><strong>Hệ quả:</strong> Người dân có đất trong vùng quy hoạch khu đô thị sẽ không lo bị ép giá đền bù. Về phía doanh nghiệp, luật này sẽ "thanh lọc" thị trường, chỉ những tập đoàn có tiềm lực tài chính thực sự (như Vingroup, Sun Group...) mới đủ tiền đàm phán mua lại hàng trăm héc-ta đất.</div>
+<div class="gt-h4"><strong>2. Giới hạn "bàn tay" của Nhà nước</strong></div>
+<div class="gt-bullet">Nhà nước hiện nay chỉ dùng quyền lực để trực tiếp thu hồi đất bắt buộc đối với các dự án phục vụ lợi ích quốc gia, lợi ích công cộng, và cụ thể trong Khu kinh tế là <strong>"khu phi thuế quan"</strong> hoặc hạ tầng khu công nghiệp.</div>
+<div class="gt-bullet"><strong>Ý nghĩa thực tế:</strong> Các phân khu chức năng được phân định ranh giới rất rạch ròi. Ban Quản lý Khu kinh tế giờ đây đóng vai trò như một trọng tài hỗ trợ thủ tục pháp lý, đo đạc, chứ không còn trực tiếp đứng ra thu hồi đất thay cho các đại gia bất động sản nữa.</div>
+<div class="gt-h4"><strong>3. Đặc quyền "Cỗ máy thời gian" của Nghị quyết 55</strong></div>
+<p class="gt-p">Đây chính là "vũ khí bí mật" giúp Khánh Hòa bứt tốc so với các tỉnh thành khác:</p>
+<div class="gt-bullet"><strong>Nút thắt thông thường:</strong> Theo quy trình cũ, phải đợi quy hoạch xong, ra thông báo thu hồi đất thì mới được rục rịch đi đo đạc, đếm từng cái cây, mét vuông nhà của dân. Quá trình "kiểm đếm" này thường kéo dài nhiều năm, gây nghẽn toàn bộ dự án.</div>
+<div class="gt-bullet"><strong>Đặc quyền NQ55:</strong> Đối với các siêu dự án (quy mô từ 300ha trở lên), Khánh Hòa được phép cho người đi đo đạc, kiểm đếm <strong>ngay từ lúc mới có quy hoạch</strong>, chạy song song với các thủ tục khác.</div>
+<div class="gt-bullet"><strong>Ý nghĩa thực tế:</strong> Khi dự án chính thức được chốt, chính quyền đã có sẵn bộ hồ sơ đền bù chi tiết trên bàn. Quá trình giải phóng mặt bằng có thể rút ngắn được hàng năm trời. Đây là thỏi nam châm cực mạnh để thu hút các nhà đầu tư lớn, vì thứ họ sợ nhất chính là bị "chôn vốn" do kẹt giải phóng mặt bằng.</div>
+<p class="gt-p"><strong>Tóm lại:</strong> Khung pháp lý này tạo ra một sân chơi công bằng và thần tốc. <strong>Người dân</strong> được bảo vệ quyền tài sản (được tự thỏa thuận giá với dự án đô thị/thương mại). <strong>Nhà nước</strong> tập trung lo hạ tầng cốt lõi (khu phi thuế quan). Còn <strong>Nhà đầu tư lớn</strong> (>300ha) thì được hỗ trợ "đi tắt đón đầu" về thủ tục đo đạc để thi công siêu tốc.</p>
+<p class="gt-p"><strong>Cơ chế yêu cầu chủ đầu tư phải tự thỏa thuận nhận quyền sử dụng đất với người dân sẽ tác động thế nào đến mặt bằng giá đất tại Vân Phong và Ninh Hòa trong thời gian tới?</strong></p>
+<p class="gt-p">Cơ chế "tự thỏa thuận" theo Luật Đất đai 2024 phối hợp cùng các đặc quyền hành chính của Nghị quyết 55 đang tạo ra một bước ngoặt lớn, định hình lại toàn bộ cục diện thị trường bất động sản tại Khu kinh tế (KKT) Vân Phong và khu vực Ninh Hòa.</p>
+<p class="gt-p">Tác động của cơ chế này đến mặt bằng giá đất không diễn ra theo một chiều tăng hay giảm đồng loạt, mà phân hóa rất mạnh mẽ theo từng kịch bản và phân khúc đất thực tế:</p>
+<div class="gt-h4"><strong>1. Thiết lập "Mặt bằng giá mới" dựa trên giá trị thực</strong></div>
+<p class="gt-p">Khi chủ đầu tư bắt buộc phải thương thảo trực tiếp với người dân đối với các dự án thương mại dịch vụ và khu đô thị, mức giá đền bù/chuyển nhượng sẽ tiến sát với giá thị trường tự do.</p>
+<div class="gt-bullet"><strong>Tác động:</strong> Điều này triệt tiêu hoàn toàn khái niệm "đất quy hoạch giá rẻ". Người dân có tâm lý giữ đất chặt hơn, kỳ vọng cao hơn, từ đó đẩy mặt bằng giá sàn (giá đáy) của khu vực lên một nấc thang mới.</div>
+<div class="gt-bullet"><strong>Hệ quả lan <em>tỏa</em>:</strong> Khi giá đất trong vùng dự án đô thị tăng do cơ chế thỏa thuận, nó sẽ kéo theo giá đất ở các vùng phụ cận (đất vùng ven, đất tái định cư, đất dân hiện hữu) tăng theo quy luật nước lên thuyền lên.</div>
+<div class="gt-h4"><strong>2. Xu hướng "Săn lùng" đất dân có sẵn sổ đỏ</strong></div>
+<p class="gt-p">Bởi vì việc gom đất quy mô lớn làm dự án đô thị mới hiện nay mất nhiều thời gian và chi phí thỏa thuận hơn, các nhà đầu tư cá nhân và các doanh nghiệp quy mô vừa sẽ chuyển hướng.</p>
+<div class="gt-bullet"><strong>Tác động:</strong> Dòng tiền sẽ tập trung săn lùng các quỹ đất nằm ngoài ranh giới thu hồi bắt buộc của Nhà nước (các khu vực không thuộc khu phi thuế quan hay hạ tầng cốt lõi) nhưng sát cạnh các siêu dự án.</div>
+<div class="gt-bullet"><strong>Phân khúc hưởng lợi:</strong> Đất nền thổ cư, đất cận kề các khu công nghiệp (như KCN Dốc Đá Trắng tại Ninh Hòa) hoặc các trục đường tỉnh lộ đang quy hoạch sẽ chứng kiến lực cầu lớn do tính an toàn cao, không sợ bị thu hồi giá rẻ và có thể khai thác kinh doanh hoặc xây nhà cho thuê ngay.</div>
+<div class="gt-h4"><strong>3. Bản chất sự phân hóa dòng tiền: Thỏa thuận vs Thu hồi</strong></div>
+<p class="gt-p">Để đánh giá tác động chính xác, thị trường tại Ninh Hòa và Vân Phong sẽ chia làm hai mảng rõ rệt:</p>
+<p class="gt-p">| <strong>Phân khúc đất</strong> | <strong>Cơ chế áp dụng</strong> | <strong>Tác động lên mặt bằng giá</strong> |</p>
+<p class="gt-p">| --- | --- | --- |</p>
+<p class="gt-p">| <strong>Đất thuộc quy hoạch Đô thị, Thương mại - Dịch vụ</strong> | <strong>Tự thỏa thuận 100%</strong> | Giá tăng mạnh do người dân có quyền quyết định bán hoặc giữ. Doanh nghiệp phải trả đúng giá trị tương xứng mới gom được đất. |</p>
+<p class="gt-p">| <strong>Đất thuộc quy hoạch Khu phi thuế quan, Cảng biển, KCN, Hạ tầng</strong> | <strong>Nhà nước thu hồi bắt buộc</strong> | Giá đền bù theo bảng giá đất mới (sát giá thị trường nhưng có khung sẵn). Phân khúc này có rủi ro thanh khoản nếu mua đầu cơ vô tội vạ, nhưng lại là động lực thúc đẩy kinh tế vùng. |</p>
+<div class="gt-h4"><strong>4. Cảnh báo hiện tượng "Đóng băng cục bộ" dự án yếu năng lực</strong></div>
+<p class="gt-p">Một tác động ngược chiều mà người mua đất cần lưu ý: Cơ chế thỏa thuận là con dao hai lưỡi.</p>
+<div class="gt-bullet"><strong>Đối với doanh nghiệp yếu:</strong> Những chủ đầu tư "vốn mỏng", quen lướt sóng hoặc gom đất kiểu cũ sẽ không đủ tiềm lực tài chính để đi đàm phán từng hộ dân. Các dự án của họ sẽ rơi vào trạng thái "đứng hình" hoặc chậm triển khai do không thể giải phóng mặt bằng.</div>
+<div class="gt-bullet"><strong>Hệ quả với đất xung quanh:</strong> Nếu một dự án đô thị bị nghẽn do không thỏa thuận được với dân, vùng đất xung quanh dự án đó cũng sẽ bị mất đi động lực tăng giá từ hạ tầng chung, dẫn đến tình trạng chôn vốn của các nhà đầu tư ăn theo.</div>
+<div class="gt-tomlai">📌 Tầm nhìn thực chiến: Cơ chế này loại bỏ các cơn "sốt ảo" do đầu cơ dự án giấy, đồng thời chuyển dòng tiền về các quỹ đất có pháp lý an toàn. Tại Ninh Hòa và Vân Phong, mặt bằng giá đất sẽ tăng trưởng bền vững hơn, tập trung chủ yếu vào <strong>đất ở đô thị, đất dân cư hiện hữu quanh các trục hạ tầng lớn và đất ven các tổ hợp công nghiệp - cảng biển</strong> vốn là những nơi được hưởng lợi từ việc Nhà nước chủ động giải phóng mặt bằng thần tốc theo Nghị quyết 55.</div>
+  </div>
+</div>
+<div class="gt-card" id="gt-sapnhap">
+  <div class="gt-header" onclick="toggleGT('gt-sapnhap')">
+    <div class="gt-header-left">
+      <div class="gt-num">🗂️ NQ 202/2025 + NQ 1667 · Hiệu lực 01/07/2025</div>
+      <div class="gt-name">Sáp nhập hành chính — "Địa danh mới"</div>
+      <div class="gt-summary">Ninh Hòa: 27 → 8 đơn vị. Vạn Ninh: 13 → 5 xã. GCN cũ vẫn hợp lệ đầy đủ (Đ.256 LĐĐ 2024). Khi giao dịch từ 2026 dùng tên mới. Đăng ký biến động địa chỉ không có thời hạn 30 ngày bắt buộc.</div>
+    </div>
+    <div class="gt-chevron" id="chev-sapnhap">▾</div>
+  </div>
+  <div class="gt-body" id="body-sapnhap">
+<p class="gt-p">Ninh Hòa: 27 đơn vị → 8 (gộp phường/xã, đổi tên toàn bộ). Vạn Ninh: 13 → 5 xã. <strong>GCN cũ vẫn hợp lệ đầy đủ</strong> — căn cứ K.3 Đ.256 LĐĐ 2024, không bắt buộc đổi, không thời hạn. Khi giao dịch từ 2026: dùng tên đơn vị hành chính mới. Đăng ký biến động địa chỉ thửa đất <strong>không có thời hạn bắt buộc 30 ngày.</strong></p>
+<p class="gt-p">Đoạn thông tin này giải quyết triệt để <strong>nỗi lo pháp lý lớn nhất</strong> của người dân và giới đầu tư khi toàn bộ bản đồ hành chính của Khánh Hòa (đặc biệt là Ninh Hòa và Vạn Ninh) bị "xóa bài làm lại" sau đợt sáp nhập.</p>
+<p class="gt-p">Dưới đây là 3 bản chất cốt lõi và hệ quả thực tế trên thị trường:</p>
+<div class="gt-h4"><strong>1. Cú sốc "Xóa tên, gộp xã" và Bài toán định vị bản đồ</strong></div>
+<div class="gt-bullet"><strong>Thực tế:</strong> Việc Ninh Hòa giảm sốc từ 27 xuống còn 8 đơn vị hành chính (và Vạn Ninh từ 13 xuống 5) có nghĩa là hàng loạt địa danh cũ đã hoàn toàn biến mất trên bản đồ từ ngày 01/07/2025.</div>
+<div class="gt-bullet"><strong>Tác động thực chiến:</strong> Khi lập các báo cáo đánh giá thị trường đất nền hay tìm kiếm vị trí tiềm năng, việc khớp nối giữa "tên xã cũ trên sổ" và "tên phường/xã mới trên bản đồ quy hoạch" là bắt buộc. Nếu không nắm vững ranh giới sáp nhập, rất dễ tra cứu sai quy hoạch sử dụng đất (ví dụ: mua đất ở xã A cũ nhưng nay đã gộp vào xã B với quy hoạch hoàn toàn khác).</div>
+<div class="gt-h4"><strong>2. "Kim bài miễn tử" cho Sổ đỏ cũ</strong></div>
+<div class="gt-bullet"><strong>Thực tế:</strong> Luật Đất đai 2024 (Khoản 3 Điều 256) tạo ra một lớp bảo vệ tuyệt đối: Mọi Giấy chứng nhận (Sổ đỏ/Sổ hồng) mang tên xã/phường cũ vẫn giữ nguyên 100% giá trị pháp lý. Nhà nước không bắt buộc người dân phải ồ ạt đi đổi sổ mới.</div>
+<div class="gt-bullet"><strong>Tác động thực chiến:</strong> Điểm này giải tỏa hoàn toàn tâm lý hoang mang, sợ tài sản bị "treo" pháp lý. Đặc biệt, việc thay đổi địa chỉ do Nhà nước sáp nhập không bị áp dụng mức phạt "chậm đăng ký biến động trong 30 ngày". Đây là một thông điệp pháp lý cực kỳ đắt giá, có thể dùng làm "hook" truyền thông để khẳng định tính an toàn tuyệt đối cho người đang nắm giữ hoặc muốn mua đất nền tại khu vực này.</div>
+<div class="gt-h4"><strong>3. Luật chơi bắt buộc khi giao dịch hiện tại (từ 2026)</strong></div>
+<div class="gt-bullet"><strong>Thực tế:</strong> Mặc dù sổ cũ cất trong tủ vẫn hợp lệ, nhưng một khi đã mang ra <strong>giao dịch (mua bán, sang tên, thế chấp)</strong> ở thời điểm hiện tại, toàn bộ hợp đồng công chứng và các thủ tục cập nhật bắt buộc phải sử dụng tên đơn vị hành chính mới.</div>
+<div class="gt-bullet"><strong>Tác động thực chiến:</strong> Quá trình sang tên hiện nay sẽ đi kèm bước đính chính lại địa chỉ thửa đất vào trang 3, trang 4 của sổ (hoặc cấp sổ mới với tên xã/phường mới). Việc này diễn ra tự nhiên trong quy trình sang tên, không gây phát sinh chi phí phạt hay rào cản pháp lý nào.</div>
+<p class="gt-p"><strong>Tóm lại:</strong> Đoạn thông tin này là một "liều thuốc an thần". Sự thay đổi địa giới hành chính khổng lồ này không làm đứt gãy tính pháp lý của bất động sản. Nó chỉ đòi hỏi sự cẩn trọng hơn trong khâu tra cứu quy hoạch và tính chính xác về mặt hành chính khi thiết lập các hồ sơ, hợp đồng giao dịch ở thời điểm hiện tại.</p>
+  </div>
+</div>
+<div class="gt-card" id="gt-uudai">
+  <div class="gt-header" onclick="toggleGT('gt-uudai')">
+    <div class="gt-header-left">
+      <div class="gt-num">💎 Điều 7, NQ 55/2022 · Ngưỡng vốn nhà đầu tư chiến lược</div>
+      <div class="gt-name">Ưu đãi nhà đầu tư chiến lược KKT</div>
+      <div class="gt-summary">Ngưỡng vốn: KĐT ≥300ha = 25.000 tỷ | TMDV = 12.000 tỷ | R&D/CN cao = 6.000 tỷ | Sân bay/cảng = 2.300 tỷ. Ưu đãi: thuế R&D 150% | luồng xanh hải quan | cấn trừ tiền đất khi ứng trước ≥200 tỷ.</div>
+    </div>
+    <div class="gt-chevron" id="chev-uudai">▾</div>
+  </div>
+  <div class="gt-body" id="body-uudai">
+<p class="gt-p">Ngưỡng vốn để được công nhận "nhà đầu tư chiến lược" — chỉ khi đạt ngưỡng này mới được hưởng các ưu đãi đặc biệt bên dưới</p>
+<p class="gt-p">📌 <strong>Tại sao cần biết điều này?</strong> Khi tư vấn khách về triển vọng KKT, đây là lý do các tập đoàn lớn (Sungroup, Vingroup, Masterise...) mới đủ điều kiện vào — không phải nhà đầu tư nhỏ lẻ. Quy mô dự án quyết định tốc độ triển khai và hạ tầng xung quanh.</p>
+<p class="gt-p">Bảng thông tin hình chính là <strong>"bộ lọc đại bàng"</strong> của Khu kinh tế Vân Phong. Nói cách khác, đây là mức "vé vào cửa" bằng tài chính cực kỳ khắt khe mà Nhà nước đặt ra để chọn mặt gửi vàng, trao các đặc quyền của Nghị quyết 55.</p>
+<p class="gt-p">Nội dung này mang 3 thông điệp và ý nghĩa thực chiến lớn nhất đối với thị trường:</p>
+<div class="gt-h4"><strong>1. Lời tuyên chiến với "Dự án treo"</strong></div>
+<p class="gt-p">Nhìn vào dòng đầu tiên của bảng, để làm một dự án khu đô thị, doanh nghiệp phải chứng minh được Vốn đầu tư từ <strong>25.000 <em>tỷ</em> đồng</strong> (hơn 1 tỷ USD) và Vốn điều lệ phải có sẵn ít nhất <strong>10.000 <em>tỷ</em> đồng</strong>.</p>
+<div class="gt-bullet"><strong>Ý nghĩa thực tế:</strong> Đây là rào cản tài chính khổng lồ, loại bỏ hoàn toàn các doanh nghiệp "vốn mỏng", các chủ đầu tư tay không bắt giặc chuyên xin dự án để phân lô bán nền hoặc xí phần rồi để hoang. Chỉ những tập đoàn tư nhân top đầu quốc gia (như Vingroup, Sun Group, Masterise...) mới có thể lọt qua khe cửa này. Khi họ đã vào, dự án chắc chắn sẽ được làm thật và làm rất nhanh.</div>
+<div class="gt-h4"><strong>2. Ưu tiên hạ tầng nền tảng trước, đô thị sau</strong></div>
+<p class="gt-p">Nếu tinh ý nhìn vào sự chênh lệch của các ngưỡng vốn, bạn sẽ thấy rõ chiến lược phát triển của tỉnh:</p>
+<div class="gt-bullet">Mức vốn yêu cầu cho <strong>Sân bay, cảng biển loại I</strong> là thấp nhất (chỉ từ 2.300 tỷ đồng), tiếp theo là Khu phi thuế quan, năng lượng sạch, R&D (6.000 tỷ đồng). Trong khi đó, các dự án <strong>Khu đô thị, Thương mại - Tài chính</strong> lại yêu cầu mức vốn cao gấp 2 đến 4 lần.</div>
+<div class="gt-bullet"><strong>Ý nghĩa thực tế:</strong> Nút thắt này thể hiện tư duy phát triển bền vững: Ưu tiên lót ổ cho các dự án hạ tầng giao thông, logistics và công nghệ cao để kéo dòng tiền, tạo ra việc làm và thu hút chuyên gia/công nhân đến làm việc. Từ cái gốc đó, các khu đô thị lớn mới được phép xây dựng để phục vụ nhu cầu an cư thực tế, tránh tình trạng xây đô thị "ma" không ai ở.</div>
+<div class="gt-h4"><strong>3. "Bảo chứng vàng" cho tư vấn và đầu tư bất động sản</strong></div>
+<p class="gt-p">Như ghi chú màu đỏ trong ảnh đã nhấn mạnh, bảng thông tin này là một công cụ tư vấn cực kỳ sắc bén:</p>
+<div class="gt-bullet"><strong>Đối với nhà đầu tư nhỏ lẻ/đất dân hiện hữu:</strong> Không thể chen chân trực tiếp vào quy mô của nhà đầu tư chiến lược. Cách chơi khôn ngoan nhất là mua đất nền, đất dân sinh nằm sát vách các siêu dự án này.</div>
+<div class="gt-bullet"><strong>Giá trị niềm tin:</strong> Khi bạn biết một dự án cạnh mảnh đất của mình đã được giao cho một "nhà đầu tư chiến lược", bạn có thể hoàn toàn yên tâm về sự bứt phá hạ tầng. Hàng chục ngàn tỷ đồng sẽ được đổ vào làm đường sá, điện nước, cảnh quan trong thời gian ngắn, và hệ quả tất yếu là giá đất vùng ven xung quanh dự án đó (như tại Ninh Hòa, Vạn Ninh) sẽ được hưởng lợi trực tiếp từ sự lột xác này.</div>
+<p class="gt-p">💡 <strong>3 ưu đãi cụ thể khi đạt ngưỡng nhà đầu tư chiến lược:</strong></p>
+<p class="gt-p">(1) <strong>Thuế R<em>&</em>D:</strong> Chi phí R&D được tính 150% vào khấu trừ thuế TNDN — nghĩa là bỏ ra 100đ chi phí, được trừ thuế tương đương 150đ chi phí.</p>
+<p class="gt-p">(2) <strong>Hải quan ưu tiên:</strong> Hàng XNK của dự án được thông quan nhanh, không xếp hàng chờ xử lý thông thường.</p>
+<p class="gt-p">(3) <strong>Cấn trừ tiền đất:</strong> Nhà đầu tư tự bỏ tiền ứng trước xây hạ tầng (tối thiểu 200 tỷ) + bồi thường GPMB → được <strong>trừ thẳng vào tiền sử dụng đất / tiền thuê đất</strong> phải nộp. Về bản chất là Nhà nước cho "xây trước, trả sau" bằng tiền đất.</p>
+<p class="gt-p">Đoạn thông tin này bóc tách <strong>3 "vũ khí tài chính cốt lõi"</strong> mà Trung ương dùng để chiêu mộ các tập đoàn tỷ đô (nhà đầu tư chiến lược) vào Khu kinh tế. Nó không chỉ là những dòng chữ trên giấy, mà là những đặc quyền có thể quy đổi ra hàng nghìn tỷ đồng tiền mặt và thời gian vàng ngọc cho doanh nghiệp.</p>
+<p class="gt-p">Dưới đây là ý nghĩa thực chiến và sự cao tay của từng chính sách:</p>
+<div class="gt-h4"><strong>1. Ưu đãi Thuế R<em>&</em>D (150%) — Thỏi nam châm hút công nghệ cao</strong></div>
+<div class="gt-bullet"><strong>Bản chất:</strong> Chính sách này biến chi phí nghiên cứu và phát triển (R&D) thành một "tấm khiên chắn thuế" khổng lồ. Doanh nghiệp càng đầu tư nhiều vào chất xám, họ càng phải nộp ít thuế Thu nhập doanh nghiệp (TNDN) cho Nhà nước.</div>
+<div class="gt-bullet"><strong>Ý nghĩa thực tế:</strong> Đây là thính thơm để thu hút dòng vốn chất lượng cao (năng lượng sạch, y tế công nghệ cao, công nghiệp R&D) thay vì chỉ thu hút các ngành gia công giá rẻ gây ô nhiễm. Những tập đoàn công nghệ lớn khi đổ bộ vào (đặc biệt tại khu vực Nam Vân Phong - Ninh Hòa) sẽ mang theo đội ngũ chuyên gia, kỹ sư thu nhập cao, từ đó kích hoạt nhu cầu về các khu đô thị sinh thái, dịch vụ tiện ích cao cấp xung quanh.</div>
+<p class="gt-p">2<strong>. Luồng xanh Hải quan — Tối ưu hóa "Thời gian là Vàng"</strong></p>
+<div class="gt-bullet"><strong>Bản chất:</strong> Được miễn xếp hàng, miễn các khâu kiểm tra thủ công rườm rà tại cảng. Hàng hóa của các dự án chiến lược được cấp thẻ "VIP" để thông quan tự động và siêu tốc.</div>
+<div class="gt-bullet"><strong>Ý nghĩa thực tế:</strong> Đối với các siêu nhà máy sản xuất linh kiện, điện tử hay thiết bị năng lượng, việc đứt gãy chuỗi cung ứng dù chỉ 1 ngày cũng tiêu tốn hàng triệu USD. Đặc quyền này giúp họ đảm bảo đúng tiến độ xuất - nhập khẩu. Nó cũng là đòn bẩy trực tiếp để biến cảng trung chuyển quốc tế Vân Phong thành một trung tâm logistics sầm uất, cạnh tranh sòng phẳng với các cảng biển lớn trong khu vực.</div>
+<div class="gt-h4"><strong>3. Cấn trừ tiền đất — Cơ chế "<em>Win-Win</em>" giải quyết điểm nghẽn hạ tầng</strong></div>
+<p class="gt-p">Đây là ưu đãi mang tính đột phá và thực dụng nhất, đặc biệt đối với các đại gia bất động sản và phát triển khu công nghiệp:</p>
+<div class="gt-bullet"><strong>Bản chất:</strong> Nhà nước đang thiếu ngân sách để tự đi đền bù giải tỏa và làm đường nội khu. Do đó, Nhà nước cho phép doanh nghiệp tự bỏ tiền túi ra ứng trước (tối thiểu 200 tỷ đồng) để bồi thường cho dân và xây dựng hạ tầng công cộng. Đổi lại, số tiền ứng trước này sẽ được trừ thẳng vào tiền sử dụng đất/thuê đất mà doanh nghiệp phải nộp cho Nhà nước sau này.</div>
+<div class="gt-bullet"><strong>Ý nghĩa thực tế:</strong></div>
+<div class="gt-bullet"><strong>Về phía Nhà nước:</strong> Không cần bỏ vốn mồi mà vẫn có ngay quỹ đất sạch và hệ thống điện, đường, trường, trạm hiện đại.</div>
+<div class="gt-bullet"><strong>Về phía Doanh nghiệp:</strong> Họ chủ động được 100% tiến độ dự án. Thay vì nộp tiền đất cho Nhà nước rồi chờ đợi mòn mỏi Nhà nước đi làm hạ tầng, họ tự làm để đẩy nhanh tốc độ bán hàng, rút ngắn thời gian chôn vốn.</div>
+<p class="gt-p"><strong>Tóm lại:</strong> 3 ưu đãi này là minh chứng cho tư duy "trải thảm đỏ" kiểu mới: <strong>Thực tế, đo đếm được bằng tiền và giải quyết trúng "nỗi đau" của doanh nghiệp.</strong> Nhờ những cơ chế này, tốc độ san lấp mặt bằng, xây dựng nhà máy và hình thành các đại đô thị tại Khu kinh tế Vân Phong sẽ diễn ra thần tốc hơn rất nhiều so với chu kỳ phát triển của các khu vực thông thường.</p>
+  </div>
+</div>
+</div>
+
+<div class="section-title">Nền tảng pháp lý tác động đến thị trường Ninh Hòa
+  <div class="section-sub">PHẦN 1 — Kim chỉ nam điều hướng dòng tiền</div>
+</div>
+<div class="gt-card" id="gt-phan1">
+  <div class="gt-header" onclick="toggleGT('gt-phan1')">
+    <div class="gt-header-left">
+      <div class="gt-num">📊 Tổng hợp tác động</div>
+      <div class="gt-name">Khung pháp lý → Thị trường đất nền Ninh Hòa</div>
+      <div class="gt-summary">Cách 4 chính sách lớn (NQ09 + NQ55 + QĐ298 + LĐĐ2024) cộng hưởng tạo ra làn sóng đầu tư thực tế tại Ninh Hòa 2026.</div>
+    </div>
+    <div class="gt-chevron" id="chev-phan1">▾</div>
+  </div>
+  <div class="gt-body" id="body-phan1">
+<div class="gt-h4"><strong>PHẦN 1: NỀN TẢNG PHÁP LÝ <em>&</em> QUY HOẠCH — "KIM CHỈ NAM" ĐIỀU HƯỚNG DÒNG TIỀN</strong></div>
+<p class="gt-p">Sự lột xác của thị trường bất động sản Ninh Hòa hiện nay không đến từ những cơn sốt ảo mang tính chu kỳ, mà được bảo chứng bởi một hệ thống pháp lý và quy hoạch đồng bộ ở cấp độ cao nhất. Những quyết sách này đang trực tiếp định hình khu vực nào được bơm tiền, khu vực nào đối mặt với rủi ro thu hồi, và đâu là tọa độ an toàn để cất trữ tài sản.</p>
+<div class="gt-h4"><strong>1. Khung pháp lý tối cao <em>&</em> Cơ chế "Đại bàng" (NQ 09, NQ 55 <em>&</em> QĐ 298)</strong></div>
+<div class="gt-bullet"><strong>Bảo chứng chính trị và Bản đồ gốc:</strong> Nghị quyết 09 của Bộ Chính trị ban hành đã chấm dứt hoàn toàn lịch sử 20 năm "quy hoạch treo", đặt Vân Phong vào vị thế trọng điểm quốc gia. Tiếp nối đó, Quyết định 298 của Thủ tướng đóng vai trò là "bản đồ gốc", chốt hạ ranh giới 150.000 ha và chia rõ hai cực phát triển: Bắc Vân Phong (du lịch) và Nam Vân Phong - Ninh Hòa (công nghiệp nặng & logistics). Mọi giao dịch đầu tư hiện nay đều đã có hệ tọa độ rõ ràng để đối chiếu.</div>
+<div class="gt-bullet"><strong>Hộp công cụ Nghị quyết 55:</strong> Quốc hội đã trao cho Khánh Hòa 5 "đặc quyền" vượt trội để thu hút nhà đầu tư chiến lược. Với yêu cầu nguồn vốn khắt khe (từ 2.300 tỷ đến 25.000 tỷ đồng), kết hợp cùng 3 ưu đãi tài chính then chốt (Chi phí R&D tính 150% vào thuế, Luồng xanh hải quan, và Cấn trừ tiền bồi thường vào tiền sử dụng đất), dòng tiền khổng lồ đang được các tập đoàn lớn bơm trực tiếp vào quá trình san lấp mặt bằng và triển khai dự án tại khu vực Nam Vân Phong.</div>
+<div class="gt-h4"><strong>2. Lộ trình đô thị hóa: Động lực chuyển đổi quỹ đất (QĐ 318)</strong></div>
+<div class="gt-bullet">Quyết định 318 của Thủ tướng Chính phủ vạch ra lộ trình thăng hạng hành chính khắt khe: Ninh Hòa bắt buộc phải đạt tiêu chuẩn Đô thị loại III vào năm 2030 và trở thành Thành phố vào năm 2040.</div>
+<div class="gt-bullet"><strong>Tác động thị trường:</strong> Để đạt được mục tiêu này, khu vực cần mở rộng thêm <strong>3.140 ha đất đô thị</strong>. Đây là dư địa khổng lồ và là động lực tăng trưởng cốt lõi cho phân khúc đất nền vùng ven. Quá trình nâng cấp hạ tầng để đáp ứng tiêu chí đô thị sẽ biến hàng loạt diện tích đất nông nghiệp, đất xen kẹt tại Ninh Hòa thành đất ở đô thị (ODT), đẩy mặt bằng giá trị lên những nấc thang mới trong trung và dài hạn.</div>
+<div class="gt-h4"><strong>3. Bộ lọc từ Luật Đất đai 2024: "Thỏa thuận" vs "Thu hồi"</strong></div>
+<p class="gt-p">Luật Đất đai 2024 kết hợp cùng các đặc quyền của tỉnh đang phân hóa mạnh mẽ dòng tiền đầu tư:</p>
+<div class="gt-bullet"><strong>Cơ chế tự thỏa thuận:</strong> Đối với các dự án đô thị và thương mại dịch vụ, chủ đầu tư bắt buộc phải tự thỏa thuận mua lại quyền sử dụng đất của người dân theo giá thị trường. Điều này thiết lập một mặt bằng giá mới, bảo vệ tối đa quyền lợi của người dân có đất nằm trong quy hoạch đô thị.</div>
+<div class="gt-bullet"><strong>Thu hồi bắt buộc:</strong> Nhà nước chỉ trực tiếp thu hồi đất cho các khu phi thuế quan và hạ tầng khu công nghiệp cốt lõi (điển hình như tại Phân khu 19). Sự rạch ròi này giúp nhà đầu tư dễ dàng nhận diện và né tránh các "vùng cấm", đồng thời tự tin gom quỹ đất thổ cư tại các khu vực an toàn.</div>
+<div class="gt-h4"><strong>4. Biến động Hành chính: Xóa bỏ tâm lý hoang mang</strong></div>
+<div class="gt-bullet">Việc Ninh Hòa sáp nhập từ 27 đơn vị hành chính xuống còn 8 đơn vị (hiệu lực từ 01/07/2025) làm thay đổi hoàn toàn cục diện bản đồ, điển hình là việc sáp nhập 9 xã thành Phường Đông Ninh Hòa (nằm trọn trong KKT).</div>
+<div class="gt-bullet"><strong>Xác nhận pháp lý:</strong> Căn cứ theo Luật Đất đai 2024, toàn bộ Giấy chứng nhận (Sổ đỏ/Sổ hồng) ghi tên đơn vị hành chính cũ vẫn giữ nguyên 100% giá trị pháp lý và không bắt buộc phải đổi sổ mới. Nền tảng pháp lý vững chắc này đã giải tỏa hoàn toàn tâm lý e ngại của người mua, đảm bảo tính thông suốt và an toàn cho thanh khoản của thị trường ở thời điểm hiện tại.</div>
+  </div>
+</div>
+
+<div class="section-title">Phân tích Thị trường Ninh Hòa
+  <div class="section-sub">Đọc để hiểu tọa độ đầu tư, rủi ro quy hoạch và chiến lược từng phân khu</div>
+</div>
+<div class="gt-grid">
+<div class="gt-card" id="gt-nh-tongquan">
+  <div class="gt-header" onclick="toggleGT('gt-nh-tongquan')">
+    <div class="gt-header-left">
+      <div class="gt-num">🏖️ Ninh Hòa</div>
+      <div class="gt-name">Tổng quan vị trí chiến lược Ninh Hòa</div>
+      <div class="gt-summary">Cửa ngõ phía Nam KKT — vai trò CN + cảng biển + đô thị ven biển. P. Đông Ninh Hòa (9 xã cũ gộp lại), KCN liên hoàn, cao tốc nút giao.</div>
+    </div>
+    <div class="gt-chevron" id="chev-nh-tongquan">▾</div>
+  </div>
+  <div class="gt-body" id="body-nh-tongquan">
+<div class="gt-h4"><strong>Tổng quan Ninh Hòa trong KKT</strong></div>
+<div class="gt-h4"><strong>Nam Vân Phong — vai trò công nghiệp + cảng biển + đô thị ven biển</strong></div>
+<div class="gt-h4"><strong>Vị trí chiến lược</strong></div>
+<div class="gt-h4"><strong>Cửa ngõ phía Nam KKT</strong></div>
+<p class="gt-p"><strong>9 đơn vị hành chính cũ phía Đông Bắc TX Ninh Hòa thuộc KKT — nay gộp thành P. Đông Ninh Hòa (trong KKT), Xã Bắc Ninh Hòa (một phần). Tiếp giáp trực tiếp cao tốc KH–BMT và QL1.</strong></p>
+<p class="gt-p">Đoạn thông tin ngắn gọn này thực chất là một bản tóm tắt hoàn hảo về <strong>lợi thế địa tô và điểm rơi dòng tiền</strong> của thị trường bất động sản Ninh Hòa.</p>
+<p class="gt-p">Khi bóc tách dưới góc độ phân tích thị trường và tìm kiếm các điểm nhấn (hook) truyền thông đắt giá, thông tin này mang 3 thông điệp chiến lược:</p>
+<div class="gt-h4"><strong>1. Vị thế "Cửa ngõ" – Đón đầu toàn bộ luồng sinh khí</strong></div>
+<div class="gt-bullet"><strong>Bản chất: </strong>Nam Vân Phong (thuộc Ninh Hòa) là trung tâm công nghiệp, năng lượng và logistics. Việc là "cửa ngõ phía Nam" có nghĩa Ninh Hòa là trạm trung chuyển bắt buộc của mọi dòng giao thương, nguồn vốn và con người đi từ Nha Trang hay phía Nam đổ ra KKT.</div>
+<div class="gt-bullet"><strong>Giá trị thực chiến:</strong> Đây là bảo chứng cho sự bùng nổ của bất động sản dân sinh và thương mại. Chuyên gia, kỹ sư và hàng vạn công nhân làm việc tại KKT Vân Phong sẽ có xu hướng chọn các khu vực cửa ngõ sầm uất tại Ninh Hòa làm nơi an cư, giải trí thay vì vào sâu bên trong các khu công nghiệp bụi bặm.</div>
+<div class="gt-h4"><strong>2. "Quyền lực hóa" bản đồ qua việc sáp nhập (Lên Phường)</strong></div>
+<div class="gt-bullet"><strong>Bản chất:</strong> Việc gom 9 đơn vị hành chính cũ thành Phường Đông Ninh Hòa (nằm trọn trong KKT) là một bước đi nén nguồn lực cực mạnh. Thay vì rải rác ngân sách cho 9 xã nhỏ, nay toàn bộ nguồn vốn sẽ dồn để nâng cấp cơ sở hạ tầng cho một siêu Phường trọng điểm.</div>
+<div class="gt-bullet"><strong>Giá trị thực chiến:</strong> Từ đất "xã" lên đất "phường" đồng nghĩa với việc tiêu chuẩn đô thị, đường sá, điện nước phải được nâng cấp lên mức cao hơn. Đối với phân khúc đất nền dân cư, đây là câu chuyện chuyển đổi từ "nông thôn" sang "thành thị", tạo ra biên độ tăng giá mạnh mẽ. Các quỹ đất thuộc Phường Đông Ninh Hòa (mới) sẽ là những rổ hàng "nóng" nhất vì vừa mang mác đô thị, vừa nằm trong vùng lõi được hưởng ưu đãi thuế và đầu tư của KKT.</div>
+<div class="gt-h4"><strong>3. Giao điểm Vàng <em>Logistics</em> (Cao tốc <em>&</em> Quốc lộ)</strong></div>
+<div class="gt-bullet"><strong>Bản chất:</strong> Nút giao giữa Quốc lộ 1A (trục Bắc - Nam) và Cao tốc Khánh Hòa - Buôn Ma Thuột (trục Đông - Tây nối Tây Nguyên xuống biển) tạo ra một ngã tư chiến lược về vận tải.</div>
+<div class="gt-bullet"><strong>Giá trị thực chiến:</strong> Hàng hóa nông sản, vật liệu từ Tây Nguyên muốn xuất khẩu qua Cảng quốc tế Vân Phong bắt buộc phải đi qua trục này. Các quỹ đất bám trục hoặc nằm trong bán kính 2-3km quanh nút giao này sở hữu tiềm năng khổng lồ để phát triển bất động sản dòng tiền: kho bãi, trung tâm trung chuyển logistics, trạm dừng nghỉ, và các dịch vụ hậu cần.</div>
+<p class="gt-p"><strong>Tóm lại:</strong> Nhìn vào đoạn thông tin này, Ninh Hòa không chỉ đơn thuần là một vùng ven đang phát triển. Sự kết hợp giữa <strong>vị trí cửa ngõ - quy chế đô thị mới (Phường Đông Ninh Hòa) - mạng lưới cao tốc</strong> biến khu vực này thành "tọa độ vàng" cho cả nhu cầu ở thực của giới chuyên gia KKT lẫn bài toán khai thác thương mại, kho bãi. Dữ liệu này cung cấp những chất liệu cực kỳ sắc bén để xây dựng các báo cáo phân tích rổ hàng đất nền hoặc làm kịch bản truyền thông nhấn mạnh vào tính thanh khoản của khu vực.</p>
+<div class="gt-h4"><strong>5 phân khu · QĐ ký 6/2025</strong></div>
+<div class="gt-h4"><strong>PK14 <em>→</em> PK19 (bỏ PK18)</strong></div>
+<p class="gt-p">Tổng diện tích ~22.100 ha. Dân số mục tiêu 2040: ~156.000 người. Cơ cấu: PK14 = du lịch biển · PK15 = làng xóm/CN dự trữ · PK16 = đô thị sinh thái · PK17 = CN + cảng · PK19 = cảng + KCN tập trung.</p>
+<p class="gt-p">Đoạn thông tin này là <strong>"chìa khóa bóc tách rổ hàng"</strong> cực kỳ đắt giá. Việc các Quyết định phê duyệt quy hoạch 5 phân khu này vừa được ký vào tháng 6/2025 có nghĩa là tính pháp lý đã hoàn thiện 100%. Ranh giới chỗ nào làm nhà máy, chỗ nào xây biệt thự, chỗ nào giữ lại khu dân cư đã được đóng đinh.</p>
+<p class="gt-p">Đây là nguồn chất liệu tuyệt vời để thiết kế các bản báo cáo thị trường chuyên sâu hoặc chuyển hóa thành các "lời bình" (hook) sắc bén trên các kênh truyền thông mạng xã hội, đánh trúng tâm lý nhà đầu tư. Dưới đây là ý nghĩa thực chiến của bức tranh quy hoạch này:</p>
+<div class="gt-h4"><strong>1. Bản đồ luân chuyển dòng tiền (Cơ cấu 5 Phân khu)</strong></div>
+<p class="gt-p">Quy hoạch chia hệ sinh thái 22.100 ha này thành một vòng tuần hoàn khép kín, phân bổ rõ dòng tiền đầu tư sẽ đi về đâu:</p>
+  </div>
+</div>
+<div class="gt-card" id="gt-nh-5pk">
+  <div class="gt-header" onclick="toggleGT('gt-nh-5pk')">
+    <div class="gt-header-left">
+      <div class="gt-num">🗂️ Ninh Hòa</div>
+      <div class="gt-name">5 Phân khu Ninh Hòa — Phân tích đầu tư từng phân khu</div>
+      <div class="gt-summary">PK14 (Dốc Lết - du lịch) · PK15 (Sinh thái - logistics) · PK16 (Đô thị thương mại) · PK17 (CN-cảng khép kín) · PK19 (Cảng công nghiệp - Vùng cấm đầu tư nhà ở)</div>
+    </div>
+    <div class="gt-chevron" id="chev-nh-5pk">▾</div>
+  </div>
+  <div class="gt-body" id="body-nh-5pk">
+<div class="gt-bullet"><strong>Cỗ máy in tiền (PK17 <em>&</em> PK19 - Cảng và KCN tập trung): </strong>Đây là thỏi nam châm hút FDI và các tập đoàn lớn bám sát mặt nước. Khu vực này sẽ tạo ra hàng chục vạn việc làm, là động lực tăng trưởng cốt lõi không thể thay thế.</div>
+<div class="gt-bullet"><strong>Tọa<em> độ giao dịch đất nền sôi động nhất (PK15 - Làng xóm </em>&</strong><strong> Công nghiệp dự trữ):</strong> Đây chính là "điểm nóng" thanh khoản. Việc quy hoạch giữ lại khu dân cư hiện hữu kết hợp với quỹ đất công nghiệp dự trữ nghĩa là khu vực này sẽ tập trung đông đảo công nhân và người dân địa phương. Nhu cầu về đất nền thổ cư chia lô, xây nhà trọ, mặt bằng kinh doanh bán lẻ ở PK15 sẽ bùng nổ sớm nhất.</div>
+<div class="gt-bullet"><strong>Không gian sống của giới tinh hoa (PK14 <em>&</em> PK16 - Du lịch biển <em>&</em> Đô thị sinh thái): </strong>Nếu PK15 dành cho số đông, thì PK14 và PK16 là sản phẩm dành cho các chuyên gia quốc tế, quản lý cấp cao làm việc tại cảng và KCN, cùng dòng khách du lịch. Đất tại đây sẽ thiên về các dự án biệt thự, nghỉ dưỡng cao cấp ven biển hoặc bám các mảng xanh sinh thái.</div>
+<div class="gt-h4"><strong>2. Bài toán bùng nổ dân số và Sức ép nguồn cung</strong></div>
+<div class="gt-bullet"><strong>Con số biết nói: </strong>Đặt mục tiêu dân số lên tới ~156.000 người vào năm 2040 cho riêng 5 phân khu này là một sự gia tăng cơ học khổng lồ.</div>
+<div class="gt-bullet"><strong>Ý nghĩa thực tế:</strong> Hơn 15 vạn người này sẽ cần nhà để ở, chợ để mua sắm, trường học cho con cái. Sức ép về nhu cầu lưu trú sẽ đẩy giá trị bất động sản dân sinh (đặc biệt tại PK15 và rìa PK16) tăng tịnh tiến theo thời gian. Mọi so sánh về giá hay biên độ lợi nhuận hàng tháng đều có thể lấy dữ kiện gia tăng dân số cơ học này làm bệ phóng để thuyết phục khách hàng.</div>
+<div class="gt-h4"><strong>3. Khung pháp lý an toàn tuyệt đối</strong></div>
+<div class="gt-bullet"><strong>Thời điểm vàng:</strong> Việc quy hoạch phân khu (tỷ lệ 1/2000) đã được ký duyệt (6/2025) cung cấp một tấm khiên pháp lý vững chắc. Các nhà đầu tư hiện nay đã có thể cầm bản đồ quy hoạch rọi thẳng vào từng thửa đất để biết chính xác lô đất mình mua có bị dính vào quy hoạch KCN (PK17, PK19) hay được an toàn nằm trong khu dân cư (PK15, PK16).</div>
+<p class="gt-p"><strong>Góc nhìn tổng quan:</strong> Đối với việc đánh giá thị trường đất nền khu vực Nam Vân Phong (đặc biệt là Ninh Hòa), 5 phân khu này vẽ ra một kịch bản đầu tư rất nét. Khách hàng vốn mỏng, thích an toàn và thanh khoản nhanh thì nhắm vào <strong>PK15.</strong> Khách hàng vốn lớn, tầm nhìn dài hạn muốn lãi bằng lần thì đón đầu các trục đường kết nối giữa <strong>PK16 (đô thị sinh thái)</strong> và <strong>PK19 (cảng, KCN)</strong>. Những số liệu về cơ cấu phân khu này chính là điểm tựa vững chắc để tạo ra các nội dung tư vấn mang tính chuyên gia và thuyết phục nhất.</p>
+<div class="gt-h4"><strong>Đô thị hóa</strong></div>
+<div class="gt-h4"><strong>Loại IV <em>→</em> Loại III 2030 <em>→</em> TP 2040</strong></div>
+<p class="gt-p">Mở rộng 3.140 ha đất đô thị. Đường DT1A mở rộng 42m (đang GPMB 2026). Cao tốc KH–BMT thông 22km đầu từ 28/5/2026 (thông xe kỹ thuật từ 19/12/2025, sớm 6 tháng) — điểm đầu tại nút giao QL26B × QL1, P. Ninh Hòa.</p>
+<p class="gt-p">Đoạn thông tin này chính là <strong>"bằng chứng thép"</strong> về sự lột xác thực tế của Ninh Hòa, chuyển từ những bản quy hoạch trên giấy thành các công trường đang thi công và những cột mốc đã hoàn thành.</p>
+<p class="gt-p">Đây là bức tranh sinh động nhất về một khu vực đang bước vào chu kỳ tăng trưởng "nóng" với 3 điểm nhấn cốt lõi sau:</p>
+<div class="gt-h4"><strong>1. Cú bứt phá về Quỹ đất và Lộ trình đô thị hóa</strong></div>
+<div class="gt-bullet"><strong>Bản chất:</strong> Việc nâng cấp từ Đô thị loại IV lên loại III (2030) và Thành phố (2040) bắt buộc Ninh Hòa phải mở rộng không gian đô thị. Con số <strong>mở rộng 3.140 ha đất đô thị</strong> là một sự gia tăng khổng lồ.</div>
+<div class="gt-bullet"><strong>Ý nghĩa thực chiến:</strong> Hơn 3.000 ha này chủ yếu sẽ được chuyển đổi từ đất nông nghiệp, đất trồng cây lâu năm sang đất ở đô thị (ODT) và thương mại dịch vụ. Đối với thị trường bất động sản, sự chuyển đổi mục đích sử dụng đất này chính là động lực tạo ra biên độ lợi nhuận lớn nhất. Những khu vực vùng ven trước đây sẽ nhanh chóng được "khoác áo" đô thị, kéo theo mặt bằng giá mới.</div>
+<div class="gt-h4"><strong>2. "Người thật, việc thật" từ Hạ tầng giao thông</strong></div>
+<p class="gt-p">Thông tin này xóa bỏ hoàn toàn tâm lý e ngại về "quy hoạch treo":</p>
+<div class="gt-bullet"><strong>Cao tốc KH–BMT thông 20km đầu (từ 28/5/2026):</strong> Đây là thông tin chấn động. Việc đoạn đầu tiên từ nút giao QL26B × QL1 (Phường Ninh Hòa) đã chính thức thông xe tạo ra cú hích tâm lý cực mạnh. Nó biến Ninh Hòa ngay lập tức trở thành tâm điểm kết nối thực tế giữa kinh tế biển và Tây Nguyên, dòng xe cộ và logistics đã bắt đầu chạy qua đây.</div>
+<div class="gt-bullet"><strong>Đường DT1A đang giải phóng mặt bằng (2026):</strong> Việc mở rộng lên 42m đang được thực thi ngay trong năm nay cho thấy dòng tiền ngân sách đã đổ về. Các trục đường lớn luôn là "đại lộ thương mại", đẩy giá trị khai thác kinh doanh của các quỹ đất bám mặt đường lên cao đột biến.</div>
+<div class="gt-h4"><strong>3. Chất liệu vàng cho Phân tích và Truyền thông</strong></div>
+<p class="gt-p">Với những dữ kiện mang tính thời sự cao, đây là những thông tin vô giá để ứng dụng ngay vào công việc chuyên môn:</p>
+<div class="gt-bullet"><strong>Xây dựng báo cáo thị trường:</strong> Sự kiện thông xe 20km cao tốc vào cuối tháng 5/2026 và việc đền bù DT1A là nguyên nhân trực tiếp để giải thích cho bất kỳ sự biến động giá cả hoặc thanh khoản nào của khu vực Ninh Hòa ở thời điểm hiện tại. Nó là dữ liệu hoàn hảo để so sánh sức nóng của thị trường so với các tháng trước đó.</div>
+<div class="gt-bullet"><strong>Phát triển nội dung đa phương tiện:</strong> Những con số như "Cao tốc đã thông", "Mở rộng 42m" hay "3.140 ha lên bệ phóng" là những "hook" (điểm neo thu hút) cực kỳ bén để triển khai các video ngắn (Reels) hoặc bài viết mạng xã hội. Khách hàng luôn bị thu hút bởi những dự án đã có xe chạy thực tế và máy xúc đang làm việc.</div>
+<div class="gt-h4"><strong>Lưu ý tư vấn</strong></div>
+<div class="gt-h4"><strong>PK19 = cảng, không phải đất ở</strong></div>
+<p class="gt-p">PK19 (Nam Vân Phong, 9.945 ha) gần như toàn bộ là đất CN kho bãi (1.698 ha). Đất ở chỉ 39,60 ha. GPMB đang tiến hành (~500/3.300 hộ đã giao đất). Không phù hợp tư vấn đầu tư đất ở.</p>
+<p class="gt-p">Đoạn thông tin này chính là <strong>"biển báo nguy hiểm"</strong> và là một kỹ năng phân tích bắt buộc phải có để bảo vệ nhà đầu tư khỏi những cạm bẫy quy hoạch tại Nam Vân Phong.</p>
+<p class="gt-p">Đằng sau những con số khô khan này là 3 chiến lược thực chiến sắc bén để bạn định hướng dòng tiền và xây dựng nội dung tư vấn:</p>
+<div class="gt-h4"><strong>1. Cảnh báo "Bẫy đất rẻ" tại Phân khu 19</strong></div>
+<div class="gt-bullet"><strong>Bản chất:</strong> Với quy mô khổng lồ gần 10.000 ha, nhưng chỉ có <strong>39,60 ha đất ở (chiếm chưa tới 0,4%)</strong>, phần còn lại là công nghiệp và kho bãi. Hơn nữa, tiến độ giải phóng mặt bằng đang diễn ra (500/3.300 hộ đã giao đất) chứng tỏ Nhà nước đang thu hồi bắt buộc khu vực này để giao cho các tập đoàn làm hạ tầng công nghiệp.</div>
+<div class="gt-bullet"><strong>Chiến lược tư vấn:</strong> Phải tuyệt đối gạch tên PK19 khỏi danh mục đầu tư đất nền an cư hay đầu cơ chờ tăng giá. Bất kỳ ai chào mời "đất nền giá rẻ" tại PK19 đều mang rủi ro bị thu hồi trắng theo đơn giá đền bù của Nhà nước.</div>
+<div class="gt-h4"><strong>2. Điểm nhấn đắt giá cho Báo cáo thị trường</strong></div>
+<div class="gt-bullet">Khi tổng hợp các số liệu về pháp lý và biến động thị trường đất nền Ninh Hòa để lập báo cáo, tiến độ giải tỏa 500/3.300 hộ dân tại PK19 là một <strong>con số biết nói</strong>.</div>
+<div class="gt-bullet">Nó minh chứng cho việc các siêu dự án công nghiệp không nằm trên giấy mà đang được thi công thực tế với tốc độ rất nhanh. Dữ liệu này giúp bản báo cáo của bạn có sức nặng hơn, khẳng định Nam Vân Phong đang thực sự trở thành đại công trường, từ đó củng cố niềm tin của khách hàng vào tiềm năng của toàn vùng.</div>
+<div class="gt-h4"><strong>3. "Vũ khí" bóc <em>phốt</em> cho Nội dung Mạng xã hội</strong></div>
+<div class="gt-bullet">Sự thật trần trụi về PK19 là một "mỏ vàng" để khai thác các tuyến nội dung cảnh báo trên nền tảng Facebook hoặc kịch bản video ngắn (Reels).</div>
+<div class="gt-bullet"><strong>Cách triển khai:</strong> Bạn có thể sử dụng những tiêu đề giật tít đánh thẳng vào tâm lý tò mò và sợ mất tiền như: "Sự thật khuất tất về những lô đất giá rẻ tại Phân khu 19 Nam Vân Phong" hoặc "Tuyệt đối đừng mua đất khu vực này nếu không muốn mất trắng". Tuyến nội dung "bắt bệnh" quy hoạch này luôn có tỷ lệ giữ chân (retention rate) rất cao, giúp định vị bạn là một chuyên gia am hiểu pháp lý, có tâm và đáng tin cậy trong mắt tệp khách hàng đầu tư.</div>
+<p class="gt-p"><strong>Nghệ thuật điều hướng dòng tiền:</strong> Thông tin này chặn đứng dòng vốn vào PK19, nhưng lại mở ra cơ hội chốt sale ở nơi khác. Khi một lượng khổng lồ 3.300 hộ dân tại PK19 bị di dời, họ sẽ được đền bù tiền mặt và có nhu cầu mua đất tái định cư. Đồng thời, hàng vạn công nhân tại PK19 cũng cần chỗ ở. Lúc này, bạn chỉ cần điều hướng sự chú ý của khách hàng sang <strong>Phân khu 15 (Làng xóm <em>&</em> Công nghiệp dự trữ) hoặc Phân khu 16 (Đô thị sinh thái)</strong> kế cận — nơi sẽ đón trọn dòng dân cư khổng lồ này đổ về.</p>
+<p class="gt-p">Bảng dữ liệu trong hình chính <strong>là "bản đồ định vị dòng vốn"</strong> và là thước đo tốc độ lột xác công nghiệp tại Ninh Hòa. Nó bóc tách rõ ràng khu vực nào đang được bơm tiền thực tế và khu vực nào đứng ngoài cuộc chơi.</p>
+<p class="gt-p">Dưới góc độ tổng hợp dữ liệu để thiết lập các báo cáo thị trường sắc nét, hay xây dựng các "điểm neo" (hook) truyền thông mạng xã hội, bảng thông tin này cung cấp 3 góc nhìn cực kỳ đắt giá:</p>
+<div class="gt-h4"><strong>1. Sự phân hóa ranh giới "Đặc quyền" (Trong vs Ngoài KKT)</strong></div>
+<div class="gt-bullet"><strong>Bản chất:</strong> Dòng cuối cùng của bảng chỉ đích danh KCN Ninh Xuân nằm ngoài ranh giới Khu kinh tế (KKT), đồng nghĩa với việc không được hưởng các cơ chế đặc thù siêu việt của Nghị quyết 55 (như miễn giảm thuế R&D, cấn trừ tiền đất, luồng xanh hải quan). Ngược lại, các KCN như Ninh Thọ, Ninh Diêm, Ninh Thủy nằm trong KKT sẽ được trải thảm đỏ vươn lên thần tốc.</div>
+<div class="gt-bullet"><strong>Góc nhìn thị trường:</strong> Dòng tiền của các "đại bàng" FDI chắc chắn sẽ ưu tiên đổ vào các KCN trong KKT để tối ưu chi phí. Đây là một chất liệu "cảnh tỉnh" tuyệt vời để đưa vào nội dung tư vấn: Không phải cứ mua đất gần KCN ở Ninh Hòa là sẽ thắng nhanh, mà phải xem KCN đó có thẻ "VIP" của Vân Phong hay không.</div>
+<div class="gt-h4"><strong>2. Điểm nổ thanh khoản thực tế ngay trong năm 2026</strong></div>
+<div class="gt-bullet">Bản chất: Các mốc thời gian hiện tại là minh chứng rõ nhất cho việc quy hoạch không còn nằm trên giấy. KCN Ninh Thọ vừa được phê duyệt chính thức (QĐ 660/2026). Đáng chú ý nhất, siêu dự án KCN Dốc Đá Trắng (của "ông lớn" Viglacera) đặt mục tiêu <strong>vận hành luôn phân khu 1 (100ha) ngay trong năm nay (2026).</strong></div>
+<div class="gt-bullet"><strong>Chất liệu truyền thông (<em>Social Media Hooks</em>):</strong> Đây là thông tin bùng nổ, có tính thời sự cao nhất để làm các video Reels hoặc bài viết Facebook. Những tiêu đề giật tít như: "KCN Dốc Đá Trắng chạy ngay 100ha trong 2026: Đất nền Vạn Hưng, Bắc Ninh Hòa rục rịch đón sóng" sẽ đánh trúng tâm lý thích tính chân thực, thấy "máy xúc đang cào đất" của nhà đầu tư. Cú hích từ 100ha vận hành này sẽ kích hoạt nhu cầu thực về nhà ở, ăn uống, dịch vụ quanh khu vực gần như ngay lập tức.</div>
+<div class="gt-h4"><strong>3. Hình hài của "Đại công trường" Nam Vân Phong</strong></div>
+<div class="gt-bullet"><strong>Bản chất: </strong>Khi ghép các mảnh ghép KCN Ninh Thọ (318ha), KCN Ninh Diêm (~200ha) và KCN Ninh Thủy (~150ha) lại với nhau, chúng ta thấy một cụm công nghiệp liên hoàn khổng lồ rộng gần 700ha án ngữ tại P. Đông Ninh Hòa và Xã Bắc Ninh Hòa.</div>
+<div class="gt-bullet"><strong>Chiến lược bủa lưới:</strong> Lượng kỹ sư, công nhân đổ về cụm lõi này trong vài năm tới sẽ tạo ra một áp lực khổng lồ lên hạ tầng dân sinh. Việc phân tích cụm liên hoàn 3 KCN này sẽ củng cố vững chắc luận điểm: Các quỹ đất ở dân cư kề cận chính là "rốn" hút dòng tiền dài hạn. Người nắm giữ đất ở đây không chỉ chờ tăng lãi vốn, mà hoàn toàn có thể xây dựng mô hình khai thác dòng tiền (nhà trọ chuyên gia, siêu thị mini, dịch vụ giải trí) rất bền vững.</div>
+<p class="gt-p">Bức ảnh này chính là <strong>"vũ khí chốt sale"</strong> và là xương sống dữ liệu hoàn hảo nhất cho bất kỳ báo cáo thị trường hay chiến dịch truyền thông nào về đất nền Ninh Hòa ngay tại thời điểm cuối tháng 6/2026 này.</p>
+<p class="gt-p">Bảng tiến độ này không vẽ ra viễn cảnh xa xôi, mà đưa ra <strong>những cột mốc thực tế</strong> đang đếm ngược từng ngày. Dưới đây là 3 thông điệp cốt lõi bạn có thể chắt lọc từ timeline này để đưa vào các kịch bản đánh giá thị trường:</p>
+<div class="gt-h4"><strong>1. Xóa bỏ hoàn toàn mác "Quy hoạch treo" (Sức mạnh của việc đã hoàn thành)</strong></div>
+<div class="gt-bullet"><strong>Bằng chứng thép:</strong> Việc Hầm Phượng Hoàng và 22km đầu tiên của cao tốc KH-BMT đã chính thức thông xe và khai thác (từ 28/5/2026) là một cú hích cực mạnh vào niềm tin thị trường. Đặc biệt, chi tiết "hoàn thành sớm hơn 6 tháng so với kế hoạch" cho thấy năng lực thi công và quyết tâm giải ngân cực kỳ đáng nể của địa phương.</div>
+<div class="gt-bullet"><strong>Góc độ thị trường:</strong> Khách hàng đầu tư luôn sợ mua đất theo "quy hoạch trên giấy". Nhưng với hạ tầng đã hiện hữu, điểm nghẽn địa hình đã được thông (Hầm Phượng Hoàng) và xe cộ đang chạy thực tế thế này, rủi ro chôn vốn do hạ tầng chậm trễ đã được gỡ bỏ. Dòng tiền sẽ tự tin đổ về các nút giao cao tốc tại P. Ninh Hòa.</div>
+<div class="gt-h4"><strong>2. "Điểm nóng" thời sự ngay lúc này: Chiến dịch 90 ngày GPMB</strong></div>
+<div class="gt-bullet"><strong>Điểm nghẽn đang được tháo gỡ:</strong> Tuyến đường ven biển Vạn Lương - Ninh Hòa (quy mô 2.000 tỷ, lộ giới 30m) đang bị chậm tiến độ giải ngân (chỉ đạt ~28,69% vào 10/2025). Tuy nhiên, thông tin đắt giá và mang tính thời sự nhất là <strong>tỉnh đã phát động 90 ngày cao điểm GPMB (từ 25/6 đến 22/9/2026)</strong>.</div>
+<div class="gt-bullet"><strong>Chất liệu vàng cho nội dung:</strong> Ngay tại thời điểm hiện tại, đây là "hook" tuyệt vời để lên các kịch bản Reels/Facebook mang tính cấp bách. Việc chính quyền đang ra quân quyết liệt trong 3 tháng tới sẽ dọn sạch mặt bằng, đẩy nhanh tiến độ dự án. Quỹ đất bám theo trục đường ven biển này chuẩn bị đón một nhịp tăng giá mới khi máy móc thi công ồ ạt trở lại sau ngày 22/9.</div>
+<div class="gt-h4"><strong>3. Lộ trình thăng hạng giá trị được bảo chứng</strong></div>
+<div class="gt-bullet"><strong>Bản chất:</strong> Mục tiêu Ninh Hòa đạt Đô thị loại III vào năm 2030 với việc "mở rộng 3.140 ha đất đô thị" đóng vai trò là kim chỉ nam cho dài hạn.</div>
+<div class="gt-bullet"><strong>Ứng dụng:</strong> Mọi sự phát triển hạ tầng (cao tốc, đường ven biển) ở các mốc thời gian trên đều phục vụ cho mục tiêu lõi 2030 này. Những khu vực đang là đất nông nghiệp, đất xen kẹt ven các trục giao thông mới chính là dư địa khổng lồ sẽ được chuyển đổi để đắp vào con số 3.140 ha đất đô thị kia.</div>
+<p class="gt-p"><strong>Tóm lược chiến lược:</strong> Timeline này cung cấp một kịch bản thuyết phục hoàn hảo: <strong>Quá khứ đã làm được (Thông xe 22km cao tốc) - Hiện tại đang hành động quyết liệt (90 ngày cao điểm GPMB) - Tương lai định hình rõ ràng (Đô thị loại III 2030)</strong>. Bạn hoàn toàn có thể cắt nhỏ 3 luồng thông tin này để làm thành một chuỗi video ngắn hoặc bài viết bám sát diễn biến thị trường, tạo độ uy tín và thúc đẩy sự khẩn trương của khách hàng.</p>
+<div class="gt-h4"><strong>5 Phân khu Ninh Hòa (trong KKT)</strong></div>
+<p class="gt-p">Tất cả QĐ phê duyệt ký tháng 6/2025</p>
+<p class="gt-p">Bức ảnh vẽ ra một kịch bản đầu tư hoàn toàn trái ngược với "đại công trường" Phân khu 19 mà chúng ta vừa bàn.</p>
+<p class="gt-p">Nếu PK19 là sân chơi của các nhà máy sản xuất, thì PK14 chính là <strong>"Thủ phủ nghỉ dưỡng và an cư cao cấp"</strong> của toàn bộ khu vực Nam Vân Phong. Đây là một mỏ vàng thực sự cho các báo cáo thị trường phân khúc đất nền ven biển và bất động sản dòng tiền.</p>
+<p class="gt-p">Dưới đây là 3 điểm nhấn chiến lược bóc tách từ bảng dữ liệu này:</p>
+<div class="gt-h4"><strong>1. "Vùng an toàn" tuyệt đối cho đất dân (Tiểu khu 14D)</strong></div>
+<div class="gt-bullet"><strong>Bản chất:</strong> Bảng dữ liệu chỉ rõ Tiểu khu 14D được quy hoạch giữ lại chức năng <strong>"Dân cư đô thị hiện hữu"</strong> với quỹ đất ở đô thị (ODT) lên tới <strong>427,31 ha</strong>.</div>
+<div class="gt-bullet"><strong>Góc nhìn đầu tư:</strong> Tình trạng <strong>"GPMB: Chưa"</strong> (Chưa giải phóng mặt bằng) kết hợp với chức năng "hiện hữu" là một tín hiệu cực kỳ an toàn. Nó khẳng định người dân mua đất thổ cư trong vùng lõi 14D sẽ không lo bị Nhà nước thu hồi trắng để giao cho tập đoàn làm dự án. Nơi đây sẽ phát triển theo dạng chỉnh trang đô thị, đường sá mở rộng đến đâu, giá đất dân tự do sẽ tăng phi mã đến đó.</div>
+<div class="gt-h4"><strong>2. "Hậu phương" xa xỉ của giới chuyên gia (Vị trí kề cận PK17)</strong></div>
+<div class="gt-bullet"><strong>Bản chất:</strong> Hãy nhìn vào dòng Ranh giới: Phía Nam của PK14 giáp trực tiếp với <strong>PK17</strong> (như chúng ta đã phân tích trước đó, PK17 là KCN và Cảng biển).</div>
+<div class="gt-bullet"><strong>Chiến lược khai thác:</strong> Hàng vạn kỹ sư, chuyên gia nước ngoài làm việc tại khói bụi KCN PK17 chắc chắn sẽ không ở đó. Họ sẽ di chuyển ngược lên phía Bắc vài kilomet để tận hưởng không gian sống tại <strong>Tiểu khu 14C (Đô thị TMDV + du lịch ven biển Dốc Lết)</strong>. Quỹ đất hỗn hợp (87,55 ha) và đất dịch vụ (90,20 ha) tại đây chính là điểm rơi hoàn hảo để xây dựng khách sạn, nhà hàng, căn hộ dịch vụ cao cấp phục vụ nhóm khách hàng rủng rỉnh tiền này.</div>
+<div class="gt-h4"><strong>3. Cuộc chơi "Lên đời" nhờ Siêu hạ tầng đường bộ</strong></div>
+<div class="gt-bullet"><strong>Bản chất:</strong> Các trục đường chính được quy hoạch trong PK14 có quy mô cực khủng: ĐT.651D (rộng 48–60m), ĐT.652B (26–60m) và đặc biệt là mặt cắt <strong>MC 1-1 rộng tới 90m</strong>.</div>
+<div class="gt-bullet"><strong>Cơ hội và rủi ro:</strong> Với tình trạng GPMB chưa diễn ra, khu vực này sắp tới sẽ đón những đợt đền bù và mở đường cực lớn. Sẽ có những quỹ đất bị thu hồi làm đường, nhưng những lô đất bám sát vành đai các đại lộ 60m - 90m này sau khi quy hoạch xong sẽ biến thành những cỗ máy in tiền thực sự nhờ kinh doanh thương mại mặt tiền.</div>
+<p class="gt-p">Bức ảnh phân tích Phân khu 15 (PK15 – Tây Ninh An) trong file image_0a76f6.png cung cấp một mảnh ghép mang màu sắc hoàn toàn khác biệt cho tổng thể thị trường.</p>
+<p class="gt-p">Nếu PK19 là "đại công trường công nghiệp", PK14 là "thủ phủ nghỉ dưỡng đô thị", thì PK15 được định vị rõ ràng là <strong>"Vành đai sinh thái và Hành lang trung chuyển"</strong>.</p>
+<p class="gt-p">Dưới góc độ phân tích để đưa vào báo cáo thị trường chuyên sâu, thông tin này vạch ra 3 định hướng dòng tiền cực kỳ rõ nét:</p>
+<div class="gt-h4"><strong>1. Định hình phân khúc "Ngách": Nhà vườn <em>&</em> Sinh thái nông nghiệp</strong></div>
+<div class="gt-bullet"><strong>Bản chất quy hoạch:</strong> Với quỹ đất nông nghiệp khổng lồ (1.478,37 ha) và tính chất "không phải đô thị mật độ cao", đi kèm dân số mục tiêu rất thấp (~14.000 người vào 2040), khu vực này không dành cho bài toán phân lô bán nền đô thị hay xây chung cư.</div>
+<div class="gt-bullet"><strong>Ứng dụng thực chiến:</strong> Đây là "thánh địa" cho tệp khách hàng yêu thích mô hình <strong>Bất động sản sinh thái, <em>Farmstay</em>, hoặc Nhà vườn (Second Home)</strong>. Tính trạng "GPMB: Chưa" và quỹ "Đất làng xóm" (302,61 ha) đảm bảo sự an toàn pháp lý cho các khu dân cư hiện hữu. Dòng vốn đổ vào đây sẽ thiên về việc săn tìm các quỹ đất có diện tích lớn, đơn giá cực rẻ để làm nơi nghỉ dưỡng ven đô hoặc phát triển nông nghiệp công nghệ cao.</div>
+<div class="gt-h4"><strong>2. Giá trị lõi nằm ở "Hành lang Giao thông <em>&</em> Logistics"</strong></div>
+<p class="gt-p">Dù là vùng nông thôn sinh thái, nhưng hạ tầng đi qua PK15 lại thuộc hàng "khủng" nhất:</p>
+<div class="gt-bullet"><strong>Bản chất:</strong> Sở hữu mặt cắt Quốc lộ 1A rộng 66m, đường tỉnh lộ ĐT.651D và 651G rộng 42m, và chỉ cách Cao tốc CT.01 khoảng 3km. Đặc biệt, tuyến ĐT.651D đóng vai trò kết nối trực tiếp Vịnh Dốc Lết và cảng Hòn Khói.</div>
+<div class="gt-bullet"><strong>Ứng dụng thực chiến:</strong> Đất nền bên trong làng xóm có thể rẻ, nhưng <strong>quỹ đất bám mặt tiền các trục đại lộ này lại là "gà đẻ trứng vàng"</strong>. Với vị trí án ngữ luồng giao thông đổ về cảng biển và khu du lịch, các quỹ đất mặt tiền tại PK15 cực kỳ phù hợp để phát triển bất động sản dòng tiền như: Trạm dừng nghỉ, hệ thống kho bãi logistics trung chuyển, bãi đỗ xe, hoặc trạm cung ứng xăng dầu/dịch vụ phụ trợ.</div>
+<div class="gt-h4"><strong>3. Tầm nhìn "Của để dành" với Đất dự trữ Công nghiệp</strong></div>
+<div class="gt-bullet"><strong>Bản chất:</strong> Bảng dữ liệu hé lộ một chi tiết nhỏ nhưng quan trọng: có <strong>130,66 ha đất dự trữ Công nghiệp</strong>.</div>
+<div class="gt-bullet"><strong>Ứng dụng thực chiến:</strong> Khác với công nghiệp nặng ở Nam Vân Phong, quỹ đất dự trữ này thường hướng đến các cụm công nghiệp nhẹ, chế biến nông lâm thủy sản hoặc kho xưởng sạch. Nó tạo ra một dư địa tăng trưởng dài hạn cho giá đất làng xóm kế cận, khi tương lai sẽ có một lượng công nhân nhất định đổ về khu vực này làm việc.</div>
+<p class="gt-p">Bảng dữ liệu của Phân khu 16 (PK16 – Đông Bắc Ninh Hòa) - là một mảnh ghép hoàn hảo để đưa vào báo cáo thị trường, tạo nên bức tranh toàn cảnh đa dạng cho khu vực Nam Vân Phong.</p>
+<p class="gt-p">Nếu PK14 là thủ phủ nghỉ dưỡng, PK15 là vành đai sinh thái - logistics, thì PK16 mang dáng dấp của một <strong>"Giao điểm Thương mại và Không gian sống xanh"</strong>.</p>
+<p class="gt-p">Dưới đây là 3 luận điểm phân tích cốt lõi có thể tích hợp ngay vào phần đánh giá cục diện các phân khu trong báo cáo:</p>
+<div class="gt-h4"><strong>1. "<em>Tọa</em> độ vàng" Thương mại tại Tiểu khu 16B</strong></div>
+<div class="gt-bullet"><strong>Bản chất:</strong> Quy hoạch chỉ đích danh Tiểu khu 16B phát triển Thương mại - Dịch vụ (TMDV) ngay tại nút giao giữa đường tỉnh ĐT.651D và Quốc lộ 1A.</div>
+<div class="gt-bullet"><strong>Giá trị thực chiến:</strong> Trục ĐT.651D chính là tuyến đường huyết mạch kết nối trực tiếp Vịnh Dốc Lết và cụm cảng Hòn Khói ra Quốc lộ 1A. Nút giao này sẽ trở thành phễu đón toàn bộ lượng khách du lịch và lưu lượng xe chở hàng hóa. Các quỹ đất bám quanh bán kính nút giao này là "gà đẻ trứng vàng" cho mô hình bất động sản thương mại: trạm dừng nghỉ, showroom, siêu thị, hoặc trung tâm trung chuyển hàng hóa. Đây là rổ hàng có tính thanh khoản và giá trị khai thác cao nhất tại PK16.</div>
+<div class="gt-h4"><strong>2. Quỹ đất an toàn và "Của để dành" khổng lồ</strong></div>
+<div class="gt-bullet"><strong>Sự an toàn từ đất Làng xóm:</strong> Với <strong>515,24 ha đất làng xóm</strong>, lớn gấp hơn 6 lần đất ở đô thị (84,32 ha), và tình trạng GPMB là "Chưa", PK16 tiếp tục là một vùng trũng thu hút dòng tiền mua đất thổ cư dân sinh. Pháp lý khu vực này cực kỳ an toàn, phù hợp cho nhà đầu tư chuộng sự bền vững.</div>
+<div class="gt-bullet"><strong>Tầm nhìn từ quỹ đất muối:</strong> Việc sở hữu tới <strong>349,84 ha đất làm muối</strong> được quy hoạch làm "dự trữ chuyển đổi dài hạn" là một ẩn số thú vị. Khi quá trình đô thị hóa dọc Quốc lộ 1A bùng nổ và các quỹ đất lõi cạn kiệt, gần 350 ha này sẽ là dư địa khổng lồ để tỉnh chuyển đổi mục đích sử dụng (có thể thành các khu đô thị mới hoặc cụm dịch vụ). Đầu tư đất nền sát các khu vực dự trữ này mang lại biên độ lợi nhuận cực cao trong tầm nhìn trung và dài hạn.</div>
+<div class="gt-h4"><strong>3. Động lực hạ tầng dài hạn từ Ga Hòa Huỳnh</strong></div>
+<div class="gt-bullet"><strong>Bản chất:</strong> Quy hoạch giữ nguyên và dự trữ nâng cấp Ga Hòa Huỳnh lên khổ lồng 1435mm.</div>
+<div class="gt-bullet"><strong>Giá trị thực chiến:</strong> Khổ đường 1435mm là tiêu chuẩn của đường sắt tốc độ cao và đường sắt liên vận quốc tế. Dù đây là câu chuyện của tương lai, nhưng việc xác định rõ chức năng này trên bản đồ quy hoạch giúp PK16 nắm giữ một lợi thế cạnh tranh độc tôn về vận tải hành khách và hàng hóa bằng đường sắt so với các phân khu khác. Nó củng cố vững chắc hơn chức năng đô thị và dịch vụ của toàn vùng.</div>
+<p class="gt-p">Bảng dữ liệu của Phân khu 17 (PK17 – Bắc Hòn Hèo) trong file image_0a7b34.png chính là mảnh ghép bùng nổ nhất để đưa vào trung tâm bản báo cáo thị trường của bạn.</p>
+<p class="gt-p">Nếu PK19 là "công xưởng", PK14 là "nơi nghỉ dưỡng", thì PK17 được quy hoạch để trở thành <strong>"Trái tim Công nghiệp - Đô thị khép kín"</strong> của toàn KKT Vân Phong. Đây là nơi dòng tiền từ sản xuất và dòng tiền từ tiêu dùng dân sinh giao thoa mạnh nhất.</p>
+<p class="gt-p">Dưới đây là 3 điểm nhấn chiến lược bóc tách từ bảng dữ liệu này để đưa thẳng vào báo cáo:</p>
+<div class="gt-h4"><strong>1. Hệ sinh thái "Sống - Làm việc" hoàn hảo (Khác biệt hoàn toàn với PK19)</strong></div>
+<div class="gt-bullet"><strong>Bản chất:</strong> Chức năng của PK17 là sự kết hợp "3 trong 1": Đô thị + Công nghiệp + Hậu cần cảng. Trái ngược với PK19 (chỉ có chưa tới 40ha đất ở), PK17 sở hữu quỹ đất an cư và dịch vụ khổng lồ: <strong>219,66 ha đất ở (ODT)</strong>, <strong>187,07 ha đất hỗn hợp</strong> và <strong>133,72 ha đất dịch vụ</strong>.</div>
+<div class="gt-bullet"><strong>Định hướng đầu tư:</strong> Đây là thông tin giải cứu và điều hướng dòng tiền tuyệt vời. Toàn bộ lượng chuyên gia, kỹ sư và công nhân làm việc tại cụm cảng và KCN sẽ dồn về đây để sinh sống, tiêu dùng. Quỹ đất ODT và đất hỗn hợp tại PK17 chính là "mỏ vàng" để phát triển các khu dân cư mới, chung cư, nhà ở xã hội và hệ thống nhà trọ cao cấp.</div>
+<div class="gt-h4"><strong>2. Điểm nổ hiện tại: KCN Ninh Thọ <em>&</em> Quỹ đất dự trữ khổng lồ</strong></div>
+<div class="gt-bullet"><strong>Chất xúc tác 2026:</strong> Điểm sáng chói nhất của bảng dữ liệu là việc <strong>KCN Ninh Thọ (318 ha) đã chính thức được phê duyệt theo QĐ 660/2026</strong>. Việc có quyết định chính thức trong năm nay tạo ra một cú hích cực mạnh về thanh khoản, vì các nhà đầu tư biết máy móc chuẩn bị tiến vào thi công thực tế.</div>
+<div class="gt-bullet"><strong>Tầm nhìn dài hạn:</strong> Bên cạnh 219,98 ha đất công nghiệp hiện hữu, PK17 còn găm một quỹ <strong>đất dự trữ công nghiệp lên tới 766,86 ha</strong>. Con số này bảo chứng cho một chu kỳ tăng trưởng kéo dài hàng thập kỷ. Việc thu hút mục tiêu <strong>~51.000 người</strong> về đây vào năm 2040 là hoàn toàn khả thi dựa trên quy mô công nghiệp khổng lồ này.</div>
+<div class="gt-h4"><strong>3. Các "Siêu đại lộ" <em>&</em> Bất động sản Hậu cần</strong></div>
+<div class="gt-bullet"><strong>Bản chất hạ tầng:</strong> Quy mô các trục đường chính tại PK17 vượt trội hoàn toàn so với các phân khu khác: <strong>QL26B rộng tới 80m</strong>, <strong>ĐT.651B rộng 75m</strong> và <strong>ĐT.652B rộng 60m</strong>.</div>
+<div class="gt-bullet"><strong>Giá trị thực chiến:</strong> Những mặt cắt đường rộng 60 - 80m không sinh ra để dành cho xe máy đi chợ, mà được thiết kế để chịu tải cho những đoàn xe container siêu trường siêu trọng ra vào cụm cảng và KCN.</div>
+<div class="gt-bullet"><strong>Chiến lược rổ hàng:</strong> Các lô đất bám sát vành đai 3 siêu đại lộ này sở hữu lợi thế tuyệt đối để làm Kho bãi (Logistics), bãi đậu xe container, xưởng sửa chữa máy móc, hoặc các tổ hợp thương mại dịch vụ quy mô lớn phục vụ công nghiệp. Trạng thái <strong>"GPMB: Chưa"</strong> đồng nghĩa với việc vẫn còn cơ hội để săn lùng các quỹ đất sát các trục đường này trước khi Nhà nước cắm mốc mở đường.</div>
+<p class="gt-p">Bảng dữ liệu của Phân khu 19 (PK19 – Nam Vân Phong) trong file image_0a7e7e.png là một mảnh ghép mang tính chất "chốt hạ" để hoàn thiện bản báo cáo thị trường phân khúc đất nền Ninh Hòa.</p>
+<p class="gt-p">Nếu đưa vào báo cáo, đây sẽ là phần thiết lập ranh giới rủi ro cực đại và bóc tách bài toán nguồn cầu khổng lồ cho các khu vực lân cận. Dưới đây là 3 góc độ phân tích chuyên sâu:</p>
+<div class="gt-h4"><strong>1. Xác lập "Vùng cấm" đối với Đất nền <em>An</em> cư</strong></div>
+<div class="gt-bullet"><strong>Nghịch lý quy mô:</strong> Với tổng diện tích khổng lồ lên tới 9.945 ha, nhưng quỹ đất ở (ODT) chỉ vỏn vẹn <strong>39,60 ha</strong> — một tỷ lệ gần như vô hình. Đi kèm với đó là quy mô dân số dự kiến đến tận năm 2040 chỉ dừng ở mức ~7.000 người.</div>
+<div class="gt-bullet"><strong>Góc nhìn báo cáo:</strong> Dữ liệu này chứng minh bằng những con số khô khan nhất rằng PK19 là một "pháo đài công nghiệp và cảng biển" thuần túy. Cần đưa ra một cảnh báo đanh thép trong báo cáo: Mọi giao dịch săn tìm đất nền tự do tại các địa bàn thuộc Phường Đông Ninh Hòa (bao gồm các xã Ninh Diêm, Ninh Thủy, Ninh Phước cũ nằm trong ranh giới này) đều đối mặt với tỷ lệ rủi ro thu hồi trắng cực kỳ cao.</div>
+<div class="gt-h4"><strong>2. Nguồn cầu khổng lồ từ "Làn sóng Tái định cư"</strong></div>
+<div class="gt-bullet"><strong>Con số biết nói:</strong> Chi tiết đắt giá và mang tính thời sự nhất trong bảng là tiến độ giải phóng mặt bằng (GPMB: Đang) với bài toán cụ thể: <strong>~500/3.300 hộ đã giao đất, còn ~2.800 hộ chờ</strong>.</div>
+<div class="gt-bullet"><strong>Chuyển hóa rủi ro thành cơ hội:</strong> Hơn 3.300 hộ gia đình này khi bị di dời sẽ đi đâu? Họ sẽ cầm một lượng tiền đền bù rất lớn và buộc phải tìm kiếm quỹ đất mới để thiết lập lại cuộc sống. Dòng tiền đền bù và nhu cầu ở thực này sẽ lập tức dội sang các phân khu kề cận có quỹ đất ở an toàn (GPMB: Chưa) như PK15, PK16, và đặc biệt là PK17. Trong báo cáo, đây chính là luận điểm sắc bén nhất để giải thích cho nguyên nhân tăng trưởng thanh khoản và sự sôi động tại các vùng giáp ranh PK19.</div>
+<div class="gt-h4"><strong>3. Chân dung "Trái tim Logistics" của Nam Vân Phong</strong></div>
+<div class="gt-bullet"><strong>Sức mạnh hạ tầng:</strong> Chức năng Cảng biển + KCN tập trung được minh chứng bằng 1.698,52 ha đất công nghiệp kho bãi (chiếm gần 63% cơ cấu) và năng lực đón tàu siêu trọng (tàu rời lên tới 300.000 tấn, tàu lỏng 150.000 tấn).</div>
+<div class="gt-bullet"><strong>Tác động vĩ mô:</strong> Thông số cảng biển này định vị Nam Vân Phong trên bản đồ hàng hải quốc tế, chứ không đơn thuần là một bến bốc xếp nội địa. Khi đưa vào báo cáo, thông tin này giúp củng cố tầm nhìn vĩ mô: Sự bùng nổ của chuỗi cung ứng và vận tải biển tại đây sẽ kéo theo một hệ sinh thái dịch vụ, chuyên gia khổng lồ, làm bệ phóng vững chắc cho mặt bằng giá bất động sản của toàn bộ thị xã Ninh Hòa trong thập kỷ tới.</div>
+<p class="gt-p">Đến đây, chúng ta đã thu thập và mổ xẻ đủ các mảnh ghép của cả 5 phân khu trọng điểm (từ PK14 đến PK19), cùng với hệ thống pháp lý và tiến độ hạ tầng giao thông thực tế.</p>
+<p class="gt-p">Bảng dữ liệu trong file chính là <strong>"bộ khung tài chính và biểu giá sàn"</strong> cho toàn bộ công tác đền bù giải tỏa tại Ninh Hòa. Nó chứng minh các chiến dịch giải phóng mặt bằng (GPMB) không chỉ là khẩu hiệu suông, mà đang được hậu thuẫn bằng những dòng tiền thật và chính sách cực kỳ quyết liệt ngay trong năm 2026.</p>
+<p class="gt-p">Đây là nguồn dữ liệu hoàn hảo để chúng ta đắp thịt cho <strong>Phần 3</strong> của bản báo cáo thị trường. Dưới đây là 3 điểm nhấn chiến lược được bóc tách từ bảng này:</p>
+<div class="gt-h4"><strong>1. Chính sách "bôi trơn" bằng tiền mặt <em>&</em> Kích thích tiến độ (QĐ 32/2026)</strong></div>
+<div class="gt-bullet"><strong>Bản chất:</strong> Quyết định 32/2026 (vừa ban hành năm nay) đưa ra những mức hỗ trợ cực kỳ bạo chi để thuyết phục người dân dời đi nhanh chóng. Mức hỗ trợ tạm cư lên tới <strong>7 triệu/tháng (đối với phường)</strong> và 4 triệu/tháng (đối với xã), cộng thêm 5 tháng. Đi kèm là khoản "thưởng nóng" 10% (tối đa 8 triệu) nếu bàn giao mặt bằng sớm và miễn phí hoàn toàn việc chỉnh lý sổ đỏ.</div>
+<div class="gt-bullet"><strong>Ý nghĩa đưa vào báo cáo:</strong> Đây là lời giải thích hoàn hảo cho tốc độ thi công thần tốc của các dự án hạ tầng hiện tại (như cao tốc hay đường DT1A). Chính quyền đang dùng lợi ích kinh tế trực tiếp để gỡ nút thắt đền bù. Lượng tiền mặt khổng lồ từ các khoản hỗ trợ và đền bù này sẽ được người dân bơm thẳng trở lại thị trường để mua đất tái định cư, tạo ra một làn sóng thanh khoản cực lớn ở các khu vực dân cư vùng ven an toàn.</div>
+<div class="gt-h4"><strong>2. Thiết lập "Giá sàn" thực tế cho thị trường (Dữ liệu Tháng 5/2026)</strong></div>
+<div class="gt-bullet"><strong>Bản chất:</strong> Dòng cuối cùng của bảng cung cấp một dữ liệu đắt giá mang tính thời sự: Phương án bồi thường đường DT1A / ĐT.652B vừa được niêm yết từ 18–27/5/2026. Trong đó, mức giá bồi thường tham khảo cho <strong>đất ở nông thôn (ONT) mặt tiền QL1 lên tới ~4.831.680đ/m²</strong>.</div>
+<div class="gt-bullet"><strong>Ý nghĩa đưa vào báo cáo:</strong> Con số 4,8 triệu/m² này đóng vai trò là <strong>mức giá đáy tâm lý (giá sàn)</strong> cho khu vực Phường Đông Ninh Hòa. Nếu Nhà nước bồi thường thu hồi đất với mức giá này, thì giá giao dịch tự do trên thị trường thứ cấp (mua bán giữa người dân và nhà đầu tư) đối với các quỹ đất sạch, không dính quy hoạch chắc chắn phải neo ở mức cao hơn đáng kể. Đây là cơ sở dữ liệu định lượng tuyệt vời để bạn tư vấn định giá cho khách hàng.</div>
+<div class="gt-h4"><strong>3. Sàng lọc Chủ đầu tư qua chi phí thu hồi (QĐ 12/2026)</strong></div>
+<div class="gt-bullet"><strong>Bản chất:</strong> Quyết định 12/2026 quy định rõ các chi phí thu hồi đất sẽ thuộc trách nhiệm của chủ đầu tư.</div>
+<div class="gt-bullet"><strong>Ý nghĩa đưa vào báo cáo:</strong> Chi tiết này khớp nối hoàn hảo với phân tích về Luật Đất đai 2024 ở Phần 1. Việc các doanh nghiệp phải tự gánh chi phí đền bù (theo giá sát thị trường) sẽ tạo ra một cuộc thanh lọc khốc liệt. Chỉ những "đại bàng" thực sự có năng lực tài chính mạnh mới có thể trụ lại triển khai các dự án khu đô thị. Điều này giúp loại bỏ rủi ro dự án treo, mang lại sự phát triển bền vững thực chất cho diện mạo đô thị Ninh Hòa.</div>
+  </div>
+</div>
+<div class="gt-card" id="gt-nh-bcthi">
+  <div class="gt-header" onclick="toggleGT('gt-nh-bcthi')">
+    <div class="gt-header-left">
+      <div class="gt-num">📈 Ninh Hòa</div>
+      <div class="gt-name">Báo cáo thị trường Ninh Hòa tháng 6/2026</div>
+      <div class="gt-summary">PHẦN 2/3/4: Tiến độ hạ tầng thực tế, biến động giá, chiến lược tọa độ đầu tư theo từng phân khu.</div>
+    </div>
+    <div class="gt-chevron" id="chev-nh-bcthi">▾</div>
+  </div>
+  <div class="gt-body" id="body-nh-bcthi">
+<div class="gt-h4"><strong>PHẦN 2: CẬP NHẬT TIẾN ĐỘ HẠ TẦNG <em>&</em> CÁC "ĐIỂM NỔ" THỰC TẾ (Tháng 6/2026)</strong></div>
+<p class="gt-p">Thị trường đất nền Ninh Hòa bước sang tháng 6/2026 không còn phụ thuộc vào những "bức vẽ" quy hoạch tương lai, mà đang được dẫn dắt bởi những công trường hiện hữu và các tuyến đường đã chính thức có xe chạy. Sự chuyển biến từ "kỳ vọng" sang "thực tế" này là động lực lớn nhất tạo ra các điểm nổ thanh khoản cục bộ.</p>
+<div class="gt-h4"><strong>1. Cú hích lịch sử từ Cao tốc Khánh Hòa - Buôn Ma <em>Thuột</em> (CT.01)</strong></div>
+<p class="gt-p">Sự kiện hạ tầng quan trọng nhất, mang tính bước ngoặt định hình lại tâm lý thị trường trong tháng vừa qua chính là việc dự án cao tốc CT.01 chính thức cán đích giai đoạn đầu.</p>
+<div class="gt-bullet"><strong>Thực tế triển khai:</strong> Điểm nghẽn địa hình lớn nhất là Hầm Phượng Hoàng (1,7km) đã được thông suốt. Đặc biệt, <strong>22km đầu tiên của tuyến cao tốc đã chính thức đi vào khai thác từ ngày 28/5/2026</strong> (sớm hơn 6 tháng so với kế hoạch ban đầu).</div>
+<div class="gt-bullet"><strong>Tác động trực tiếp đến thị trường:</strong> Nút giao bắt đầu từ QL26B x QL1 (Phường Ninh Hòa) trở thành tâm điểm kết nối luồng giao thương khổng lồ giữa Tây Nguyên và cụm cảng Nam Vân Phong. Sự kiện thông xe vào cuối tháng 5 đã xóa bỏ hoàn toàn rào cản tâm lý "sợ quy hoạch treo" của các nhà đầu tư. Ngay trong tháng 6 này, các quỹ đất bám quanh bán kính 3-5km từ nút giao giao thông này đã ghi nhận sự gia tăng đột biến về lượt tìm kiếm và giao dịch thực tế, đặc biệt là các phân khúc đất có thể khai thác kho bãi, trạm dừng nghỉ.</div>
+<div class="gt-h4"><strong>2. Chiến dịch 90 ngày đêm <em>&</em> <em>Tọa</em> độ bắt đáy ven biển</strong></div>
+<p class="gt-p">Nếu cao tốc là câu chuyện đã hoàn thành, thì tuyến <strong>Đường ven biển Vạn Lương - Ninh Hòa</strong> chính là "điểm nổ" đang được nén lại và chuẩn bị bứt phá.</p>
+<div class="gt-bullet"><strong>Áp lực và Hành động:</strong> Tuyến đường huyết mạch dài 20,5km với lộ giới 30m (tổng mức đầu tư 2.000 tỷ đồng) từng gặp tình trạng chậm trễ trong khâu giải ngân bồi thường. Tuy nhiên, nút thắt này đang được phá vỡ bằng một chiến dịch quyết liệt nhất từ trước đến nay: Tỉnh đã chính thức phát động <strong>90 ngày cao điểm giải phóng mặt bằng (từ 25/6 đến 22/9/2026)</strong>.</div>
+<div class="gt-bullet"><strong>Cơ hội găm hàng:</strong> Khoảng thời gian 3 tháng tới là "thời điểm vàng" mang tính chiến thuật. Khi máy xúc ồ ạt tiến vào san lấp mặt bằng dọc tuyến đường ven biển này, giá đất chắc chắn sẽ thiết lập một mặt bằng mới. Việc định vị và thu gom các quỹ đất nền an toàn (thuộc khu dân cư hiện hữu) bám theo trục Vạn Lương - Ninh Hòa ngay trong chiến dịch 90 ngày này sẽ mang lại biên độ lợi nhuận cực kỳ sắc nét cho nhà đầu tư ngắn và trung hạn.</div>
+<div class="gt-h4"><strong>3. Đại lộ DT1A và Sự <em>trỗi</em> dậy của Bất động sản Thương mại</strong></div>
+<div class="gt-bullet">Bên cạnh các trục quốc lộ, tuyến đường nội bộ <strong>DT1A đang trong quá trình giải phóng mặt bằng khẩn trương để mở rộng lên 42m</strong> ngay trong năm 2026.</div>
+<div class="gt-bullet"><strong>Tác động thị trường:</strong> Việc mở rộng một tuyến đường lên mặt cắt 42m không đơn thuần là giải quyết bài toán giao thông, mà là quá trình "thương mại hóa" toàn bộ quỹ đất hai bên đường. Những lô đất nông nghiệp hoặc đất ở nông thôn trước đây nay nghiễm nhiên trở thành đất mặt tiền đại lộ. Sức nóng từ công tác đền bù DT1A đang trực tiếp làm tăng giá trị định giá của các bất động sản dọc tuyến, thu hút dòng tiền thông minh đổ về săn tìm mặt bằng kinh doanh, showroom và các tổ hợp dịch vụ phục vụ Khu kinh tế.</div>
+<div class="gt-h4"><strong>PHẦN 3: PHÂN TÍCH BIẾN ĐỘNG GIÁ <em>&</em> THANH KHOẢN (Tháng 6/2026 so với Tháng 5/2026)</strong></div>
+<p class="gt-p">Tháng 6/2026 đánh dấu một bước ngoặt về chất của thị trường đất nền Ninh Hòa. Nếu trong tháng 5, tâm lý chung của giới đầu tư là "thăm dò và chờ đợi" các cột mốc hạ tầng, thì bước sang tháng 6, thị trường đã chính thức chuyển sang giai đoạn <strong>"hấp thụ thực tế"</strong>. Động lực chính cho sự chuyển mình này đến từ việc dòng tiền bồi thường khổng lồ bắt đầu chảy ra thị trường.</p>
+<div class="gt-h4"><strong>1. Thiết lập "Giá sàn tâm lý" mới (Neo từ mốc 4,8 triệu/m²)</strong></div>
+<div class="gt-bullet"><strong>Điểm tựa từ chính sách:</strong> Việc phương án bồi thường trục DT1A / ĐT.652B được niêm yết vào cuối tháng 5 vừa qua đã công bố mức giá bồi thường tham khảo cho đất ở nông thôn (ONT) mặt tiền Quốc lộ 1 lên tới <strong>~4.831.680 VNĐ/m²</strong>.</div>
+<div class="gt-bullet"><strong>Tác động lên mặt bằng giá:</strong> Con số này ngay lập tức trở thành "bức tường phòng ngự" cho người nắm giữ bất động sản trong tháng 6. Chủ đất có cơ sở vững chắc để giữ giá, triệt tiêu hoàn toàn các hiện tượng bán tháo, cắt lỗ sâu. Với mức đền bù thu hồi của Nhà nước đã neo ở ngưỡng 4,8 triệu/m², các quỹ đất sạch pháp lý, an toàn quy hoạch trên thị trường thứ cấp (đặc biệt tại khu vực Phường Đông Ninh Hòa) bắt buộc phải thiết lập một mặt bằng giá mới cao hơn mức sàn này. Biên độ giá so với đầu tháng 5 đã nhích lên và duy trì ở trạng thái cực kỳ vững chắc.</div>
+<div class="gt-h4"><strong>2. Bùng nổ thanh khoản từ "Làn sóng tái định cư"</strong></div>
+<p class="gt-p">Lực cầu mạnh nhất giúp thị trường tháng 6 sôi động không chỉ đến từ giới đầu cơ, mà đến từ chính những người dân địa phương.</p>
+<div class="gt-bullet"><strong>Dòng tiền khổng lồ chốt lời:</strong> Hơn 500 hộ dân tại Phân khu 19 (Nam Vân Phong) đã bàn giao đất, cùng hàng loạt hộ dân thuộc diện giải tỏa đường ven biển Vạn Lương và trục DT1A đang cầm trong tay dòng tiền mặt lớn.</div>
+<div class="gt-bullet"><strong>Hiệu ứng tái đầu tư tức thì:</strong> Nhờ chính sách bạo chi của QĐ 32/2026 (hỗ trợ tạm cư lên tới 7 triệu/tháng, thưởng 10% khi bàn giao sớm), người dân có tâm lý cực kỳ phấn khởi và xu hướng mang dòng tiền này tái đầu tư ngay lập tức để tìm chốn an cư mới. Dòng thác tiền mặt này dội thẳng vào các vùng lõi an toàn như Phân khu 15 (Tây Ninh An) và Phân khu 16 (Đông Bắc Ninh Hòa). Khối lượng giao dịch (volume) và tỷ lệ hấp thụ các lô đất thổ cư có sổ sẵn tại đây tăng vọt so với không khí trầm lắng của đầu tháng 5.</div>
+<div class="gt-h4"><strong>3. Sự chuyển dịch dòng vốn sau hiệu ứng "Thông xe Cao tốc"</strong></div>
+<div class="gt-bullet"><strong>Từ kỳ vọng đến hành động:</strong> Trong tháng 5, dòng tiền chủ yếu nằm chờ đợi sự kiện khánh thành. Khi 22km đầu tiên của cao tốc CT.01 chính thức vận hành (từ 28/5), một luồng giao thông và dòng vốn mới từ Đắk Lắk và vùng Tây Nguyên đã trực tiếp đổ đèo xuống Ninh Hòa thông qua nút giao QL26B.</div>
+<div class="gt-bullet"><strong>Tiêu điểm hấp thụ:</strong> Dòng vốn ngoại tỉnh này có xu hướng nhắm thẳng vào phân khúc đất nền ven Khu công nghiệp Dốc Đá Trắng và các trục đại lộ quy hoạch (60m - 80m) tại Phân khu 17. Tỷ lệ chốt deal thành công trong tháng 6 ghi nhận sự cải thiện rõ rệt, chuyển dịch từ việc mua gom chờ thời sang việc mua để sẵn sàng xây dựng nhà trọ, kho bãi khai thác thương mại, đáp ứng nhịp thi công của 100ha KCN Dốc Đá Trắng ngay trong năm nay.</div>
+<p class="gt-p">Dưới đây là mảnh ghép cuối cùng và cũng là phần quan trọng nhất của bản báo cáo. Phần này sẽ đóng vai trò như một chiếc "la bàn", giúp nhà đầu tư định vị chính xác dòng tiền, tối đa hóa lợi nhuận và né tránh tuyệt đối những cạm bẫy quy hoạch.</p>
+<div class="gt-h4"><strong>PHẦN 4: ĐÁNH GIÁ CỤC DIỆN CÁC PHÂN KHU <em>&</em> CHIẾN LƯỢC TỌA ĐỘ ĐẦU TƯ</strong></div>
+<p class="gt-p">Bản đồ quy hoạch Nam Vân Phong không phải là một "miếng bánh" chia đều cơ hội cho tất cả. Dựa trên tính chất quy hoạch và tiến độ giải phóng mặt bằng thực tế trong tháng 6/2026, thị trường Ninh Hòa được phân tách thành 3 tọa độ chiến lược với các khẩu vị rủi ro và kỳ vọng lợi nhuận hoàn toàn khác biệt.</p>
+<div class="gt-h4"><strong>1. "Vùng đỏ" Rủi ro Cực đại: Tuyệt đối tránh bắt đáy</strong></div>
+<p class="gt-p"><strong>Tọa</strong><strong> độ:</strong> Phân khu 19 (Nam Vân Phong)</p>
+<div class="gt-bullet"><strong>Bản chất quy hoạch:</strong> Sở hữu diện tích khổng lồ lên tới 9.945 ha, nhưng đây là "công xưởng và bến cảng" thuần túy. Quỹ đất ở (ODT) được phê duyệt chỉ vỏn vẹn 39,60 ha.</div>
+<div class="gt-bullet"><strong>Đánh giá thực chiến:</strong> Hàng ngàn hộ dân đang và sẽ tiếp tục bị thu hồi đất (với ~500/3.300 hộ đã giao đất). Việc mua bán đất nền tự do tại khu vực này (thuộc các xã Ninh Diêm, Ninh Thủy, Ninh Phước cũ) mang rủi ro mất trắng cực cao. Nhà đầu tư tuyệt đối không nghe theo các mồi nhử "đất nền giá rẻ" tại khu vực này, bởi biên độ lợi nhuận không thể bù đắp được rủi ro bị Nhà nước thu hồi theo đơn giá quy định.</div>
+<div class="gt-h4"><strong>2. "Vùng động lực" Lãi vốn <em>&</em> Dòng tiền: Tâm điểm bùng nổ 2026</strong></div>
+<p class="gt-p"><strong>Tọa</strong><strong> độ:</strong> Phân khu 17 (Bắc Hòn Hèo) và Vành đai KCN Dốc Đá Trắng</p>
+<div class="gt-bullet"><strong>Bản chất quy hoạch:</strong> PK17 là sự kết hợp hoàn hảo "3 trong 1": Đô thị, Công nghiệp và Hậu cần cảng. Khác với PK19, khu vực này sở hữu tới 219,66 ha đất ở (ODT) và 187,07 ha đất hỗn hợp.</div>
+<div class="gt-bullet"><strong>Đánh giá thực chiến:</strong> Sự kiện KCN Ninh Thọ (318 ha) chính thức được phê duyệt (QĐ 660/2026) và KCN Dốc Đá Trắng khởi động 100ha đầu tiên biến khu vực này thành "rốn" hút dòng tiền.</div>
+<div class="gt-bullet"><strong>Chiến lược:</strong> Đầu tư vào các quỹ đất dân cư hiện hữu ven KCN để xây dựng hệ thống nhà trọ, dịch vụ ăn uống. Đặc biệt, các quỹ đất bám sát vành đai các siêu đại lộ (QL26B rộng 80m, ĐT.651B rộng 75m) là rổ hàng vô giá để khai thác chuỗi kho bãi, logistics phục vụ cụm cảng trong tương lai gần.</div>
+<div class="gt-h4"><strong>3. "Vùng lõi" Tích sản <em>An</em> toàn <em>&</em> Khai thác Thương mại</strong></div>
+<p class="gt-p"><strong>Tọa</strong><strong> độ:</strong> Phân khu 14 (Ninh Hải - Dốc Lết), Phân khu 15 & Phân khu 16 Đây là "hậu phương" vững chắc, nơi đón nhận toàn bộ lượng chuyên gia, du khách và dòng tiền đền bù tái định cư đổ về.</p>
+<div class="gt-bullet"><strong>Phân khu 14 (Thủ phủ Nghỉ dưỡng):</strong> Quỹ đất ODT lên tới 427,31 ha tại Tiểu khu 14D (dân cư hiện hữu) mang lại sự an toàn pháp lý tuyệt đối. Nằm sát vách KCN PK17 nhưng không bị ảnh hưởng bởi khói bụi công nghiệp, đây là tọa độ lý tưởng để tích sản dài hạn, xây dựng biệt thự nghỉ dưỡng, khách sạn hoặc căn hộ dịch vụ cao cấp phục vụ giới chuyên gia nước ngoài và khách du lịch Dốc Lết.</div>
+<div class="gt-bullet"><strong>Phân khu 16 (Giao điểm Thương mại):</strong> Nổi bật nhất là Tiểu khu 16B nằm ngay tại nút giao ĐT.651D và Quốc lộ 1A. Với lợi thế phễu giao thông, các quỹ đất bám mặt tiền tại đây mang lại tỷ suất sinh lời thương mại (cho thuê mặt bằng, showroom, trạm dừng nghỉ) cao nhất toàn vùng. Đồng thời, quỹ đất làng xóm rộng 515,24 ha (GPMB: Chưa) tạo ra một vùng đệm an toàn cho dòng vốn mỏng muốn mua đất chờ tăng giá.</div>
+<div class="gt-bullet"><strong>Phân khu 15 (Ngách Logistics <em>&</em> Sinh thái):</strong> Định vị dành cho thị trường ngách. Phù hợp gom quỹ đất lớn làm nhà vườn sinh thái nông nghiệp, hoặc tận dụng mặt tiền tuyến ĐT.651D (42m) kết nối cảng Hòn Khói để phát triển các trạm trung chuyển hàng hóa quy mô vừa.</div>
+<p class="gt-p"><strong>TỔNG KẾT BÁO CÁO:</strong> Thị trường đất nền Ninh Hòa tháng 6/2026 đã bước qua giai đoạn "đầu cơ theo tin đồn" để bước vào chu kỳ "tăng trưởng thực chất" dựa trên sự vận hành của dòng vốn Nhà nước và các tập đoàn lớn. Thay vì rải tiền mù quáng, nhà đầu tư cần bám sát các ranh giới phân khu quy hoạch, tận dụng tối đa nhịp độ giải phóng mặt bằng chiến dịch 90 ngày và dòng tiền đền bù thực tế để chọn cho mình những sản phẩm có tính thanh khoản và khả năng khai thác dòng tiền tốt nhất.</p>
+  </div>
+</div>
+</div>
+
+<div class="section-title">Phân tích Thị trường Vạn Ninh
+  <div class="section-sub">Bắc Vân Phong — tọa độ vàng du lịch, cảng QT và 2 siêu KĐT Sun Group 65.000 tỷ</div>
+</div>
+<div class="gt-grid">
+<div class="gt-card" id="gt-vn-tongquan">
+  <div class="gt-header" onclick="toggleGT('gt-vn-tongquan')">
+    <div class="gt-header-left">
+      <div class="gt-num">⛵ Vạn Ninh</div>
+      <div class="gt-name">Tổng quan Vạn Ninh — 5 xã mới toàn bộ trong KKT</div>
+      <div class="gt-summary">Bắc Vân Phong: du lịch sinh thái + cảng QT + đô thị cao cấp. Cấu trúc 3 lớp (đảo/bán đảo → đô thị mới → sinh thái núi dự trữ).</div>
+    </div>
+    <div class="gt-chevron" id="chev-vn-tongquan">▾</div>
+  </div>
+  <div class="gt-body" id="body-vn-tongquan">
+<div class="gt-h4"><strong>Tổng quan Vạn Ninh trong KKT</strong></div>
+<p class="gt-p">Bắc Vân Phong — vai trò đô thị du lịch + cảng trung chuyển quốc tế + sinh thái</p>
+<div class="gt-h4"><strong>Phạm vi hành chính</strong></div>
+<div class="gt-h4"><strong>5 xã mới · Tất cả trong KKT</strong></div>
+<p class="gt-p">Từ 01/07/2025: Xã Đại Lãnh (PK01–05) · Xã Tu Bông (PK08–09) · Xã Vạn Thắng (PK08 sân bay) · Xã Vạn Ninh (PK11–12) · Xã Vạn Hưng (một phần — trừ đất Xuân Sơn cũ). Phía Bắc giáp tỉnh Phú Yên.</p>
+<p class="gt-p">Đoạn thông tin này là bức tranh toàn cảnh về <strong>sự tái cấu trúc quyền lực và không gian</strong> tại huyện Vạn Ninh (thuộc Bắc Vân Phong). Việc sắp xếp lại địa giới hành chính không đơn thuần là đổi tên trên giấy, mà là bước dọn đường chiến lược để đón dòng vốn khổng lồ.</p>
+<p class="gt-p">Dưới góc độ phân tích thị trường bất động sản và quy hoạch, thông tin này mang 3 ý nghĩa cốt lõi:</p>
+<div class="gt-h4"><strong>1. "Tấm thẻ xanh" 100% vào Khu Kinh Tế</strong></div>
+<div class="gt-bullet"><strong>Bản chất:</strong> Chi tiết đắt giá nhất là thông điệp <strong>"Tất cả trong KKT"</strong>. Sau ngày 01/07/2025, toàn bộ 5 xã mới này đều nằm trọn vẹn trong ranh giới Khu kinh tế Vân Phong.</div>
+<div class="gt-bullet"><strong>Ý nghĩa thực chiến:</strong> Điều này xóa bỏ hoàn toàn ranh giới "trong - ngoài" vốn gây đau đầu cho nhà đầu tư trước đây. Bất kỳ quỹ đất nào thuộc 5 xã này cũng sẽ được hưởng trọn vẹn hệ sinh thái hạ tầng và các đặc quyền thu hút đầu tư từ Nghị quyết 55. Đối với khách hàng, việc mua đất tại đây mang lại sự an tâm tuyệt đối về việc "đứng đúng tọa độ" đón sóng hạ tầng của Nhà nước.</div>
+<div class="gt-h4"><strong>2. Khớp nối hoàn hảo giữa "Hành chính" và "Quy hoạch"</strong></div>
+<p class="gt-p">Việc chỉ đích danh xã nào quản lý Phân khu (PK) nào giúp nhà đầu tư dễ dàng khoanh vùng rổ hàng theo đúng khẩu vị:</p>
+<div class="gt-bullet"><strong>Xã Đại Lãnh (PK01–05):</strong> Đây là phân khu được định hướng làm du lịch sinh thái, nghỉ dưỡng cao cấp ôm trọn các eo biển phía Bắc. Đất tại đây mang giá trị nghỉ dưỡng, khai thác du lịch tĩnh.</div>
+<div class="gt-bullet"><strong>Xã Tu Bông (PK08–09):</strong> Nơi đây đang quy hoạch các siêu dự án Khu đô thị lấn biển hàng chục ngàn tỷ đồng. Đất Tu Bông sẽ là tâm điểm của dòng tiền đầu cơ đô thị và thương mại.</div>
+<div class="gt-bullet"><strong>Xã Vạn Thắng (PK08 sân bay):</strong> Việc gắn liền với quy hoạch sân bay charter (chuyên cơ) biến Vạn Thắng thành cửa ngõ giao thương hàng không cao cấp. Bất động sản tại đây sẽ gắn liền với dịch vụ logistics hàng không và lưu trú cho khách VIP.</div>
+<div class="gt-h4"><strong>3. Lộ trình nén nguồn lực để bứt tốc (Từ 01/07/2025)</strong></div>
+<div class="gt-bullet"><strong>Bản chất:</strong> Việc rút gọn từ 13 xã/thị trấn cũ của Vạn Ninh xuống chỉ còn 5 xã là một cuộc "đại phẫu" hành chính. Nó giúp tập trung cao độ nguồn ngân sách đầu tư công thay vì dàn trải.</div>
+<div class="gt-bullet"><strong>Ý nghĩa thực chiến:</strong> Từ ngày 01/07/2025, 5 xã mới này sẽ có quy mô dân số và diện tích khổng lồ, trở thành những "siêu xã". Ngân sách Nhà nước đổ về đây để làm đường, điện, nước, y tế sẽ ở quy mô cực lớn. Đối với các nhà đầu tư đang gom quỹ đất nền thổ cư, mốc thời gian giữa năm 2025 chính là "điểm nổ" về giá khi bộ máy hành chính mới chính thức vận hành và các dự án hạ tầng nội xã được cấp vốn triển khai.</div>
+<div class="gt-h4"><strong>10 phân khu · QĐ 2024–2026</strong></div>
+<div class="gt-h4"><strong>PK01, 02, 03, 04, 05, 08, 09, 10, 11, 12</strong></div>
+<p class="gt-p">Cấu trúc 3 lớp:</p>
+<p class="gt-p">(1) Đảo + bán đảo = du lịch sinh thái cao cấp (PK01–05);</p>
+<p class="gt-p">(2) Khu đô thị mới = Cổ Mã-Tu Bông-Đầm Môn (PK03, 08);</p>
+<p class="gt-p">(3) Sinh thái núi dự trữ (PK09, 10). Dân số 2040 toàn KKT: 500.000–550.000.</p>
+<p class="gt-p">Đoạn thông tin này chính là <strong>"bản thiết kế vĩ mô"</strong> định hình toàn bộ diện mạo của khu vực Bắc Vân Phong (huyện Vạn Ninh). Nếu Nam Vân Phong (Ninh Hòa) là cực công nghiệp khổng lồ, thì dữ kiện này xác nhận Bắc Vân Phong được định vị trở thành <strong>Thủ phủ Đô thị <em>&</em> Du lịch biển đẳng cấp quốc tế</strong>.</p>
+<p class="gt-p">Việc bóc tách cấu trúc 10 phân khu này sẽ là chất liệu tuyệt vời để bạn xây dựng tầm nhìn dài hạn trong báo cáo. Dưới đây là 3 thông điệp cốt lõi được rút ra:</p>
+<div class="gt-h4"><strong>1. Chiến lược "Cấu trúc 3 lớp" – La bàn điều hướng dòng vốn</strong></div>
+<p class="gt-p">Quy hoạch chia Bắc Vân Phong thành 3 lớp không gian cực kỳ rạch ròi, vạch ra sân chơi riêng cho từng tệp nhà đầu tư:</p>
+<div class="gt-bullet"><strong>Lớp 1 - "Sân chơi của Đại bàng" (PK01–05 - Đảo và Bán đảo):</strong> Định hướng du lịch sinh thái cao cấp nghĩa là quỹ đất tại đây sẽ được giao cho các tập đoàn lớn (như Sun Group, Vingroup, hoặc FDI) để phát triển các siêu resort, bến du thuyền, sân golf. Đối với nhà đầu tư cá nhân, việc ôm đất xen kẹt tại đây rủi ro dính quy hoạch dự án rất cao.</div>
+<div class="gt-bullet"><strong>Lớp 2 - "Phễu hút Thanh khoản" (PK03, 08 - Cổ Mã, Tu Bông, Đầm Môn):</strong> Đây chính là <strong>"vùng lõi vàng"</strong> của bất động sản dân sinh và thương mại. Chức năng "Khu đô thị mới" biến Cổ Mã, Tu Bông thành trung tâm hành chính, thương mại và an cư của toàn vùng. Dòng tiền đầu cơ, đầu tư đất nền phân lô, nhà phố thương mại chắc chắn sẽ đổ dồn về lớp quy hoạch thứ 2 này.</div>
+<div class="gt-bullet"><strong>Lớp 3 - "Vùng cấm" <em>sinh</em> thái (PK09, 10 - Sinh thái núi):</strong> Chức năng dự trữ sinh thái núi là một tín hiệu cảnh báo. Quỹ đất tại đây chủ yếu là đất rừng, đất nông nghiệp được bảo vệ nghiêm ngặt. Phải gạch tên khu vực này khỏi danh mục đầu tư đất ở hoặc phân lô bán nền.</div>
+<div class="gt-h4"><strong>2. Tốc độ phủ kín Pháp lý (Quyết định 2024–2026)</strong></div>
+<div class="gt-bullet"><strong>Bản chất:</strong> Việc phê duyệt quy hoạch cho cả 10 phân khu lớn dồn dập trong giai đoạn 2024–2026 cho thấy quyết tâm chính trị cực lớn của tỉnh Khánh Hòa.</div>
+<div class="gt-bullet"><strong>Ý nghĩa thực chiến:</strong> Khung pháp lý 1/2000 của toàn bộ Bắc Vân Phong cơ bản đã được đóng đinh. Bản đồ quy hoạch không còn là bản nháp để đồn đoán. Tính minh bạch này giúp các nhà đầu tư an tâm xuống tiền tại các khu vực được quy hoạch đất ở đô thị (ODT), loại bỏ hoàn toàn tâm lý rụt rè vì sợ "quy hoạch treo".</div>
+<div class="gt-h4"><strong>3. Động lực khổng lồ từ Bài toán Dân số (500.000–550.000 người)</strong></div>
+<div class="gt-bullet"><strong>Bản chất:</strong> Đặt mục tiêu dân số cho toàn Khu Kinh tế lên tới hơn nửa triệu người vào năm 2040 là một con số bùng nổ (tương đương dân số của một thành phố loại I lớn).</div>
+<div class="gt-bullet"><strong>Đưa vào báo cáo:</strong> Đây là <strong>cơ sở định lượng đắt giá nhất</strong> để bảo chứng cho sức cầu bất động sản dài hạn. Hơn 500.000 người này sẽ cần hàng chục ngàn căn nhà, bệnh viện, trường học và trung tâm mua sắm. Sự gia tăng dân số cơ học khổng lồ này sẽ là bệ phóng đẩy giá đất tại "Lớp 2" (các khu đô thị mới như Tu Bông, Cổ Mã) tăng trưởng theo cấp số nhân trong 10-15 năm tới.</div>
+<p class="gt-p">Đoạn thông tin này chính là <strong>"tiếng súng lệnh"</strong> xác nhận thị trường Bắc - Nam Vân Phong đã chính thức bước qua giai đoạn đồn đoán để tiến thẳng vào chu kỳ tăng trưởng thực chất.</p>
+<p class="gt-p">Dữ kiện này là một trong những mảnh ghép có sức nặng nhất để giải thích cho sự bùng nổ thanh khoản của thị trường hiện tại. Dưới góc độ phân tích báo cáo, thông tin này mang 3 ý nghĩa mang tính bước ngoặt:</p>
+  </div>
+</div>
+<div class="gt-card" id="gt-vn-10pk">
+  <div class="gt-header" onclick="toggleGT('gt-vn-10pk')">
+    <div class="gt-header-left">
+      <div class="gt-num">🗺️ Vạn Ninh</div>
+      <div class="gt-name">10 Phân khu Vạn Ninh — Phân tích chi tiết từng phân khu</div>
+      <div class="gt-summary">PK01-05 (đảo/sinh thái) · PK08 (Tu Bông - Sun Group 43.000 tỷ) · PK03 (Đầm Môn - Sun Group 25.645 tỷ) · PK09-10 (sinh thái núi) · PK11-12 (đô thị Vạn Giã)</div>
+    </div>
+    <div class="gt-chevron" id="chev-vn-10pk">▾</div>
+  </div>
+  <div class="gt-body" id="body-vn-10pk">
+<div class="gt-h4"><strong>1. Chấm dứt <em>kỷ</em> nguyên 20 năm "Quy hoạch treo"</strong></div>
+<div class="gt-bullet"><strong>Bản chất: Việc KCN Dốc Đá Trắng (288 ha) của Viglacera đã chính thức khởi công từ ngày 19/8/2025 (theo Ban Quản lý KKT Khánh Hòa) là cột mốc lịch sử. Đây là dự án công nghiệp đầu tiên "động thổ" thực sự sau hai thập kỷ Khu kinh tế Vân Phong chỉ nằm trên giấy.</strong></div>
+<div class="gt-bullet"><strong>Ý nghĩa thực chiến:</strong> Niềm tin của các nhà đầu tư lớn trên toàn quốc đã được khôi phục hoàn toàn. Không còn là những lời hứa hẹn, máy xúc đã san lấp và các nhà máy đang được thành hình. Tính đến thời điểm giữa năm 2026 này, tiến độ xây dựng của KCN sẽ trực tiếp tạo ra lượng việc làm khổng lồ, kéo theo nhu cầu an cư, lưu trú và tiêu dùng thực tế bùng nổ quanh khu vực Dốc Đá Trắng và Bắc Ninh Hòa.</div>
+<div class="gt-h4"><strong>2. Quả bom "Dòng tiền đền bù" từ 3 Siêu Đô Thị</strong></div>
+<div class="gt-bullet"><strong>Bản chất:</strong> Việc giải phóng mặt bằng (GPMB) song song 3 Khu đô thị khổng lồ tại Bắc Vân Phong gồm Đầm Môn (1.440ha), Tu Bông (503ha) và Cổ Mã đòi hỏi một nguồn ngân sách đền bù giải tỏa lên tới hàng chục ngàn tỷ đồng.</div>
+<div class="gt-bullet"><strong>Tác động thị trường:</strong> Khi Nhà nước thu hồi gần 2.000 ha đất này, hàng ngàn hộ dân địa phương sẽ nhận được một lượng tiền mặt khổng lồ. Đặc tính của người dân khi bị thu hồi đất là sẽ ngay lập tức cầm tiền đi mua lại các quỹ đất thổ cư an toàn ở các khu vực lân cận để tái định cư và tích trữ. Đây chính là "nguồn cầu nội sinh" khổng lồ sẽ càn quét và đẩy mặt bằng giá các quỹ đất sạch (đất ODT, ONT không dính quy hoạch) tại Vạn Ninh và Ninh Hòa tăng phi mã trong ngắn hạn.</div>
+<div class="gt-h4"><strong>3. Khẳng định sự "Chuyển pha" của Chu kỳ Đất đai</strong></div>
+<div class="gt-bullet"><strong>Bản chất:</strong> Bất động sản luôn vận động theo chu kỳ: (1) Đồn đoán quy hoạch -> (2) Chờ đợi hạ tầng -> (3) Triển khai thực tế -> (4) Lấp đầy dân cư.</div>
+<div class="gt-bullet"><strong>Góc nhìn báo cáo:</strong> Dữ kiện này là bằng chứng đanh thép cho thấy thị trường Vân Phong đã chính thức <strong>chuyển từ Pha 2 sang Pha 3</strong>. Động lực tăng giá lúc này không còn dựa vào "bơm thổi" hay đầu cơ lướt sóng, mà được bảo chứng bằng giá trị thực: Các tập đoàn lớn đang đổ bê tông (Viglacera) và chính quyền đang quyết liệt dọn dẹp mặt bằng (3 KĐT lớn).</div>
+<div class="gt-h4"><strong>Lưu ý tư vấn</strong></div>
+<div class="gt-h4"><strong>Xuân Sơn cũ NGOÀI KKT</strong></div>
+<p class="gt-p">Phần đất Xuân Sơn cũ nay thuộc xã Vạn Hưng nhưng <strong>không thuộc KKT</strong> theo QĐ 298/2023. Khi tư vấn lô đất khu vực này phải đối chiếu bản đồ ranh giới, không căn cứ vào tên xã mới. Sân bay VP (497ha, TK11 PK08) — đang nghiên cứu đề án, chưa phê duyệt đầu tư.</p>
+<p class="gt-p">Đoạn thông tin này chính là <strong>"bộ lọc rủi ro"</strong> mang tính sống còn. Nó bóc trần hai cái bẫy quy hoạch tinh vi nhất mà các nhà đầu tư tay ngang, hoặc thậm chí là những môi giới thiếu kinh nghiệm, rất dễ mắc phải khi đánh sóng Vạn Ninh lúc này.</p>
+<p class="gt-p">Dưới góc độ xây dựng báo cáo và tư vấn thực chiến, thông tin này cung cấp 2 luận điểm mang tính "giải độc" cho thị trường:</p>
+<div class="gt-h4"><strong>1. Cạm bẫy danh xưng và "Gót chân Achilles" mang tên Vạn Hưng</strong></div>
+<div class="gt-bullet"><strong>Bản chất:</strong> Bức tranh sáp nhập 5 xã mới vẽ ra một viễn cảnh "tất cả trong KKT", nhưng lại chừa ra một lỗ hổng chí mạng: <strong>Phần đất Xuân Sơn cũ (nay ghép vào Vạn Hưng) nằm NGOÀI ranh giới KKT</strong> theo Quyết định 298/2023.</div>
+<div class="gt-bullet"><strong>Giá trị cảnh báo:</strong> Lợi dụng danh xưng "xã Vạn Hưng thuộc KKT", rất nhiều giỏ hàng tại khu vực Xuân Sơn cũ đang được chào bán với mức giá ngáo, đánh lận con đen để hưởng ké đặc quyền của KKT. Khi đưa chi tiết này vào báo cáo, bạn thiết lập một quy tắc thẩm định thép: <strong>Tuyệt đối không mua đất bằng "tên xã", mà phải áp trực tiếp lên "bản đồ ranh giới KKT"</strong>. Khách hàng đọc được chi tiết này sẽ nhận ra độ sắc sảo và tính bảo vệ cực cao từ người lập báo cáo.</div>
+<div class="gt-h4"><strong>2. Giải mã "Ảo ảnh" Sân bay Vân Phong</strong></div>
+<div class="gt-bullet"><strong>Bản chất:</strong> Sân bay Vân Phong (497ha tại Tiểu khu 11, Phân khu 08) luôn là một từ khóa cực "hot" để bơm thổi giá đất. Tuy nhiên, dữ liệu thực tế chỉ ra nó mới đang nằm ở bước <strong>"nghiên cứu đề án, chưa phê duyệt đầu tư"</strong>.</div>
+<div class="gt-bullet"><strong>Chiến lược tư vấn:</strong> Đối với các siêu dự án hạ tầng hàng không, khoảng cách từ "nghiên cứu" đến "khởi công" thường kéo dài từ 5 đến 10 năm. Việc lấy sân bay ra làm mồi nhử để chốt sale ngắn hạn là đưa khách hàng vào thế chôn vốn. Thông tin này giúp bạn bẻ lái dòng tiền của nhà đầu tư một cách khôn ngoan: Thay vì ôm đất chờ một sân bay chưa biết ngày khởi công tại PK08, hãy dồn lực vào KCN Dốc Đá Trắng (đã khởi công thực tế) hoặc các khu đô thị đang dọn mặt bằng ngay trước mắt.</div>
+<p class="gt-p">Mình đã khóa chặt 2 "biển báo nguy hiểm" này vào kho dữ liệu Bắc Vân Phong. Chi tiết Xuân Sơn cũ và trạng thái thực của Sân bay sẽ là những nét chấm phá xuất sắc trong phần Đánh giá Rủi ro của báo cáo sau này.</p>
+<div class="gt-h4"><strong>QĐ 298 — Xương sống pháp lý KKT Vân Phong</strong></div>
+<div class="gt-h4"><strong>Diện tích<em> </em>150.000 ha</strong></div>
+<p class="gt-p">Đất liền + đảo: 70.822 ha</p>
+<p class="gt-p">Mặt nước: 79.178 ha</p>
+<p class="gt-p">19 phân khu chức năng</p>
+<p class="gt-p">Đoạn thông tin về <strong>Quyết định 298</strong> này chính là <strong>"Bản hiến pháp"</strong> của toàn bộ Khu kinh tế (KKT) Vân Phong. Trong bối cảnh làm báo cáo thị trường, đây là tham số vĩ mô quan trọng nhất để định hình quy mô và luật chơi của toàn vùng.</p>
+<p class="gt-p">Dưới góc độ phân tích chiến lược, những con số khô khan này bóc tách ra 3 sự thật cốt lõi về thị trường Vân Phong:</p>
+<div class="gt-h4"><strong>1. "Tấm khiên pháp lý" tối thượng</strong></div>
+<div class="gt-bullet"><strong>Bản chất:</strong> QĐ 298/QĐ-TTg được phê duyệt chính là xương sống pháp lý cao nhất, chấm dứt hoàn toàn mọi đồn đoán, vẽ dự án ảo hay tình trạng mập mờ quy hoạch suốt nhiều năm qua.</div>
+<div class="gt-bullet"><strong>Ý nghĩa thực chiến:</strong> Trong báo cáo, đây là lời khẳng định đanh thép gửi đến nhà đầu tư: Từ nay, mọi giao dịch mua bán, mọi quyết định xuống tiền đều phải dùng QĐ 298 làm hệ quy chiếu duy nhất. Bất động sản nào khớp với bản đồ này là tài sản thật, bất động sản nào nằm ngoài hoặc sai chức năng là rủi ro.</div>
+<div class="gt-h4"><strong>2. Bản sắc "Kinh tế biển" định hình giá trị bất động sản</strong></div>
+<div class="gt-bullet"><strong>Bản chất:</strong> Tổng diện tích 150.000 ha là một quy mô khổng lồ (lớn hơn nhiều tỉnh thành nhỏ). Tuy nhiên, điểm nhấn đặc biệt nhất là <strong>diện tích mặt nước (79.178 ha) còn lớn hơn cả diện tích đất liền và đảo (70.822 ha)</strong>.</div>
+<div class="gt-bullet"><strong>Chiến lược đầu tư:</strong> Tỷ lệ này khẳng định Vân Phong sinh ra để làm <strong>Kinh tế biển</strong> (Cảng nước sâu trung chuyển quốc tế, Logistics hàng hải và Du lịch nghỉ dưỡng ven biển). Những quỹ đất liền bám biển hoặc có tầm nhìn hướng vịnh sẽ là những rổ hàng có giá trị gia tăng vô hạn, bởi chúng được hưởng lợi trực tiếp từ không gian mặt nước khổng lồ này.</div>
+<div class="gt-h4"><strong>3. Luật chơi chia nhỏ: Sự phân hóa khốc liệt của 19 Phân khu</strong></div>
+<div class="gt-bullet"><strong>Bản chất:</strong> Việc chia cắt 70.822 ha đất liền thành <strong>19 phân khu chức năng</strong> cho thấy KKT Vân Phong không phát triển cào bằng. Mỗi phân khu mang một sứ mệnh riêng biệt (như chúng ta đã phân tích: PK19 là công nghiệp cảng, PK14 là du lịch Dốc Lết, PK08 là đô thị Tu Bông...).</div>
+<div class="gt-bullet"><strong>Góc nhìn báo cáo:</strong> Dữ kiện này dập tắt hoàn toàn tư duy đầu tư "đánh lưới" (mua đất bừa bãi ở Vân Phong là thắng). Thị trường giờ đây là bài toán "bắn tỉa". 19 phân khu đồng nghĩa với 19 luật chơi khác nhau về thu hồi đất, đền bù và định hướng phát triển. Nhà đầu tư phải chọn đúng phân khu phù hợp với khẩu vị vốn của mình (ngắn hạn, dài hạn, dòng tiền hay lãi vốn).</div>
+<div class="gt-h4"><strong>Dân số</strong></div>
+<div class="gt-h4"><strong>500.000–550.000 người</strong></div>
+<p class="gt-p">Đến 2040 (quy đổi cả du lịch)</p>
+<p class="gt-p">Đến 2030: 350.000–380.000</p>
+<p class="gt-p">Con số về quy mô dân số này chính là <strong>"đáp án cuối cùng"</strong> cho bài toán nguồn cầu của thị trường bất động sản Vân Phong. Trong triết lý đầu tư, hạ tầng là thứ dẫn đường, nhưng chính con người mới là yếu tố quyết định việc lấp đầy và làm tăng giá trị thực của bất động sản.</p>
+<p class="gt-p">Khi bóc tách hai cột mốc 2030 và 2040 này để đưa vào báo cáo, chúng ta có 3 luận điểm cốt lõi để thuyết phục các nhà đầu tư khó tính nhất:</p>
+<div class="gt-h4"><strong>1. Cú hích Dân số cơ học <em>&</em> Bài toán nhà ở cấp bách (Mốc 2030)</strong></div>
+<div class="gt-bullet"><strong>Bản chất:</strong> Chỉ trong vòng 4 năm nữa (từ thời điểm giữa 2026 hiện tại đến 2030), KKT Vân Phong phải đạt mốc 350.000 – 380.000 người. Đây là một tỷ lệ tăng trưởng "thần tốc", không thể chỉ dựa vào sinh đẻ tự nhiên mà bắt buộc phải đến từ <strong>di cư cơ học</strong> (lực lượng kỹ sư, công nhân, chuyên gia đổ về làm việc tại các KCN như Dốc Đá Trắng, Ninh Thọ và các đại đô thị đang thành hình).</div>
+<div class="gt-bullet"><strong>Ý nghĩa thị trường:</strong> Hàng trăm ngàn con người đổ về trong ngắn hạn sẽ tạo ra một cuộc khủng hoảng thiếu hụt nguồn cung nhà ở. Các quỹ đất ở đô thị (ODT) và đất ở nông thôn (ONT) an toàn tại các phân khu cận kề KCN (như PK17, PK14, PK16) sẽ chứng kiến sự bùng nổ về nhu cầu xây dựng nhà trọ, chung cư bình dân và nhà phố. Dòng tiền đầu tư vào phân khúc phục vụ "nhu cầu ở thực" này sẽ cực kỳ an toàn và sinh lãi đều đặn.</div>
+<div class="gt-h4"><strong>2. Giải mã thuật ngữ "Quy đổi cả du lịch" (Mốc 2040)</strong></div>
+<div class="gt-bullet"><strong>Bản chất:</strong> Con số 500.000 – 550.000 người vào năm 2040 có một chú thích cực kỳ quan trọng: <strong>"quy đổi cả du lịch"</strong>. Điều này có nghĩa là nửa triệu người này không phải toàn bộ là dân cư thường trú, mà bao gồm cả một lượng khổng lồ "dân số vãng lai" (tourist/visitor) lưu trú mỗi ngày tại KKT.</div>
+<div class="gt-bullet"><strong>Định hướng rổ hàng:</strong> Chi tiết này vẽ ra ranh giới rõ ràng cho 2 trường phái đầu tư. Nếu đánh vào dân cư thường trú, nhà đầu tư phải chọn đất ven KCN (Nam Vân Phong). Nhưng nếu đánh vào dòng "dân số quy đổi" này, dòng tiền bắt buộc phải chảy về các phân khu như Bắc Vân Phong (PK01-05) hoặc Dốc Lết (PK14) – nơi sẽ mọc lên các tổ hợp lưu trú, khách sạn, resort nghỉ dưỡng để vắt kiệt hầu bao của tập khách du lịch khổng lồ này.</div>
+<div class="gt-h4"><strong>3. Lộ trình xuống tiền theo "Điểm rơi chu kỳ"</strong></div>
+<div class="gt-bullet"><strong>Chiến lược báo cáo:</strong> Việc chia rõ hai mốc thời gian giúp bạn thiết lập một lộ trình tư vấn cực kỳ khoa học cho khách hàng:</div>
+<div class="gt-bullet"><strong>Tầm nhìn 2026 - 2030:</strong> Tập trung 100% nguồn lực vào "Bất động sản Công nghiệp & Dân sinh" (ăn theo mốc 380.000 người). Đây là giai đoạn các nhà máy xây dựng và cần người làm.</div>
+<div class="gt-bullet"><strong>Tầm nhìn 2030 - 2040:</strong> Khi hạ tầng du lịch và các siêu đô thị ven biển hoàn thiện, dòng tiền lớn sẽ chuyển dịch sang "Bất động sản Nghỉ dưỡng & Thương mại cao cấp" để đón đầu mốc 550.000 người vãng lai và thường trú.</div>
+<div class="gt-h4"><strong>Phân kỳ 2030</strong><strong> </strong></div>
+<div class="gt-h4"><strong>Vạn Ninh đạt đô thị loại IV</strong></div>
+<p class="gt-p">Hoàn thành cao tốc KH–BMT</p>
+<p class="gt-p">KCN + cảng tổng hợp Nam VP đầu tư</p>
+<p class="gt-p">Đoạn thông tin về <strong>"Phân kỳ 2030"</strong> này chính là <strong>"bản cam kết tiến độ"</strong> của Chính phủ đối với Khu kinh tế Vân Phong. Nó vạch ra một deadline rõ ràng cho dòng tiền đầu tư công và sự bứt phá của khu vực chỉ trong vòng 4 năm tới.</p>
+<p class="gt-p">Dưới góc độ phân tích dữ liệu, thông tin này mang 3 giá trị định hướng cốt lõi để đưa vào báo cáo chiến lược:</p>
+<div class="gt-h4"><strong>1. Vạn Ninh thăng hạng (Đô thị loại IV) – Điểm rơi của Đầu tư công</strong></div>
+<div class="gt-bullet"><strong>Bản chất:</strong> Để Vạn Ninh từ một huyện đạt tiêu chuẩn Đô thị loại IV vào năm 2030, địa phương này bắt buộc phải hoàn thiện hàng loạt chỉ tiêu khắt khe về mật độ dân số, tỷ lệ đô thị hóa, và đặc biệt là hạ tầng giao thông, y tế, giáo dục.</div>
+<div class="gt-bullet"><strong>Góc nhìn đầu tư:</strong> Từ nay đến 2030 chính là "chu kỳ vàng" giải ngân đầu tư công tại Vạn Ninh. Nhà nước sẽ liên tục đổ ngân sách để nâng cấp đường sá, xây dựng hạ tầng cơ sở đô thị. Sự lột xác về mặt vật lý này sẽ trực tiếp kéo giá đất nền (đặc biệt là quanh các khu vực được quy hoạch khu đô thị mới như Tu Bông, Cổ Mã) tăng trưởng tịnh tiến theo từng năm.</div>
+<div class="gt-h4"><strong>2. Hoàn thiện toàn tuyến Cao tốc KH-BMT – Mở toang cửa ngõ Tây Nguyên</strong></div>
+<div class="gt-bullet"><strong>Bản chất:</strong> Nếu việc thông xe 22km đầu tiên vào cuối tháng 5/2026 vừa qua đã tạo ra cú hích thanh khoản ngắn hạn, thì mục tiêu 2030 là hoàn thành 100% toàn tuyến, nối thẳng thủ phủ nông sản Tây Nguyên xuống biển.</div>
+<div class="gt-bullet"><strong>Giá trị thực chiến:</strong> Trục cao tốc này là mạch máu giao thương cốt lõi. Khi toàn tuyến đi vào vận hành trơn tru, lượng xe container chở hàng hóa từ Đắk Lắk đổ về cảng Nam Vân Phong sẽ bùng nổ. Các quỹ đất bám sát hành lang kết nối cao tốc này (tại khu vực Ninh Hòa) sẽ có dư địa lớn để chuyển đổi công năng sang phục vụ logistics, trạm dừng nghỉ, và dịch vụ kho bãi.</div>
+<div class="gt-h4"><strong>3. Nam Vân Phong – "Cỗ máy in tiền" chính thức vận hành</strong></div>
+<div class="gt-bullet"><strong>Bản chất:</strong> Việc Khu công nghiệp và Cảng tổng hợp Nam Vân Phong (thuộc thị xã Ninh Hòa) được chốt tiến độ tập trung "đầu tư" trong giai đoạn này khẳng định cực Nam của Khu kinh tế đã bước vào pha xây dựng khối nạc và chuẩn bị khai thác thương mại.</div>
+  </div>
+</div>
+<div class="gt-card" id="gt-vn-bcthi">
+  <div class="gt-header" onclick="toggleGT('gt-vn-bcthi')">
+    <div class="gt-header-left">
+      <div class="gt-num">📈 Vạn Ninh</div>
+      <div class="gt-name">Báo cáo thị trường Vạn Ninh + Phân tích GPMB</div>
+      <div class="gt-summary">Tiến độ GPMB 3 KĐT (Đầm Môn + Tu Bông + Cổ Mã) + KCN Viglacera. Lộ trình đầu tư 2026-2030 và dài hạn sau 2030.</div>
+    </div>
+    <div class="gt-chevron" id="chev-vn-bcthi">▾</div>
+  </div>
+  <div class="gt-body" id="body-vn-bcthi">
+<div class="gt-bullet"><strong>Tác động thị trường:</strong> Quá trình rót vốn đầu tư làm KCN và Cảng biển cần một lượng lớn nhân lực thi công, kéo theo sau đó là chuyên gia và công nhân vận hành. Động thái này bảo chứng vững chắc cho nguồn cầu an cư thực tế tại khu vực Ninh Hòa. Các phân khu dân cư an toàn liền kề cụm công nghiệp này (như phân khu Bắc Hòn Hèo hay khu vực Dốc Lết) sẽ trực tiếp đón làn sóng dân số cơ học đổ về.</div>
+<p class="gt-p"><strong>Tóm lược tầm nhìn:</strong> Phân kỳ 2030 cho thấy một sự phân vai hoàn hảo: Vạn Ninh lo "nâng cấp vỏ bọc" (Đô thị loại IV) để hút dòng tiền phát triển bất động sản đô thị, trong khi Ninh Hòa lo "vận hành động cơ" (Cảng + KCN + Cao tốc) để kích hoạt chuỗi cung ứng logistics và việc làm. Đây là mỏ neo niềm tin quan trọng, giúp nhà đầu tư yên tâm nắm giữ tài sản vượt qua các biến động nhỏ giọt của thị trường.</p>
+<div class="gt-h4"><strong>Phân kỳ 2040</strong></div>
+<div class="gt-h4"><strong>Cảng trung chuyển QT</strong></div>
+<p class="gt-p">Tàu 24.000 TEU / 100.000 tấn</p>
+<p class="gt-p">Ninh Hòa thành thành phố</p>
+<p class="gt-p">Đoạn thông tin về <strong>"Phân kỳ 2040"</strong> này chính là <strong>"đích đến cuối cùng"</strong> trong toàn bộ chu kỳ phát triển của Khu kinh tế Vân Phong. Nếu mốc 2030 là giai đoạn "khởi động và xây dựng nền móng", thì 2040 là thời điểm cất cánh để xác lập vị thế của một siêu đô thị - kinh tế biển trên bản đồ quốc tế.</p>
+<p class="gt-p">Dưới góc độ chiến lược đầu tư bất động sản, những thông số vĩ mô này bóc tách ra 3 định hướng mang tính "tích sản truyền đời":</p>
+<div class="gt-h4"><strong>1. Định vị Toàn cầu từ Cảng Trung chuyển Quốc tế (Tàu 24.000 TEU)</strong></div>
+<div class="gt-bullet"><strong>Bản chất sức mạnh:</strong> Việc đón được siêu tàu 24.000 TEU (sức chở container lớn nhất thế giới hiện nay) và tàu tổng hợp 100.000 tấn khẳng định Nam Vân Phong sở hữu mực nước sâu tự nhiên và luồng hàng hải hiếm có. Chức năng "Trung chuyển Quốc tế" có nghĩa là nơi đây sẽ trở thành trạm dừng chân của các tuyến vận tải xuyên đại dương, không chỉ phục vụ xuất nhập khẩu nội địa.</div>
+<div class="gt-bullet"><strong>Tác động thị trường:</strong> Khi cảng trung chuyển quốc tế hình thành, nó sẽ kéo theo một hệ sinh thái khổng lồ gồm: khu phi thuế quan, trung tâm logistics, kho ngoại quan và đại bản doanh của các tập đoàn đa quốc gia. Lực lượng lao động lúc này không chỉ là công nhân, mà là cộng đồng chuyên gia hàng hải, kỹ sư quốc tế và giới tinh hoa tài chính. Dòng vốn đầu tư dài hạn vào các phân khu lưu trú cao cấp (như PK14 - Dốc Lết) sẽ bùng nổ để phục vụ tệp khách hàng "chi tiêu bằng USD" này.</div>
+<div class="gt-h4"><strong>2. "Cú nhảy vọt" Hành chính: Ninh Hòa lên Thành phố</strong></div>
+<div class="gt-bullet"><strong>Bản chất:</strong> Mục tiêu nâng cấp từ Thị xã (hiện tại) lên <strong>Thành phố Ninh Hòa</strong> vào năm 2040 là một cam kết đanh thép về việc thay máu toàn diện hạ tầng đô thị.</div>
+<div class="gt-bullet"><strong>Giá trị thực chiến:</strong> Quá trình lên Thành phố đồng nghĩa với việc ranh giới các phường nội thị sẽ phình to ra. Hàng loạt khu vực đang là "xã" sẽ phải nâng cấp lên "phường". Đi kèm với đó, hàng ngàn hecta đất ở nông thôn (ONT) sẽ được chuyển đổi và định giá lại theo khung giá của đất ở đô thị (ODT). Việc nắm giữ các quỹ đất tại những khu vực vùng ven đang có quy hoạch chuyển đổi này chính là bài toán nhân tài khoản chắc chắn nhất nhờ sự chênh lệch địa tô khi thăng hạng hành chính.</div>
+<div class="gt-h4"><strong>3. Xác lập Tầm nhìn "Tích sản Truyền đời"</strong></div>
+<div class="gt-bullet"><strong>Chiến lược rổ hàng:</strong> Cột mốc 2040 cách thời điểm hiện tại (2026) đúng 14 năm. Khoảng thời gian này vạch ra một ranh giới rõ ràng: Đây không phải là sân chơi cho dòng tiền đầu cơ lướt sóng "ăn xổi", mà là tọa độ cho dòng vốn nhàn rỗi nhắm đến <strong>chu kỳ lợi nhuận dài hạn</strong>.</div>
+<div class="gt-bullet"><strong>Ứng dụng vào báo cáo:</strong> Khi tư vấn, thông tin này giúp bạn thuyết phục nhóm khách hàng VIP — những người muốn mua những quỹ đất lớn, pháp lý chuẩn để làm tài sản thừa kế cho thế hệ sau. Khi thế hệ sau tiếp quản, mảnh đất vùng ven ngày nay đã biến thành bất động sản trung tâm của một Thành phố Cảng quốc tế sầm uất.</div>
+<p class="gt-p">Bức ảnh cung cấp một "bản mốc thời gian" (timeline) cực kỳ đắt giá, cập nhật chính xác đến ngày hôm nay (28/06/2026). Đây chính là bằng chứng thép cho thấy mọi quy hoạch trên giấy đã chính thức chuyển hóa thành dòng tiền tỷ đô đổ xuống công trường.</p>
+<p class="gt-p">Dưới góc độ phân tích thị trường để đưa vào báo cáo, bản mốc thời gian này cung cấp 3 điểm nhấn chiến lược mang tính quyết định:</p>
+<div class="gt-h4"><strong>1. Sự đổ bộ chính thức của các "Đại bàng" (Dòng vốn thực)</strong></div>
+<div class="gt-bullet"><strong>Bản chất: Thị trường không còn dựa vào những tin đồn vô căn cứ. Các tay chơi lớn nhất đã chính thức xuất hiện trên văn bản pháp lý: Liên danh Mặt trời Phú Quốc + Mặt trời Hạ Long (thuộc Sun Group) thâu tóm hai đại đô thị Đầm Môn và Tu Bông với tổng mức đầu tư 68.647 tỷ đồng (bao gồm cả chi phí GPMB). Ở mảng công nghiệp, Viglacera bắt tay với "ông lớn" quốc tế Frasers Property Singapore để làm KCN Dốc Đá Trắng.</strong></div>
+<div class="gt-bullet"><strong>Ý nghĩa thực chiến:</strong> Sự góp mặt của những tập đoàn có năng lực tài chính và triển khai thực tế đỉnh cao này bảo chứng cho tiến độ dự án. Niềm tin của các nhà đầu tư cá nhân trên toàn quốc sẽ đổ dồn về Vạn Ninh, kéo theo một làn sóng tăng trưởng giá trị bất động sản bền vững, ăn theo các đại đô thị và khu công nghiệp.</div>
+<div class="gt-h4"><strong>2. Điểm nổ thanh khoản khổng lồ ngay trong năm 2026</strong></div>
+<p class="gt-p">Giai đoạn hiện tại (giữa năm 2026) đang là "tâm bão" của các chiến dịch giải phóng mặt bằng (GPMB) và đưa vào vận hành hạ tầng:</p>
+<div class="gt-bullet"><strong>Làn sóng đền bù:</strong> Các KĐT Đầm Môn (~1.440 ha, 970 thửa), Tu Bông (502,68 ha) và Cổ Mã đang trong giai đoạn nước rút kiểm đếm và lập bảng đền bù (dự kiến ra QĐ thu hồi chính thức vào tháng 10/2026). Hàng ngàn hộ gia đình sắp nhận được một lượng tiền mặt đền bù khổng lồ, tạo ra sức ép tái đầu tư cực mạnh lên các quỹ đất thổ cư an toàn ở vùng ven.</div>
+<div class="gt-bullet"><strong>Động lực việc làm:</strong> Mục tiêu vận hành 100ha đầu tiên của KCN Dốc Đá Trắng ngay trong năm 2026 sẽ kích hoạt nhu cầu lưu trú, ăn uống, dịch vụ. Các quỹ đất bám ven KCN này lập tức đưa vào khai thác dòng tiền được ngay, không phải chờ đợi thêm.</div>
+<div class="gt-h4"><strong>3. Phân định rạch ròi rổ hàng theo "Điểm rơi thời gian"</strong></div>
+<p class="gt-p">Dữ liệu này vạch ra một lộ trình giải ngân cực kỳ an toàn cho khách hàng, giúp loại bỏ các cạm bẫy "chôn vốn":</p>
+<div class="gt-bullet"><strong>Đánh ngắn <em>&</em> Trung hạn (2026 - 2030):</strong> Tập trung gom quỹ đất nền ven KCN Dốc Đá Trắng và các khu dân cư giáp ranh 3 KĐT đang GPMB (Tu Bông, Đầm Môn, Cổ Mã) để đón sóng đền bù và nhịp thi công của Sun Group (kéo dài đến 2034).</div>
+<div class="gt-bullet"><strong>Đánh dài hạn (Sau 2030):</strong> Các thông tin về Cảng trung chuyển Quốc tế Đầm Môn và Sân bay Vân Phong được xếp rõ vào nhóm "Sau 2030" và "Đang nghiên cứu". Trong báo cáo, cần cảnh báo khách hàng tuyệt đối không xuống tiền lướt sóng tại các khu vực này dựa trên tin đồn sân bay, vì rủi ro kẹp hàng chục năm là rất lớn.</div>
+<p class="gt-p">Thông tin trong file mô tả chi tiết quy hoạch của <strong>Phân khu 1 (PK01) – Đảo Hòn Lớn</strong> thuộc Khu kinh tế (KKT) Vân Phong.</p>
+<p class="gt-p">Dưới góc độ phân tích thị trường và đầu tư, dữ liệu này nói lên các ý nghĩa chiến lược sau:</p>
+<div class="gt-bullet"><strong>Định vị sản phẩm du lịch hạng sang:</strong> Với chức năng được xác định là "Du lịch sinh thái nghỉ dưỡng cao cấp", khu vực này không dành cho phân khúc nhà ở dân sinh hay kinh doanh đại trà. Việc quy hoạch xây dựng resort tối đa 7 tầng với mật độ xây dựng thấp (25%) cho thấy mục tiêu phát triển bền vững, giữ gìn cảnh quan thiên nhiên để thu hút giới thượng lưu.</div>
+<div class="gt-bullet"><strong>Tiềm năng phát triển bền vững:</strong> Dù không có dân số thường trú, nhưng dự báo đến năm 2040 khu vực này sẽ đón 8.000 du khách quy đổi, khẳng định đây là một trung tâm lưu trú du lịch chuyên biệt. Việc dành tới 3.068,50 ha rừng sản xuất cho mục đích bảo tồn là một chỉ số quan trọng, đảm bảo không gian xanh cho các dự án nghỉ dưỡng trong tương lai.</div>
+<div class="gt-bullet"><strong>Hạ tầng kết nối đồng bộ:</strong> Sự hiện diện của hệ thống cáp treo dài 4,1km kết nối với núi Khải Lương (PK02) cho thấy tính quy hoạch bài bản, tạo thành một hệ sinh thái du lịch liên hoàn, thay vì chỉ là các dự án đơn lẻ.</div>
+<div class="gt-bullet"><strong>Trạng thái pháp lý thực tế:</strong> Dự án được phê duyệt theo Quyết định 1643/QĐ-UBND (2024). Tuy nhiên, một lưu ý quan trọng cho nhà đầu tư là hiện trạng giải phóng mặt bằng (GPMB) vẫn là "Chưa". Điều này có nghĩa là mọi hoạt động đầu tư vào đây hiện tại vẫn cần theo dõi sát sao tiến độ đền bù và giải tỏa mặt bằng từ cơ quan chức năng.</div>
+<p class="gt-p">Thông tin trong file mô tả các đặc điểm quy hoạch chính của <strong>Phân khu 2 (PK02) – Núi Khải Lương</strong>. Dưới góc độ quy hoạch và tiềm năng, thông tin này cho thấy một số ý nghĩa quan trọng:</p>
+<div class="gt-bullet"><strong>Pháp lý và vị trí</strong>: Phân khu thuộc Khu kinh tế (KKT) Vân Phong, được phê duyệt theo Quyết định 1642/QĐ-UBND (2024) với quy mô 4.015 ha tại xã Đại Lãnh. Tuy nhiên, tình trạng giải phóng mặt bằng (GPMB) hiện tại vẫn là "Chưa".</div>
+<div class="gt-bullet"><strong>Định hướng chức năng cao cấp</strong>: Phân khu được quy hoạch cho du lịch (DL) sinh thái nghỉ dưỡng cao cấp kết hợp với dịch vụ Casino. Sự hiện diện của Casino là một yếu tố then chốt, thường mang lại giá trị gia tăng rất lớn cho các dự án nghỉ dưỡng và thu hút tệp khách hàng thượng lưu.</div>
+<div class="gt-bullet"><strong>Hạ tầng và kết nối chiến lược</strong>:</div>
+<div class="gt-bullet">Phân khu được bố trí 105,94 ha đất dịch vụ (DV) và có đường chính B3 với lộ giới rộng 36m (lòng đường 26m) để phục vụ giao thông.</div>
+<div class="gt-bullet">Khả năng kết nối được chú trọng với hệ thống cáp treo liên kết sang PK01 (Hòn Lớn) và vị trí tiếp giáp với PK03 (Đầm Môn) ở phía Bắc, tạo tiền đề cho một hệ sinh thái du lịch liên kết trong KKT.</div>
+<div class="gt-tomlai">📌 Tóm lại, đây là khu vực được quy hoạch để trở thành một trung tâm giải trí và nghỉ dưỡng tầm cỡ, đòi hỏi sự đầu tư hạ tầng đồng bộ và bài bản.</div>
+<p class="gt-p">Thông tin trong file mô tả chi tiết quy hoạch và tiến độ triển khai của <strong>Phân khu 3 (PK03) – Cảng Đầm Môn</strong>. Dưới đây là các ý nghĩa chiến lược của dữ liệu này:</p>
+<div class="gt-bullet"><strong>Tính pháp lý và tiến độ thực tế</strong>:</div>
+<div class="gt-bullet">Phân khu nằm trong Khu kinh tế (KKT) Vân Phong, được phê duyệt theo QĐ 242/QĐ-UBND (2024) với diện tích 4.445 ha tại xã Đại Lãnh.</div>
+<div class="gt-bullet">Công tác giải phóng mặt bằng (GPMB) đang được triển khai cho khoảng 1.440 ha (970 thửa) trong giai đoạn từ tháng 10/2025 đến tháng 10/2026.</div>
+<div class="gt-bullet">Chủ trương đầu tư đã được Thủ tướng Chính phủ phê duyệt ngày 30/6/2025 (QĐ 1451/QĐ-TTg) và trao quyết định cho nhà đầu tư là Liên danh Mặt trời Phú Quốc + Mặt trời Hạ Long vào ngày 11/9/2025.</div>
+<div class="gt-bullet"><strong>Quy mô và chức năng</strong>:</div>
+<div class="gt-bullet">Đây là một siêu dự án với vốn đầu tư 25.645 tỷ đồng (chưa tính chi phí GPMB 526 tỷ đồng).</div>
+<div class="gt-bullet">Chức năng chính bao gồm: Cảng biển loại I, đô thị dịch vụ hậu cần và khu đô thị cao cấp.</div>
+<div class="gt-bullet">Đến năm 2030, cảng được định hướng trở thành cảng container trung chuyển quốc tế có khả năng đón tàu 24.000 TEU.</div>
+<div class="gt-bullet">Dân số dự kiến đến năm 2034 là 28.540 người, với đa dạng sản phẩm nhà ở gồm 791 căn liền kề, 592 biệt thự, 858 căn chung cư và 352 căn nhà ở xã hội (NOXH).</div>
+<div class="gt-bullet"><strong>Cơ cấu đất và hạ tầng</strong>:</div>
+<div class="gt-bullet">Cơ cấu sử dụng đất gồm 227,76 ha đất ở, 586,52 ha đất du lịch và dịch vụ (DL+DV), cùng 386,72 ha đất công nghiệp và cảng (CN/cảng).</div>
+<div class="gt-bullet">Hạ tầng giao thông được đầu tư đồng bộ với đường chính ĐT.651 có lộ giới lên tới 75m.</div>
+<div class="gt-bullet">Tiến độ tổng thể của dự án kéo dài từ quý 2/2025 đến quý 4/2034.</div>
+<p class="gt-p">Thông tin trong file mô tả chi tiết quy hoạch của <strong>Phân khu 4 (PK04) – Vĩnh Yên · Mũi Đá Son</strong>, một khu vực quan trọng thuộc xã Đại Lãnh, nằm trong Khu kinh tế (KKT) Vân Phong. Dưới đây là những ý nghĩa chiến lược của dữ liệu này:</p>
+<div class="gt-bullet"><strong>Pháp lý và trạng thái triển khai</strong>:</div>
+<div class="gt-bullet">Phân khu được phê duyệt theo Quyết định 1885/QĐ-UBND (2025) với tổng diện tích 3.566 ha.</div>
+<div class="gt-bullet">Hiện tại, công tác giải phóng mặt bằng (GPMB) đang ở giai đoạn "Chuẩn bị".</div>
+<div class="gt-bullet"><strong>Chức năng đa dạng</strong>:</div>
+<div class="gt-bullet">Phân khu được định hướng phát triển kết hợp giữa Đô thị, Du lịch (DL) nghỉ dưỡng và Bến du thuyền.</div>
+<div class="gt-bullet">Đặc biệt, khu vực Mũi Đá Son được quy hoạch thành Trung tâm du lịch và triển lãm quốc tế, với tiềm năng xây dựng các công trình cao tầng tối đa 15 tầng (mật độ xây dựng 25%).</div>
+<div class="gt-bullet"><strong>Cơ cấu sử dụng đất</strong>:</div>
+<div class="gt-bullet">Đất ở: 51,72 ha.</div>
+<div class="gt-bullet">Đất dịch vụ và du lịch (Đất DV+DL): 252,86 ha.</div>
+<div class="gt-bullet">Đất rừng sản xuất: 933,78 ha, chiếm 26,19% tổng diện tích, đảm bảo không gian xanh và bảo tồn sinh thái.</div>
+<p class="gt-p">Thông tin trong file mô tả các đặc điểm quy hoạch và tiến độ triển khai của <strong>Phân khu 5 (PK05) – Tuần Lễ · Hòn Ngang</strong>. Dưới góc độ đầu tư và phát triển, dữ liệu này phản ánh những ý nghĩa chiến lược sau:</p>
+<div class="gt-bullet"><strong>Định vị không gian nghỉ dưỡng cao cấp</strong>:</div>
+<div class="gt-bullet">Phân khu được quy hoạch với chức năng thương mại dịch vụ (TMDV), du lịch (DL) cao cấp và sân golf.</div>
+<div class="gt-bullet">Đây là khu vực sở hữu quỹ đất dịch vụ và du lịch lớn lên tới 585,78 ha, khẳng định tầm nhìn tạo ra một trung tâm giải trí nghỉ dưỡng quy mô tại xã Đại Lãnh.</div>
+<div class="gt-bullet"><strong>Pháp lý và hạ tầng giao thông kết nối</strong>:</div>
+<div class="gt-bullet">Phân khu thuộc KKT Vân Phong, được phê duyệt theo QĐ 1686/QĐ-UBND (2025) với tổng diện tích 3.064 ha.</div>
+<div class="gt-bullet">Hạ tầng giao thông tại đây được đầu tư mạnh mẽ với đường ĐT.651 (lộ giới 75m, có quy hoạch đường sắt đô thị) và đường ven biển (lộ giới 47m), đảm bảo khả năng kết nối và vận chuyển hành khách.</div>
+<div class="gt-bullet"><strong>Tiến độ giải phóng mặt bằng (GPMB)</strong>:</div>
+<div class="gt-bullet">Tình trạng GPMB hiện tại đang ở giai đoạn "Chuẩn bị".</div>
+<div class="gt-bullet">Đối với Khu du lịch (KDL) Hòn Ngang – Bãi Cát Thắm, từ tháng 5/2025, cơ quan chức năng đang triển khai xác định giá đất để phục vụ công tác đền bù.</div>
+<p class="gt-p">Thông tin trong file phác thảo một bức tranh quy hoạch trọng điểm của <strong>Phân khu 8 (PK08) – Cổ Mã · Tu Bông</strong> tại huyện Vạn Ninh, với những ý nghĩa chiến lược sau:</p>
+<div class="gt-bullet"><strong>Động lực đầu tư thực tế</strong>:</div>
+<div class="gt-bullet">Phân khu nằm trong Khu kinh tế (KKT) Vân Phong, được phê duyệt theo QĐ 243/QĐ-UBND (2024) với diện tích 6.631 ha tại xã Tu Bông và Vạn Thắng.</div>
+<div class="gt-bullet">Công tác giải phóng mặt bằng (GPMB) đang được triển khai: KĐT Cổ Mã đang lập bảng thống kê đền bù, trong khi KĐT Tu Bông (502,68 ha) đang thực hiện điều tra kiểm đếm.</div>
+<div class="gt-bullet">Dự án KĐT Tu Bông đã được Thủ tướng Chính phủ phê duyệt chủ trương đầu tư vào ngày 30/6/2025 (QĐ 1450) cho Liên danh Mặt trời Phú Quốc + Mặt trời Hạ Long, với số vốn 43.000 tỷ đồng, quy mô dân số 74.700 người và tiến độ hoàn thành dự kiến vào quý 4/2034.</div>
+<div class="gt-bullet"><strong>Chức năng và cơ cấu sử dụng đất</strong>:</div>
+<div class="gt-bullet">Phân khu được định hướng trở thành đô thị mới cao cấp, tích hợp thương mại dịch vụ (TMDV), du lịch (DL) và sân bay.</div>
+<div class="gt-bullet">Riêng KĐT Tu Bông có quy mô 2.579 ha, bao gồm 1.002 căn liền kề, 609 biệt thự, 3.812 căn chung cư và 1.130 căn nhà ở xã hội (NOXH).</div>
+<div class="gt-bullet">Cơ cấu đất bao gồm khoảng 1.132 ha đất nhà ở (chiếm 21,36%) và 504,31 ha đất du lịch, dịch vụ.</div>
+<div class="gt-bullet"><strong>Thông tin về sân bay và hạ tầng</strong>:</div>
+<div class="gt-bullet">Sân bay Vân Phong (tại TK11, diện tích 497,15 ha, xã Vạn Thắng) hiện vẫn đang trong giai đoạn nghiên cứu đề án, chưa được phê duyệt đầu tư.</div>
+<div class="gt-bullet">Hạ tầng giao thông chính gồm các trục đường huyết mạch: ĐT.651 (lộ giới 75m), QL1 (56m) và ĐT.651B (42–60m).</div>
+<div class="gt-bullet">Phân khu được chia thành 11 tiểu khu, trong đó TK1–2 tập trung vào TMDV cao cấp, TK3–10 phát triển đô thị mới và TK11 là khu vực dự trữ cho sân bay.</div>
+<p class="gt-p">Thông tin trong file mô tả các đặc điểm quy hoạch của <strong>Phân khu 9 (PK09) – Sinh thái Tây Tu Bông</strong>. Dưới đây là những ý nghĩa chiến lược quan trọng của dữ liệu này:</p>
+<div class="gt-bullet"><strong>Định vị chức năng</strong>:</div>
+<div class="gt-bullet">Phân khu được quy hoạch với chức năng chính là du lịch sinh thái bảo tồn cảnh quan núi rừng.</div>
+<div class="gt-bullet">Đây là khu vực không phù hợp để phát triển đất ở hoặc các dự án công nghiệp.</div>
+<div class="gt-bullet"><strong>Pháp lý và quy mô</strong>:</div>
+<div class="gt-bullet">Phân khu nằm trong Khu kinh tế (KKT) Vân Phong, thuộc xã Tu Bông, với diện tích khoảng 9.017 ha.</div>
+<div class="gt-bullet">Tình trạng giải phóng mặt bằng (GPMB) tại đây hiện vẫn là "Chưa".</div>
+<div class="gt-bullet"><strong>Chỉ tiêu xây dựng và tiềm năng đầu tư</strong>:</div>
+<div class="gt-bullet">Quy định xây dựng khá khắt khe với mật độ tối đa 25% và tầng cao tối đa 3 tầng.</div>
+<div class="gt-bullet">Đến năm 2040, diện tích đất xây dựng chỉ chiếm 762,15 ha trên tổng số 9.017 ha.</div>
+<div class="gt-bullet">Loại hình đầu tư phù hợp duy nhất tại khu vực này là các mô hình eco-resort quy mô nhỏ.</div>
+<p class="gt-p">Thông tin trong file mô tả các đặc điểm quy hoạch của <strong>Phân khu 10 (PK10) – Sinh thái Tây Vạn Giã</strong>, mang lại những góc nhìn quan trọng về chiến lược phát triển tại khu vực này:</p>
+<div class="gt-bullet"><strong>Định vị chức năng và quy mô</strong>:</div>
+<div class="gt-bullet">Phân khu nằm trong Khu kinh tế (KKT) Vân Phong, thuộc xã Vạn Hưng, với quy mô diện tích lớn nhất tại Vạn Ninh, lên tới khoảng 16.281 ha.</div>
+<div class="gt-bullet">Chức năng chính của phân khu là phát triển sinh thái núi và các làng nông nghiệp sinh thái.</div>
+<div class="gt-bullet">Tình trạng giải phóng mặt bằng (GPMB) hiện tại là "Chưa".</div>
+<div class="gt-bullet"><strong>Chỉ tiêu xây dựng và tiềm năng</strong>:</div>
+<div class="gt-bullet">Quy định xây dựng được phân định rõ ràng giữa hai khu vực: tại vùng đồi núi, mật độ xây dựng tối đa là 25% với tầng cao tối đa 3 tầng; tại khu vực làng xóm, mật độ xây dựng lên tới 60% với tầng cao tối đa 5 tầng.</div>
+<div class="gt-bullet">Hồ Đồng Điền được xác định là một điểm du lịch sinh thái tiềm năng.</div>
+<div class="gt-bullet"><strong>Lưu ý quan trọng</strong>:</div>
+<div class="gt-bullet">Mặc dù là phân khu có diện tích lớn nhất tại Vạn Ninh, nhưng tỷ lệ đất dành cho xây dựng rất thấp, chỉ chiếm khoảng 4% tổng diện tích.</div>
+<p class="gt-p">Thông tin trong file mô tả về <strong>Phân khu 11 (PK11) – Đô thị Vạn Giã</strong>, mang lại những góc nhìn quan trọng về chiến lược phát triển hành chính và bất động sản tại khu vực này:</p>
+<div class="gt-bullet"><strong>Định vị trung tâm</strong>:</div>
+<div class="gt-bullet">Phân khu này đóng vai trò là trung tâm kinh tế, chính trị và văn hóa của huyện Vạn Ninh.</div>
+<div class="gt-bullet">Tính chất của phân khu là đô thị hiện hữu được cải tạo kết hợp với phát triển mới xung quanh thị trấn Vạn Giã cũ.</div>
+<div class="gt-bullet"><strong>Mục tiêu chiến lược 2030</strong>:</div>
+<div class="gt-bullet">Phân khu đặt mục tiêu trọng điểm để Vạn Ninh đạt đô thị loại IV vào năm 2030, đồng thời khẳng định vị thế là trung tâm hành chính của toàn huyện.</div>
+<div class="gt-bullet"><strong>Tiềm năng đầu tư</strong>:</div>
+<div class="gt-bullet">Khu vực này phù hợp để đầu tư đất ở và thương mại dịch vụ (TMDV) tại các vị trí hiện hữu.</div>
+<div class="gt-bullet">Đây là nơi có tính thanh khoản tốt hơn so với các phân khu mới quy hoạch.</div>
+<div class="gt-bullet"><strong>Hạ tầng và lưu ý pháp lý</strong>:</div>
+<div class="gt-bullet">Hạ tầng giao thông chính gồm QL1 (lộ giới 66m), ĐT.651D (42m) và đường ven biển ĐT.651B (26–30m).</div>
+<div class="gt-bullet">Lưu ý quan trọng là Quyết định phân khu vẫn chưa được ban hành (dự kiến trong năm 2026), do đó các số liệu về diện tích đất theo loại hình hiện vẫn chưa phải là thông tin chính thức.</div>
+<p class="gt-p">Thông tin trong file mô tả về <strong>Phân khu 12 (PK12) – Nam Vạn Giã</strong>, mang lại những góc nhìn quan trọng về chiến lược phát triển đô thị và hạ tầng tại khu vực này:</p>
+<div class="gt-bullet"><strong>Chức năng và định hướng</strong>:</div>
+<div class="gt-bullet">Phân khu đóng vai trò là đô thị Nam Vạn Giã, tập trung vào việc cải tạo dân cư hiện hữu kết hợp với phát triển các khu ở mới ven biển.</div>
+<div class="gt-bullet">Địa bàn bao gồm xã Vạn Ninh (thị trấn Vạn Giã, Vạn Phú, Vạn Lương cũ) và tiếp giáp với xã Vạn Hưng.</div>
+<div class="gt-bullet"><strong>Tiến độ và giải phóng mặt bằng (GPMB)</strong>:</div>
+<div class="gt-bullet">Công tác GPMB đang diễn ra, đặc biệt là khu vực ven biển.</div>
+<div class="gt-bullet">Đối với 300 trường hợp tại xã Vạn Hưng, Quyết định 1040/5/2025 đã phê duyệt giá đất bồi thường.</div>
+<div class="gt-bullet"><strong>Hạ tầng giao thông</strong>:</div>
+<div class="gt-bullet">Hệ thống đường chính bao gồm QL1 (32,5m), đường ven biển ĐT.651B (30m) và ĐT.651D (42m).</div>
+<div class="gt-bullet">Tuyến đường ven biển dự kiến hoàn thành vào tháng 6/2027, tạo động lực lớn cho sự phát triển của khu vực.</div>
+<div class="gt-bullet"><strong>Tiềm năng và lưu ý pháp lý</strong>:</div>
+<div class="gt-bullet">Khu vực phù hợp để đầu tư đất ở dân cư gần trung tâm Vạn Giã.</div>
+<div class="gt-bullet">Lưu ý quan trọng: Quyết định phân khu chưa được ban hành (dự kiến trong năm 2026), do đó khi tư vấn các lô đất cụ thể, cần đối chiếu bản đồ ranh giới với Khu kinh tế (KKT) để đảm bảo tính chính xác.</div>
+<p class="gt-p">Thông tin trong file cung cấp bức tranh tổng thể về tình trạng giải phóng mặt bằng (GPMB) tại Vạn Ninh, cho thấy sự quyết liệt trong việc triển khai các dự án trọng điểm. Dưới đây là các ý nghĩa quan trọng của dữ liệu này:</p>
+<div class="gt-bullet"><strong>Đẩy nhanh tiến độ dự án hạ tầng và đô thị</strong>:</div>
+<div class="gt-bullet">KĐT Đầm Môn với quy mô khoảng 1.440 ha (970 thửa) đang trong giai đoạn GPMB từ tháng 10/2025 đến tháng 10/2026.</div>
+<div class="gt-bullet">KĐT Tu Bông (502,68 ha) đang trong giai đoạn điều tra kiểm đếm.</div>
+<div class="gt-bullet">KĐT Cổ Mã đang trong quá trình lập bảng đền bù.</div>
+<div class="gt-bullet">KCN Dốc Đá Trắng (288 ha) tại xã Vạn Hưng và Bắc Ninh Hòa đang thực hiện GPMB, với khởi công 19/8/2025.</div>
+<div class="gt-bullet">Tuyến đường ven biển (đoạn qua Vạn Ninh) dài 12,7km với diện tích khoảng 51ha đã có 19,6% mặt bằng được bàn giao tính đến tháng 5/2025.</div>
+<div class="gt-bullet"><strong>Định hướng chiến lược</strong>:</div>
+<div class="gt-bullet">Việc đồng loạt triển khai GPMB tại các KĐT (Đầm Môn, Tu Bông, Cổ Mã) và KCN (Dốc Đá Trắng) cho thấy Vạn Ninh đang chuyển mình mạnh mẽ thành trung tâm kinh tế, du lịch và công nghiệp của Khu kinh tế Vân Phong.</div>
+<div class="gt-bullet">Tiến độ GPMB là "chìa khóa" để thu hút nhà đầu tư và hiện thực hóa các quy hoạch, với các mốc thời gian cụ thể giúp thị trường có cơ sở để dự báo về nguồn cung và sự phát triển hạ tầng trong tương lai gần.</div>
+<div class="gt-h4"><strong>BÁO CÁO THỊ TRƯỜNG VÀ TIẾN ĐỘ HẠ TẦNG VẠN NINH – THÁNG 6/2026</strong></div>
+<div class="gt-h4"><strong>1. Tổng quan chiến lược</strong></div>
+<p class="gt-p">Vạn Ninh hiện đang bước vào giai đoạn chuyển mình mạnh mẽ, chuyển hóa từ quy hoạch trên giấy sang triển khai thực địa. Với định hướng đạt đô thị loại IV vào năm 2030, khu vực này đang tập trung dồn lực cho hạ tầng giao thông và các khu đô thị (KĐT) quy mô lớn. Sự đổ bộ của các tập đoàn bất động sản hàng đầu và tiến độ giải phóng mặt bằng (GPMB) quyết liệt là "mỏ neo" niềm tin cho nhà đầu tư.</p>
+<div class="gt-h4"><strong>2. Bảng tổng hợp Tiến độ Giải phóng mặt bằng (GPMB)</strong></div>
+<p class="gt-p">| <strong>Khu vực / Dự án</strong> | <strong>Diện tích</strong> | <strong>Địa bàn</strong> | <strong>Tình trạng</strong> |</p>
+<p class="gt-p">| --- | --- | --- | --- |</p>
+<p class="gt-p">| <strong>KĐT Đầm Môn</strong> | ~1.440 ha | Xã Đại Lãnh | Đang triển khai (10/2025–10/2026) |</p>
+<p class="gt-p">| <strong>KĐT Tu Bông</strong> | 502,68 ha | Xã Tu Bông | Đang điều tra kiểm đếm |</p>
+<p class="gt-p">| <strong>KĐT Cổ Mã</strong> | Chưa có tổng | Xã Tu Bông | Đang lập bảng đền bù |</p>
+<p class="gt-p">| <strong>KCN Dốc Đá Trắng</strong> | 288 ha | Vạn Hưng + Bắc Ninh Hòa | Đang GPMB (khởi công 19/8/2025, mốc kiểm soát GPMB từ 8/2025) |</p>
+<p class="gt-p">| <strong>Đường ven biển (đoạn VN)</strong> | 12,7 km | Vạn Ninh + Vạn Hưng | Đã bàn giao 19,6% (tính đến 5/2025) |</p>
+<div class="gt-h4"><strong>3. Điểm nhấn các Phân khu chiến lược</strong></div>
+<div class="gt-bullet"><strong>Cực du lịch phía Bắc (PK01-PK02):</strong> Định hình với các dự án du lịch sinh thái nghỉ dưỡng cao cấp, Casino, và hệ thống cáp treo kết nối 4,1km giữa Đảo Hòn Lớn và Núi Khải Lương.</div>
+<div class="gt-bullet"><strong>Siêu dự án Cảng <em>&</em> Đô thị Đầm Môn (PK03):</strong> Với vốn đầu tư 25.645 tỷ đồng, đây là trọng điểm phát triển cảng biển loại I và đô thị hậu cần, đón tàu container 24.000 TEU sau năm 2030.</div>
+<div class="gt-bullet"><strong>Đô thị Vạn Giã (PK11):</strong> Trung tâm kinh tế, chính trị, văn hóa của huyện, đóng vai trò là "điểm tựa" thanh khoản cho toàn khu vực nhờ sự ổn định của đô thị hiện hữu và hạ tầng giao thông huyết mạch.</div>
+<div class="gt-h4"><strong>4. Lộ trình đầu tư khuyến nghị</strong></div>
+<p class="gt-p">Dựa trên các mốc thời gian thực tế, nhà đầu tư nên phân bổ nguồn vốn theo hai giai đoạn:</p>
+<div class="gt-bullet"><strong>Giai đoạn 2026 - 2030 (Ngắn <em>&</em> Trung hạn):</strong> Ưu tiên các quỹ đất gần các KCN đang triển khai (Dốc Đá Trắng) và các khu vực đang thực hiện GPMB (KĐT Tu Bông, Đầm Môn) để đón đầu làn sóng hạ tầng và sự chuyển dịch dân cư cơ học.</div>
+<div class="gt-bullet"><strong>Giai đoạn sau 2030 (Dài hạn):</strong> Tập trung vào các dự án thương mại cao cấp, nghỉ dưỡng tại các phân khu du lịch (PK01, PK02, PK05) để cộng hưởng từ sự hoàn thiện của hệ thống cảng trung chuyển và sân bay Vân Phong.</div>
+<div class="gt-h4"><strong>5. Lưu ý quan trọng cho nhà đầu tư</strong></div>
+<p class="gt-p">Thị trường Vạn Ninh đang trong pha "xây dựng khối nạc", đòi hỏi sự kiên nhẫn. Cần đặc biệt chú ý đối chiếu bản đồ ranh giới quy hoạch mới nhất với thực địa trước khi xuống tiền, vì nhiều Quyết định phân khu vẫn đang trong quá trình ban hành hoàn thiện (dự kiến trong năm 2026).</p>
+  </div>
+</div>
+</div>
+</div>
+
 </div>
 
 <script>
@@ -806,8 +1692,17 @@ function toggleFaq(el) {
   el.querySelector('span').textContent = isOpen ? '▾' : '▴';
 }
 
+
+// ── Toggle Giải Thích cards ──
+function toggleGT(id) {
+  const card = document.getElementById(id);
+  if (!card) return;
+  const isOpen = card.classList.contains('open');
+  card.classList.toggle('open', !isOpen);
+}
+
 // ── Search ──
-const TAB_LABEL = { tab1: { label: 'Pháp Lý', cls: 't1' }, tab2: { label: 'Ninh Hòa', cls: 't2' }, tab3: { label: 'Vạn Ninh', cls: 't3' } };
+const TAB_LABEL = { tab1: { label: 'Pháp Lý', cls: 't1' }, tab2: { label: 'Ninh Hòa', cls: 't2' }, tab3: { label: 'Vạn Ninh', cls: 't3' }, tab4: { label: 'Giải Thích', cls: 't4' } };
 
 // Index of searchable blocks: { el, text, title, type, tabId, anchorId }
 function buildIndex() {
@@ -851,6 +1746,13 @@ function buildIndex() {
     });
 
     // Timeline items
+    panel.querySelectorAll('.gt-card').forEach(card => {
+      const name = card.querySelector('.gt-name')?.textContent || '';
+      const num  = card.querySelector('.gt-num')?.textContent || '';
+      const sum  = card.querySelector('.gt-summary')?.textContent || '';
+      const body = card.querySelector('.gt-body')?.textContent || '';
+      idx.push({ el: card, title: name, snippet: num + ' ' + sum + ' ' + body.slice(0,300), type: 'Giải thích', tabId, anchorId: card.id });
+    });
     panel.querySelectorAll('.tl-item').forEach(item => {
       const txt = item.textContent.trim();
       if (txt.length > 4) idx.push({ el: item, title: txt.slice(0, 80), snippet: txt, type: 'Timeline', tabId, anchorId: '' });
@@ -877,6 +1779,8 @@ function jumpToResult(item) {
   }
   // Open accordion if needed
   const card = item.el.closest('.pk-card') || item.el;
+  const gtCard = item.el.closest('.gt-card') || (item.el.classList.contains('gt-card') ? item.el : null);
+  if (gtCard) gtCard.classList.add('open');
   if (card.classList.contains('pk-card')) {
     card.classList.add('open');
     const tog = card.querySelector('.pk-toggle');
