@@ -199,18 +199,40 @@ mark { background: #fef08a; border-radius: 3px; }
 .font-size-md  { font-size: 13px; }
 .font-size-lg  { font-size: 15px; }
 
-/* Apply font scale to reading content */
-.fs-small  .gt-p, .fs-small  .gt-bullet, .fs-small  .gt-tomlai, .fs-small  .gt-h4,
-.fs-small  .faq-a, .fs-small  td, .fs-small  .tl-text, .fs-small  .law-card .law-desc,
-.fs-small  .pk-body dl { font-size: 12px !important; line-height: 1.6; }
+/* ── FONT SCALE via CSS variable ── */
+/* Mặc định: tất cả nhân với 1.0 */
+:root { --fs: 1; }
+body.fs-small  { --fs: 0.82; }
+body.fs-large  { --fs: 1.18; }
+body.fs-xlarge { --fs: 1.42; }
 
-.fs-large   .gt-p, .fs-large  .gt-bullet, .fs-large  .gt-tomlai, .fs-large  .gt-h4,
-.fs-large   .faq-a, .fs-large  td, .fs-large  .tl-text, .fs-large  .law-card .law-desc,
-.fs-large   .pk-body dl { font-size: 17px !important; line-height: 1.85; }
-
-.fs-xlarge  .gt-p, .fs-xlarge .gt-bullet, .fs-xlarge .gt-tomlai, .fs-xlarge .gt-h4,
-.fs-xlarge  .faq-a, .fs-xlarge td, .fs-xlarge .tl-text, .fs-xlarge .law-card .law-desc,
-.fs-xlarge  .pk-body dl { font-size: 20px !important; line-height: 1.9; }
+/* Áp dụng scale cho TẤT CẢ text trong .content */
+.content .gt-p        { font-size: calc(var(--fs) * 14px) !important; line-height: 1.75; }
+.content .gt-bullet   { font-size: calc(var(--fs) * 13.5px) !important; line-height: 1.7; }
+.content .gt-tomlai   { font-size: calc(var(--fs) * 13.5px) !important; line-height: 1.7; }
+.content .gt-h4       { font-size: calc(var(--fs) * 13.5px) !important; }
+.content .gt-name     { font-size: calc(var(--fs) * 15px) !important; }
+.content .gt-num      { font-size: calc(var(--fs) * 11px) !important; }
+.content .gt-summary  { font-size: calc(var(--fs) * 13px) !important; line-height: 1.55; }
+.content .faq-q       { font-size: calc(var(--fs) * 14px) !important; }
+.content .faq-a       { font-size: calc(var(--fs) * 13.5px) !important; line-height: 1.7; }
+.content td           { font-size: calc(var(--fs) * 13px) !important; }
+.content th           { font-size: calc(var(--fs) * 13px) !important; }
+.content .tl-text     { font-size: calc(var(--fs) * 14px) !important; }
+.content .tl-note     { font-size: calc(var(--fs) * 12px) !important; }
+.content .tl-date     { font-size: calc(var(--fs) * 11px) !important; }
+.content .law-card .law-num  { font-size: calc(var(--fs) * 11px) !important; }
+.content .law-card .law-name { font-size: calc(var(--fs) * 14px) !important; }
+.content .law-card .law-desc { font-size: calc(var(--fs) * 13px) !important; line-height: 1.6; }
+.content .section-title      { font-size: calc(var(--fs) * 18px) !important; }
+.content .section-sub        { font-size: calc(var(--fs) * 13px) !important; }
+.content .pk-name     { font-size: calc(var(--fs) * 15px) !important; }
+.content .pk-sub      { font-size: calc(var(--fs) * 12px) !important; }
+.content .pk-body dl  { font-size: calc(var(--fs) * 13px) !important; }
+.content .hc-row      { font-size: calc(var(--fs) * 13px) !important; }
+.content .hc-head     { font-size: calc(var(--fs) * 13px) !important; }
+.content .info-box    { font-size: calc(var(--fs) * 13px) !important; }
+.content .warn-box    { font-size: calc(var(--fs) * 13px) !important; }
 .gt-grid { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
 .gt-card { background: var(--card); border-radius: 12px; border: 1px solid var(--border); overflow: hidden; }
 .gt-header {
@@ -1798,18 +1820,16 @@ function toggleFaq(el) {
 
 
 // ── Font size toggle ──
-const FONT_CLASSES = ['fs-small','fs-large','fs-xlarge'];
 function setFont(size) {
-  document.body.classList.remove(...FONT_CLASSES);
+  document.body.classList.remove('fs-small','fs-large','fs-xlarge');
   ['fb-s','fb-m','fb-l','fb-xl'].forEach(id => document.getElementById(id)?.classList.remove('active'));
-  if (size === 'small')   { document.body.classList.add('fs-small');  document.getElementById('fb-s').classList.add('active'); }
-  else if (size === 'large')  { document.body.classList.add('fs-large');  document.getElementById('fb-l').classList.add('active'); }
-  else if (size === 'xlarge') { document.body.classList.add('fs-xlarge'); document.getElementById('fb-xl').classList.add('active'); }
-  else { document.getElementById('fb-m').classList.add('active'); }
+  const map = { small:'fb-s', default:'fb-m', large:'fb-l', xlarge:'fb-xl' };
+  document.getElementById(map[size] || 'fb-m')?.classList.add('active');
+  if (size !== 'default') document.body.classList.add('fs-' + size);
   try { localStorage.setItem('kkt_font', size); } catch(e){}
 }
 // Restore saved preference
-try { const s = localStorage.getItem('kkt_font'); if(s) setFont(s); } catch(e){}
+try { const s = localStorage.getItem('kkt_font'); if(s) setFont(s); else setFont('default'); } catch(e){ setFont('default'); }
 
 // ── Wrap tables for mobile horizontal scroll ──
 document.querySelectorAll('table').forEach(tbl => {
