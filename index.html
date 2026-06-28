@@ -185,7 +185,32 @@ mark { background: #fef08a; border-radius: 3px; }
 .sd-empty { padding: 16px 14px; font-size: 13px; color: var(--text-muted); text-align: center; }
 
 
-/* ── GIẢI THÍCH CHÍNH SÁCH (TAB 4) ── */
+/* ── FONT SIZE TOGGLE ── */
+.font-toggle { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
+.font-btn {
+  background: rgba(255,255,255,.15); border: none; color: #fff;
+  border-radius: 6px; padding: 4px 9px; font-family: inherit;
+  font-weight: 700; cursor: pointer; transition: background .15s;
+  line-height: 1;
+}
+.font-btn:hover { background: rgba(255,255,255,.28); }
+.font-btn.active { background: var(--sea); }
+.font-size-sm  { font-size: 11px; }
+.font-size-md  { font-size: 13px; }
+.font-size-lg  { font-size: 15px; }
+
+/* Apply font scale to reading content */
+.fs-small  .gt-p, .fs-small  .gt-bullet, .fs-small  .gt-tomlai, .fs-small  .gt-h4,
+.fs-small  .faq-a, .fs-small  td, .fs-small  .tl-text, .fs-small  .law-card .law-desc,
+.fs-small  .pk-body dl { font-size: 12px !important; line-height: 1.6; }
+
+.fs-large   .gt-p, .fs-large  .gt-bullet, .fs-large  .gt-tomlai, .fs-large  .gt-h4,
+.fs-large   .faq-a, .fs-large  td, .fs-large  .tl-text, .fs-large  .law-card .law-desc,
+.fs-large   .pk-body dl { font-size: 17px !important; line-height: 1.85; }
+
+.fs-xlarge  .gt-p, .fs-xlarge .gt-bullet, .fs-xlarge .gt-tomlai, .fs-xlarge .gt-h4,
+.fs-xlarge  .faq-a, .fs-xlarge td, .fs-xlarge .tl-text, .fs-xlarge .law-card .law-desc,
+.fs-xlarge  .pk-body dl { font-size: 20px !important; line-height: 1.9; }
 .gt-grid { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
 .gt-card { background: var(--card); border-radius: 12px; border: 1px solid var(--border); overflow: hidden; }
 .gt-header {
@@ -248,31 +273,51 @@ html, body { overflow-x: hidden; max-width: 100%; }
   /* Content padding nhỏ hơn */
   .content { padding: 14px 10px 60px; }
 
-  /* Section title nhỏ hơn */
-  .section-title { font-size: 15px; }
+  /* Section title */
+  .section-title { font-size: 16px; }
+  .section-sub { font-size: 13px; }
 
   /* PK grid 1 cột */
   .pk-grid { grid-template-columns: 1fr; }
   .law-grid { grid-template-columns: 1fr; }
   .hanh-chinh-grid { grid-template-columns: 1fr; }
 
-  /* Table font nhỏ hơn */
-  th, td { padding: 8px 9px; font-size: 12px; }
+  /* Table — cỡ chữ đủ đọc */
+  th { padding: 9px 10px; font-size: 13px; }
+  td { padding: 9px 10px; font-size: 13px; line-height: 1.5; }
 
-  /* FAQ text */
-  .faq-q { font-size: 13px; padding: 10px 12px; }
-  .faq-a { font-size: 12px; }
+  /* FAQ */
+  .faq-q { font-size: 14px; padding: 12px 14px; }
+  .faq-a { font-size: 14px; line-height: 1.7; }
 
-  /* GT cards */
-  .gt-name { font-size: 14px; }
-  .gt-summary { font-size: 12px; }
-  .gt-p { font-size: 13px; }
-  .gt-header { padding: 12px 14px; }
-  .gt-body { padding: 12px 14px 14px; }
+  /* Law cards */
+  .law-card .law-name { font-size: 14px; }
+  .law-card .law-desc { font-size: 13px; }
+
+  /* PK cards */
+  .pk-name { font-size: 15px; }
+  .pk-sub { font-size: 12px; }
+  .pk-body dl { font-size: 13px; }
 
   /* Timeline */
-  .tl-text { font-size: 13px; }
-  .tl-note { font-size: 11px; }
+  .tl-text { font-size: 14px; }
+  .tl-note { font-size: 12px; }
+  .tl-date { font-size: 11px; }
+
+  /* GT cards — chữ đủ đọc không cần zoom */
+  .gt-name { font-size: 15px; }
+  .gt-summary { font-size: 13px; line-height: 1.55; }
+  .gt-num { font-size: 12px; }
+  .gt-p { font-size: 15px; line-height: 1.75; }
+  .gt-h4 { font-size: 14px; }
+  .gt-bullet { font-size: 14px; line-height: 1.7; }
+  .gt-tomlai { font-size: 14px; line-height: 1.7; }
+  .gt-header { padding: 12px 14px; }
+  .gt-body { padding: 14px 14px 16px; }
+
+  /* HC rows */
+  .hc-row { font-size: 13px; }
+  .hc-head { font-size: 13px; }
 }
 </style>
 </head>
@@ -287,6 +332,12 @@ html, body { overflow-x: hidden; max-width: 100%; }
       <div class="search-dropdown" id="searchDropdown"></div>
     </div>
     <div class="verified-badge">✓ Xác minh internet 28/06/2026 v4</div>
+    <div class="font-toggle" title="Cỡ chữ">
+      <button class="font-btn font-size-sm" onclick="setFont('small')" id="fb-s">A</button>
+      <button class="font-btn font-size-md active" onclick="setFont('default')" id="fb-m">A</button>
+      <button class="font-btn font-size-lg" onclick="setFont('large')" id="fb-l">A</button>
+      <button class="font-btn font-size-lg" onclick="setFont('xlarge')" id="fb-xl" style="font-size:18px">A</button>
+    </div>
   </div>
   <div class="tabs">
     <button class="tab active" onclick="switchTab('tab1',this)">⚖️ Khung Pháp Lý</button>
@@ -1745,6 +1796,20 @@ function toggleFaq(el) {
   el.querySelector('span').textContent = isOpen ? '▾' : '▴';
 }
 
+
+// ── Font size toggle ──
+const FONT_CLASSES = ['fs-small','fs-large','fs-xlarge'];
+function setFont(size) {
+  document.body.classList.remove(...FONT_CLASSES);
+  ['fb-s','fb-m','fb-l','fb-xl'].forEach(id => document.getElementById(id)?.classList.remove('active'));
+  if (size === 'small')   { document.body.classList.add('fs-small');  document.getElementById('fb-s').classList.add('active'); }
+  else if (size === 'large')  { document.body.classList.add('fs-large');  document.getElementById('fb-l').classList.add('active'); }
+  else if (size === 'xlarge') { document.body.classList.add('fs-xlarge'); document.getElementById('fb-xl').classList.add('active'); }
+  else { document.getElementById('fb-m').classList.add('active'); }
+  try { localStorage.setItem('kkt_font', size); } catch(e){}
+}
+// Restore saved preference
+try { const s = localStorage.getItem('kkt_font'); if(s) setFont(s); } catch(e){}
 
 // ── Wrap tables for mobile horizontal scroll ──
 document.querySelectorAll('table').forEach(tbl => {
